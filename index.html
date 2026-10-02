@@ -6,15 +6,6 @@
   <meta content="web_standard" name="shell-type"/>
   <title>Sydin Rahman — Builder &amp; Entrepreneur</title>
 
-  <!-- Prevent dark mode flash -->
-  <script>
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  </script>
-
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -24,7 +15,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script id="tailwind-config">
     tailwind.config = {
-      darkMode: "class",
       theme: {
         extend: {
           "colors": {
@@ -130,8 +120,8 @@
 </head>
 <body class="bg-surface font-body-md text-on-surface antialiased selection:bg-surface-container-high selection:text-on-surface transition-colors duration-200">
 
-<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-surface-container-highest transition-colors duration-200">
-  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin h-20 flex items-center justify-between">
+<header class="fixed top-0 left-0 right-0 w-full z-50 glass-nav transition-all duration-200">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-margin-mobile md:px-margin h-20 flex items-center justify-between">
     <div class="flex items-center gap-3">
       <a class="group flex flex-col justify-center" data-path="overview" href="#">
         <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-primary group-hover:text-secondary transition-colors duration-150">SYDIN RAHMAN</span>
@@ -167,25 +157,20 @@
     </nav>
 
     <div class="flex items-center gap-space-xs sm:gap-space-md">
-      <!-- Theme Toggle Button -->
-      <button id="theme-toggle-btn" class="p-2.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors focus:outline-none flex items-center justify-center" aria-label="Toggle Theme">
-        <span id="theme-toggle-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
-      </button>
-
-      <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary font-body-sm text-body-sm hover:bg-secondary hover:text-on-secondary transition-colors duration-150 shadow-sm" data-path="contact" href="#contact">
+      <a class="btn-tactile inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary hover:text-on-secondary transition-all duration-150 shadow-sm min-h-[44px]" data-path="contact" href="#contact">
         <span>Let's Talk</span>
         <span class="material-symbols-outlined text-[16px] leading-none">arrow_outward</span>
       </a>
 
       <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center p-2 rounded-lg text-primary hover:bg-surface-container-high transition-colors focus:outline-none" aria-label="Toggle Navigation Menu" aria-expanded="false">
+      <button id="mobile-menu-btn" class="btn-tactile md:hidden flex items-center justify-center p-2.5 rounded-xl text-primary hover:bg-surface-container-high/60 transition-colors focus:outline-none min-w-[44px] min-h-[44px] glass-pill" aria-label="Toggle Navigation Menu" aria-expanded="false">
         <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
       </button>
     </div>
   </div>
 
   <!-- Mobile Navigation Dropdown -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-surface-container-highest bg-surface/95 backdrop-blur-md px-margin-mobile py-4 shadow-lg transition-all duration-200">
+  <div id="mobile-menu" class="hidden md:hidden glass-menu px-4 sm:px-margin-mobile py-4 transition-all duration-200">
     <nav class="flex flex-col gap-2">
       <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="about" href="#about">
         <span>About</span>
@@ -227,7 +212,7 @@
               DHAKA / WORLDWIDE
             </span>
           </div>
-          <h1 class="font-display-hero text-display-hero text-primary mt-space-sm tracking-tight leading-none">
+          <h1 class="font-display-hero text-[36px] xs:text-[42px] sm:text-[56px] md:text-display-hero text-primary mt-space-sm tracking-tight leading-[1.08] sm:leading-none">
             I build simple businesses<br class="hidden sm:inline"/>
             from good ideas.
           </h1>
@@ -237,17 +222,17 @@
         </div>
 
         <!-- Hero Actions & Status Indicator -->
-        <div class="mt-space-2xl flex flex-col sm:flex-row sm:items-center gap-space-md justify-between pt-space-xl bg-surface-container-low/60 p-space-lg rounded-2xl border border-surface-container-highest/40">
+        <div class="mt-space-2xl flex flex-col sm:flex-row sm:items-center gap-space-md justify-between p-4 sm:p-space-lg rounded-2xl glass-card">
           <div class="flex items-center gap-space-md flex-wrap">
-            <a class="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-all duration-200 shadow-sm" href="#ventures">
+            <a class="btn-tactile group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-all duration-200 shadow-sm min-h-[44px]" href="#ventures">
               <span>Explore Ventures</span>
               <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:translate-y-0.5">arrow_downward</span>
             </a>
-            <a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150" href="#about">
+            <a class="btn-tactile inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full glass-pill text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150 min-h-[44px]" href="#about">
               <span>About My Journey</span>
             </a>
           </div>
-          <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-surface-container-lowest shadow-sm border border-surface-container-highest/50">
+          <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-full glass-pill">
             <span class="relative flex h-2.5 w-2.5">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
@@ -271,7 +256,7 @@
               </span>
               <span class="font-label-mono-tag text-label-mono-tag text-on-surface-variant">OPERATOR PERSPECTIVE</span>
             </div>
-            <h2 class="font-headline-section text-headline-section text-primary max-w-3xl leading-tight">
+            <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary max-w-3xl leading-tight">
               I'm Sydin Rahman, an entrepreneur from Bangladesh.
             </h2>
           </div>
@@ -287,7 +272,7 @@
               </p>
 
               <!-- Philosophy Tagline Badge -->
-              <div class="mt-space-sm p-space-md rounded-2xl bg-surface-container-high flex flex-wrap items-center justify-between gap-4 border border-surface-container-highest/40">
+              <div class="mt-space-sm p-space-md rounded-2xl glass-card flex flex-wrap items-center justify-between gap-4">
                 <div class="flex items-center gap-2">
                   <span class="material-symbols-outlined text-secondary text-[20px]">loop</span>
                   <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.15em] text-on-surface font-semibold">Core Loop</span>
@@ -306,13 +291,13 @@
 
             <!-- Metric and Contextual Card -->
             <div class="lg:col-span-5 flex flex-col gap-space-md">
-              <div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm relative overflow-hidden border border-surface-container-highest/40 card-hover-effect">
+              <div class="p-space-lg rounded-2xl glass-card flex flex-col gap-space-sm relative overflow-hidden card-hover-effect">
                 <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant">Focus Areas</span>
                 <div class="flex flex-wrap gap-2 pt-1">
-                  <span class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm border border-surface-container-highest/30">AI Tooling</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm border border-surface-container-highest/30">Consumer Web Apps</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm border border-surface-container-highest/30">Handloom &amp; Heritage Retail</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm border border-surface-container-highest/30">Micro-SaaS Models</span>
+                  <span class="px-3 py-1.5 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm">AI Tooling</span>
+                  <span class="px-3 py-1.5 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm">Consumer Web Apps</span>
+                  <span class="px-3 py-1.5 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm">Handloom &amp; Heritage Retail</span>
+                  <span class="px-3 py-1.5 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm">Micro-SaaS Models</span>
                 </div>
                 <div class="mt-space-sm pt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container-highest/40">
                   <span>Based in</span>
@@ -335,7 +320,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm">
               <!-- Step 1 -->
-              <div class="p-space-md rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[160px] border border-surface-container-highest/40">
+              <div class="p-space-md rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[160px]">
                 <div class="flex flex-col gap-1">
                   <span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 01</span>
                   <h3 class="font-title-md text-title-md text-primary font-medium">Started</h3>
@@ -344,7 +329,7 @@
               </div>
 
               <!-- Step 2 -->
-              <div class="p-space-md rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[160px] border border-surface-container-highest/40">
+              <div class="p-space-md rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[160px]">
                 <div class="flex flex-col gap-1">
                   <span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 02</span>
                   <h3 class="font-title-md text-title-md text-primary font-medium">Learned</h3>
@@ -353,7 +338,7 @@
               </div>
 
               <!-- Step 3 -->
-              <div class="p-space-md rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[160px] border border-surface-container-highest/40">
+              <div class="p-space-md rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[160px]">
                 <div class="flex flex-col gap-1">
                   <span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 03</span>
                   <h3 class="font-title-md text-title-md text-primary font-medium">Built</h3>
@@ -362,7 +347,7 @@
               </div>
 
               <!-- Step 4 -->
-              <div class="p-space-md rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[160px] border border-surface-container-highest/40">
+              <div class="p-space-md rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[160px]">
                 <div class="flex flex-col gap-1">
                   <span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 04</span>
                   <h3 class="font-title-md text-title-md text-primary font-medium">Exploring</h3>
@@ -371,12 +356,12 @@
               </div>
 
               <!-- Step 5: Active -->
-              <div class="p-space-md rounded-2xl bg-primary text-on-primary shadow-md card-hover-effect flex flex-col justify-between min-h-[160px]">
+              <div class="p-space-md rounded-2xl glass-card-accent card-hover-effect flex flex-col justify-between min-h-[160px]">
                 <div class="flex flex-col gap-1">
                   <span class="font-label-mono-tag text-[11px] text-secondary-fixed-dim font-semibold">PHASE 05 / ACTIVE</span>
-                  <h3 class="font-title-md text-title-md text-on-primary font-medium">Now</h3>
+                  <h3 class="font-title-md text-title-md text-white font-medium">Now</h3>
                 </div>
-                <p class="font-body-sm text-body-sm opacity-90">Building and actively testing new business ideas.</p>
+                <p class="font-body-sm text-body-sm text-white/90">Building and actively testing new business ideas.</p>
               </div>
             </div>
           </div>
@@ -395,7 +380,7 @@
               <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
                 02 // PORTFOLIO
               </span>
-              <h2 class="font-headline-section text-headline-section text-primary leading-tight">
+              <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
                 Ventures
               </h2>
               <p class="font-body-md text-body-md text-on-surface-variant">
@@ -404,20 +389,20 @@
             </div>
 
             <!-- Legend Pill Cluster -->
-            <div class="flex items-center flex-wrap gap-2 p-2 rounded-xl bg-surface-container-low border border-surface-container-highest/40">
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium border border-surface-container-highest/30">
+          <div class="flex items-center flex-wrap gap-2 p-2 rounded-xl glass-pill">
+            <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full glass-pill text-[11px] font-label-status text-on-surface font-medium">
                 <span class="w-2 h-2 rounded-full bg-[#16A34A]"></span>
                 <span>LIVE</span>
               </div>
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium border border-surface-container-highest/30">
+            <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full glass-pill text-[11px] font-label-status text-on-surface font-medium">
                 <span class="w-2 h-2 rounded-full bg-secondary"></span>
                 <span>BUILDING</span>
               </div>
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium border border-surface-container-highest/30">
+            <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full glass-pill text-[11px] font-label-status text-on-surface font-medium">
                 <span class="w-2 h-2 rounded-full bg-[#D97706]"></span>
                 <span>EXPLORING</span>
               </div>
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium border border-surface-container-highest/30">
+            <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full glass-pill text-[11px] font-label-status text-on-surface font-medium">
                 <span class="w-2 h-2 rounded-full bg-outline"></span>
                 <span>ARCHIVED</span>
               </div>
@@ -427,13 +412,13 @@
           <!-- 4 Venture Cards Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
             <!-- Venture 01: MyAgeNow (Live) -->
-            <div class="group p-space-xl rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[320px] border border-surface-container-highest/40">
+          <div class="group p-space-xl rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[320px]">
               <div>
                 <div class="flex items-center justify-between mb-space-md">
                   <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
                     01 / UTILITY
                   </span>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DCFCE7] dark:bg-green-950/60 text-[#15803D] dark:text-green-400 font-label-status text-label-status font-medium">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DCFCE7] text-[#15803D] font-label-status text-label-status font-medium">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#16A34A] animate-pulse"></span>
                     LIVE
                   </span>
@@ -455,13 +440,13 @@
             </div>
 
             <!-- Venture 02: Tangail Saree (Building) -->
-            <div class="group p-space-xl rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[320px] border border-surface-container-highest/40">
+          <div class="group p-space-xl rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[320px]">
               <div>
                 <div class="flex items-center justify-between mb-space-md">
                   <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
                     02 / ECOMMERCE
                   </span>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DBEAFE] dark:bg-blue-950/60 text-secondary dark:text-blue-400 font-label-status text-label-status font-medium">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DBEAFE] text-secondary font-label-status text-label-status font-medium">
                     <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
                     BUILDING
                   </span>
@@ -483,13 +468,13 @@
             </div>
 
             <!-- Venture 03: MemoryFix (Exploring) -->
-            <div class="group p-space-xl rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[320px] border border-surface-container-highest/40">
+          <div class="group p-space-xl rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[320px]">
               <div>
                 <div class="flex items-center justify-between mb-space-md">
                   <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
                     03 / APPLIED AI
                   </span>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FEF3C7] dark:bg-amber-950/60 text-[#B45309] dark:text-amber-400 font-label-status text-label-status font-medium">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FEF3C7] text-[#B45309] font-label-status text-label-status font-medium">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#D97706]"></span>
                     EXPLORING
                   </span>
@@ -511,7 +496,7 @@
             </div>
 
             <!-- Venture 04: QuoteFlow (Building) -->
-            <div class="group p-space-xl rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[320px] border border-surface-container-highest/40">
+          <div class="group p-space-xl rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[320px]">
               <div>
                 <div class="flex items-center justify-between mb-space-md">
                   <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
@@ -552,7 +537,7 @@
               <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
                 03 // RADAR
               </span>
-              <h2 class="font-headline-section text-headline-section text-primary leading-tight">
+              <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
                 Currently
               </h2>
             </div>
@@ -563,9 +548,9 @@
 
           <!-- 4-Column Structured Matrix -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
               <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl bg-surface-container-high flex items-center justify-center mb-2">
+                <div class="w-8 h-8 rounded-xl glass-pill flex items-center justify-center mb-2">
                   <span class="material-symbols-outlined text-secondary text-[20px]">construction</span>
                 </div>
                 <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">01 / FOCUS</span>
@@ -576,9 +561,9 @@
               </p>
             </div>
 
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
               <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl bg-surface-container-high flex items-center justify-center mb-2">
+                <div class="w-8 h-8 rounded-xl glass-pill flex items-center justify-center mb-2">
                   <span class="material-symbols-outlined text-secondary text-[20px]">explore</span>
                 </div>
                 <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">02 / EXPERIMENTS</span>
@@ -589,9 +574,9 @@
               </p>
             </div>
 
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
               <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl bg-surface-container-high flex items-center justify-center mb-2">
+                <div class="w-8 h-8 rounded-xl glass-pill flex items-center justify-center mb-2">
                   <span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
                 </div>
                 <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">03 / KNOWLEDGE</span>
@@ -602,9 +587,9 @@
               </p>
             </div>
 
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
               <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl bg-surface-container-high flex items-center justify-center mb-2">
+                <div class="w-8 h-8 rounded-xl glass-pill flex items-center justify-center mb-2">
                   <span class="material-symbols-outlined text-secondary text-[20px]">handshake</span>
                 </div>
                 <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">04 / DISCOVERY</span>
@@ -628,7 +613,7 @@
             <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
               04 // RESEARCH &amp; CONCEPTS
             </span>
-            <h2 class="font-headline-section text-headline-section text-primary leading-tight">
+            <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
               Idea Lab
             </h2>
             <p class="font-body-md text-body-md text-on-surface-variant">
@@ -639,7 +624,7 @@
           <!-- Interactive Concept Cards -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
             <!-- Concept 1 -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[200px]">
               <div class="flex flex-col gap-space-xs">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 01</span>
@@ -656,7 +641,7 @@
             </div>
 
             <!-- Concept 2 -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[200px]">
               <div class="flex flex-col gap-space-xs">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 02</span>
@@ -673,7 +658,7 @@
             </div>
 
             <!-- Concept 3 -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[200px]">
               <div class="flex flex-col gap-space-xs">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 03</span>
@@ -690,7 +675,7 @@
             </div>
 
             <!-- Concept 4 -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[200px]">
               <div class="flex flex-col gap-space-xs">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 04</span>
@@ -707,7 +692,7 @@
             </div>
 
             <!-- Concept 5 -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[200px]">
               <div class="flex flex-col gap-space-xs">
                 <div class="flex items-center justify-between">
                   <span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 05</span>
@@ -724,7 +709,7 @@
             </div>
 
             <!-- Editorial Disclaimer Card -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-high flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card flex flex-col justify-between min-h-[200px]">
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-secondary text-[20px]">science</span>
                 <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-primary font-semibold">METHOD</span>
@@ -748,7 +733,7 @@
             <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
               05 // OPERATING PRINCIPLES
             </span>
-            <h2 class="font-headline-section text-headline-section text-primary leading-tight">
+            <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
               How I Think
             </h2>
             <p class="font-body-md text-body-md text-on-surface-variant">
@@ -758,7 +743,7 @@
 
           <!-- 5 Editorial Blocks -->
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-space-sm">
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
               <span class="font-label-mono-tag text-[12px] text-secondary font-bold">01</span>
               <div class="flex flex-col gap-1">
                 <h3 class="font-title-md text-title-md text-primary font-medium">Start small.</h3>
@@ -766,7 +751,7 @@
               </div>
             </div>
 
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
               <span class="font-label-mono-tag text-[12px] text-secondary font-bold">02</span>
               <div class="flex flex-col gap-1">
                 <h3 class="font-title-md text-title-md text-primary font-medium">Solve problems.</h3>
@@ -774,7 +759,7 @@
               </div>
             </div>
 
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
               <span class="font-label-mono-tag text-[12px] text-secondary font-bold">03</span>
               <div class="flex flex-col gap-1">
                 <h3 class="font-title-md text-title-md text-primary font-medium">Launch.</h3>
@@ -782,7 +767,7 @@
               </div>
             </div>
 
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
               <span class="font-label-mono-tag text-[12px] text-secondary font-bold">04</span>
               <div class="flex flex-col gap-1">
                 <h3 class="font-title-md text-title-md text-primary font-medium">Learn.</h3>
@@ -790,7 +775,7 @@
               </div>
             </div>
 
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
               <span class="font-label-mono-tag text-[12px] text-secondary font-bold">05</span>
               <div class="flex flex-col gap-1">
                 <h3 class="font-title-md text-title-md text-primary font-medium">Improve.</h3>
@@ -806,12 +791,12 @@
 
       <!-- CONTACT SECTION -->
       <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="contact">
-        <div class="rounded-2xl bg-surface-container-low p-space-xl md:p-space-2xl flex flex-col gap-space-xl border border-surface-container-highest/40">
+        <div class="rounded-2xl glass-card p-space-xl md:p-space-2xl flex flex-col gap-space-xl">
           <div class="flex flex-col gap-space-sm max-w-2xl">
             <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
               06 // INITIATE CONTACT
             </span>
-            <h2 class="font-headline-section text-headline-section text-primary leading-tight">
+            <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
               Have an interesting idea, opportunity, or business to discuss?
             </h2>
             <p class="font-body-md text-body-md text-on-surface-variant">
@@ -823,13 +808,13 @@
           <div class="flex flex-col gap-space-lg">
             <!-- Email Buttons Bar -->
             <div class="flex flex-wrap items-center gap-space-md relative">
-              <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-colors duration-150 shadow-sm" href="mailto:contact@sydinrahman.com">
+              <a class="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-colors duration-150 shadow-sm min-h-[44px]" href="mailto:contact@sydinrahman.com">
                 <span class="material-symbols-outlined text-[18px]">mail</span>
                 <span>Email Me Directly</span>
                 <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
               </a>
 
-              <button id="copy-email-btn" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150">
+              <button id="copy-email-btn" class="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full glass-pill text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150 min-h-[44px]">
                 <span class="material-symbols-outlined text-[18px]">content_copy</span>
                 <span>Copy Address</span>
               </button>
@@ -846,7 +831,7 @@
               <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">Primary Social Identities</span>
               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
                 <!-- Facebook -->
-                <a class="group p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm border border-surface-container-highest/30 flex items-center justify-between" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
+                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
                   <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-xl bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm">
                       f
@@ -860,9 +845,9 @@
                 </a>
 
                 <!-- LinkedIn -->
-                <a class="group p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm border border-surface-container-highest/30 flex items-center justify-between" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
                   <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-xs">
+                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center font-bold text-xs">
                       in
                     </div>
                     <div class="flex flex-col">
@@ -874,9 +859,9 @@
                 </a>
 
                 <!-- GitHub -->
-                <a class="group p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm border border-surface-container-highest/30 flex items-center justify-between" href="https://github.com" rel="noopener noreferrer" target="_blank">
+                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://github.com" rel="noopener noreferrer" target="_blank">
                   <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center">
+                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center">
                       <span class="material-symbols-outlined text-[18px]">terminal</span>
                     </div>
                     <div class="flex flex-col">
@@ -888,9 +873,9 @@
                 </a>
 
                 <!-- Behance -->
-                <a class="group p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm border border-surface-container-highest/30 flex items-center justify-between" href="https://behance.net" rel="noopener noreferrer" target="_blank">
+                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://behance.net" rel="noopener noreferrer" target="_blank">
                   <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-xs">
+                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center font-bold text-xs">
                       Bē
                     </div>
                     <div class="flex flex-col">
