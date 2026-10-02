@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // --- Theme Toggle Logic ---
+  const themeToggleBtn = document.getElementById('theme-toggle-btn');
+  const themeToggleIcon = document.getElementById('theme-toggle-icon');
+
+  function updateThemeUI(isDark) {
+    if (themeToggleIcon) {
+      themeToggleIcon.textContent = isDark ? 'light_mode' : 'dark_mode';
+    }
+  }
+
+  // Initialize icon state
+  const isCurrentlyDark = document.documentElement.classList.contains('dark');
+  updateThemeUI(isCurrentlyDark);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.theme = isDark ? 'dark' : 'light';
+      updateThemeUI(isDark);
+    });
+  }
+
   // --- Mobile Menu Toggle Logic ---
   const links = document.querySelectorAll('a[href^="#"]');
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -113,32 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, observerOptions);
 
   sections.forEach((section) => sectionObserver.observe(section));
-
-  // --- Scroll Reveal Animations ---
-  const animateElements = document.querySelectorAll(
-    'section, .glass-card, .glass-card-accent, .card-hover-effect'
-  );
-
-  animateElements.forEach((el) => {
-    el.classList.add('fade-in-up');
-  });
-
-  const revealObserverOptions = {
-    root: null,
-    rootMargin: '0px 0px -50px 0px',
-    threshold: 0.1
-  };
-
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, revealObserverOptions);
-
-  animateElements.forEach((el) => revealObserver.observe(el));
 
   // --- Floating Back-To-Top Button ---
   const backToTopBtn = document.getElementById('back-to-top-btn');
