@@ -54,6 +54,30 @@ img {
   line-height: 1;
 }
 
+/* Navigation Drawer & Active States */
+.active-nav-link {
+  position: relative;
+}
+
+.active-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #000000;
+  border-radius: 9999px;
+}
+
+#mobile-drawer-backdrop {
+  will-change: opacity;
+}
+
+#mobile-drawer-panel {
+  will-change: transform;
+}
+
 @media (max-width: 767px) {
   body {
     overflow-x: hidden;
