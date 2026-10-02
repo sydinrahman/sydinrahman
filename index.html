@@ -1,135 +1,109 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="web_standard" name="shell-type"/>
-  <title>Sydin Rahman — Builder &amp; Entrepreneur</title>
 
-  <!-- Prevent dark mode flash -->
-  <script>
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  </script>
-
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
-  <link href="style.css" rel="stylesheet"/>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          "colors": {
-            "tertiary-fixed-dim": "#cac6c3",
-            "on-surface": "rgb(var(--on-surface-rgb) / <alpha-value>)",
-            "background": "rgb(var(--background-rgb) / <alpha-value>)",
-            "tertiary": "#000000",
-            "on-tertiary-fixed-variant": "#484645",
-            "outline-variant": "rgb(var(--outline-variant-rgb) / <alpha-value>)",
-            "on-secondary": "rgb(var(--on-secondary-rgb) / <alpha-value>)",
-            "surface-container-high": "rgb(var(--surface-container-high-rgb) / <alpha-value>)",
-            "secondary-fixed-dim": "rgb(var(--secondary-fixed-dim-rgb) / <alpha-value>)",
-            "error": "#ba1a1a",
-            "surface-variant": "rgb(var(--surface-variant-rgb) / <alpha-value>)",
-            "on-error-container": "#93000a",
-            "on-primary-container": "#858383",
-            "surface-dim": "#dadad8",
-            "surface-tint": "#5f5e5e",
-            "surface-container-highest": "rgb(var(--surface-container-highest-rgb) / <alpha-value>)",
-            "surface-container-lowest": "rgb(var(--surface-container-lowest-rgb) / <alpha-value>)",
-            "tertiary-fixed": "#e6e1df",
-            "on-background": "rgb(var(--on-surface-rgb) / <alpha-value>)",
-            "surface-container-low": "rgb(var(--surface-container-low-rgb) / <alpha-value>)",
-            "primary-fixed-dim": "#c8c6c5",
-            "outline": "rgb(var(--outline-rgb) / <alpha-value>)",
-            "error-container": "#ffdad6",
-            "inverse-surface": "#2f3130",
-            "on-secondary-fixed": "#00174b",
-            "on-primary": "rgb(var(--on-primary-rgb) / <alpha-value>)",
-            "surface": "rgb(var(--surface-rgb) / <alpha-value>)",
-            "on-secondary-fixed-variant": "#003ea8",
-            "on-surface-variant": "rgb(var(--on-surface-variant-rgb) / <alpha-value>)",
-            "tertiary-container": "#1d1b1a",
-            "secondary-container": "rgb(var(--secondary-container-rgb) / <alpha-value>)",
-            "on-primary-fixed-variant": "#474646",
-            "on-tertiary": "#ffffff",
-            "on-error": "#ffffff",
-            "on-secondary-container": "rgb(var(--on-secondary-container-rgb) / <alpha-value>)",
-            "secondary-fixed": "#dbe1ff",
-            "primary-fixed": "#e5e2e1",
-            "primary": "rgb(var(--primary-rgb) / <alpha-value>)",
-            "on-tertiary-fixed": "#1d1b1a",
-            "inverse-on-surface": "#f1f1ef",
-            "secondary": "rgb(var(--secondary-rgb) / <alpha-value>)",
-            "primary-container": "#1c1b1b",
-            "surface-container": "rgb(var(--surface-container-low-rgb) / <alpha-value>)",
-            "on-tertiary-container": "#868381",
-            "surface-bright": "rgb(var(--surface-rgb) / <alpha-value>)",
-            "on-primary-fixed": "#1c1b1b",
-            "inverse-primary": "#c8c6c5"
-          },
-          "borderRadius": {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
-          },
-          "spacing": {
-            "space-xl": "2.5rem",
-            "space-2xl": "4rem",
-            "gutter-mobile": "1rem",
-            "margin": "3rem",
-            "space-3xl": "6rem",
-            "space-sm": "0.5rem",
-            "space-md": "1rem",
-            "space-lg": "1.5rem",
-            "space-xs": "0.25rem",
-            "gutter": "2rem",
-            "margin-mobile": "1.25rem"
-          },
-          "fontFamily": {
-            "body-sm": ["Inter"],
-            "body-md": ["Inter"],
-            "display-hero-mobile": ["Inter"],
-            "headline-section": ["Inter"],
-            "headline-venture": ["Inter"],
-            "headline-section-mobile": ["Inter"],
-            "display-hero": ["Inter"],
-            "title-md": ["Inter"],
-            "headline-venture-mobile": ["Inter"],
-            "label-status": ["Inter"],
-            "body-lg": ["Inter"],
-            "label-mono-tag": ["Inter"]
-          },
-          "fontSize": {
-            "body-sm": ["14px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400"}],
-            "body-md": ["16px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400"}],
-            "display-hero-mobile": ["42px", {"lineHeight": "46px", "letterSpacing": "-0.025em", "fontWeight": "600"}],
-            "headline-section": ["48px", {"lineHeight": "54px", "letterSpacing": "-0.025em", "fontWeight": "500"}],
-            "headline-venture": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
-            "headline-section-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
-            "display-hero": ["72px", {"lineHeight": "78px", "letterSpacing": "-0.035em", "fontWeight": "600"}],
-            "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
-            "headline-venture-mobile": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "500"}],
-            "label-status": ["13px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
-            "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
-            "label-mono-tag": ["12px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500"}]
-          }
+<html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>Sydin Rahman — Builder &amp; Entrepreneur</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><!-- Optimized: Single Material Symbols Outlined font import with display=swap to avoid duplicate network requests and prevent render blocking -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/><link href="style.css" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary-fixed-dim": "#cac6c3",
+          "on-surface": "#1a1c1b",
+          "background": "#f9f9f7",
+          "tertiary": "#000000",
+          "on-tertiary-fixed-variant": "#484645",
+          "outline-variant": "#c4c7c7",
+          "on-secondary": "#ffffff",
+          "surface-container-high": "#e8e8e6",
+          "secondary-fixed-dim": "#b4c5ff",
+          "error": "#ba1a1a",
+          "surface-variant": "#e2e3e1",
+          "on-error-container": "#93000a",
+          "on-primary-container": "#858383",
+          "surface-dim": "#dadad8",
+          "surface-tint": "#5f5e5e",
+          "surface-container-highest": "#e2e3e1",
+          "surface-container-lowest": "#ffffff",
+          "tertiary-fixed": "#e6e1df",
+          "on-background": "#1a1c1b",
+          "surface-container-low": "#f4f4f2",
+          "primary-fixed-dim": "#c8c6c5",
+          "outline": "#747878",
+          "error-container": "#ffdad6",
+          "inverse-surface": "#2f3130",
+          "on-secondary-fixed": "#00174b",
+          "on-primary": "#ffffff",
+          "surface": "#f9f9f7",
+          "on-secondary-fixed-variant": "#003ea8",
+          "on-surface-variant": "#444748",
+          "tertiary-container": "#1d1b1a",
+          "secondary-container": "#316bf3",
+          "on-primary-fixed-variant": "#474646",
+          "on-tertiary": "#ffffff",
+          "on-error": "#ffffff",
+          "on-secondary-container": "#fefcff",
+          "secondary-fixed": "#dbe1ff",
+          "primary-fixed": "#e5e2e1",
+          "primary": "#000000",
+          "on-tertiary-fixed": "#1d1b1a",
+          "inverse-on-surface": "#f1f1ef",
+          "secondary": "#0051d5",
+          "primary-container": "#1c1b1b",
+          "surface-container": "#eeeeec",
+          "on-tertiary-container": "#868381",
+          "surface-bright": "#f9f9f7",
+          "on-primary-fixed": "#1c1b1b",
+          "inverse-primary": "#c8c6c5"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-xl": "2.5rem",
+          "space-2xl": "4rem",
+          "gutter-mobile": "1rem",
+          "margin": "3rem",
+          "space-3xl": "6rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "space-xs": "0.25rem",
+          "gutter": "2rem",
+          "margin-mobile": "1.25rem"
+        },
+        "fontFamily": {
+          "body-sm": ["Inter"],
+          "body-md": ["Inter"],
+          "display-hero-mobile": ["Inter"],
+          "headline-section": ["Inter"],
+          "headline-venture": ["Inter"],
+          "headline-section-mobile": ["Inter"],
+          "display-hero": ["Inter"],
+          "title-md": ["Inter"],
+          "headline-venture-mobile": ["Inter"],
+          "label-status": ["Inter"],
+          "body-lg": ["Inter"],
+          "label-mono-tag": ["Inter"]
+        },
+        "fontSize": {
+          "body-sm": ["14px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "body-md": ["16px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "display-hero-mobile": ["42px", {"lineHeight": "46px", "letterSpacing": "-0.025em", "fontWeight": "600"}],
+          "headline-section": ["48px", {"lineHeight": "54px", "letterSpacing": "-0.025em", "fontWeight": "500"}],
+          "headline-venture": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+          "headline-section-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+          "display-hero": ["72px", {"lineHeight": "78px", "letterSpacing": "-0.035em", "fontWeight": "600"}],
+          "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+          "headline-venture-mobile": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "500"}],
+          "label-status": ["13px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+          "label-mono-tag": ["12px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500"}]
         }
       }
-    };
-  </script>
-</head>
-<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-surface-container-high selection:text-on-surface transition-colors duration-200">
-
+    }
+  };</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-surface-container-high selection:text-on-surface">
 <header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/85 backdrop-blur-md border-b border-surface-container-highest transition-colors duration-200">
   <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin h-20 flex items-center justify-between">
     <div class="flex items-center gap-3">
@@ -143,35 +117,15 @@
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="nav-links hidden md:flex items-center gap-space-lg">
-      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="about" href="#about">
-        <span>About</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
-      </a>
-      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="ventures" href="#ventures">
-        <span>Ventures</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
-      </a>
-      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="currently" href="#currently">
-        <span>Currently</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
-      </a>
-      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="idea-lab" href="#idea-lab">
-        <span>Idea Lab</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
-      </a>
-      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="contact" href="#contact">
-        <span>Contact</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
-      </a>
+    <nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-primary font-medium">
+      <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150" data-path="about" href="#about">About</a>
+      <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150" data-path="ventures" href="#ventures">Ventures</a>
+      <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150" data-path="currently" href="#currently">Currently</a>
+      <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150" data-path="idea-lab" href="#idea-lab">Idea Lab</a>
+      <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150" data-path="contact" href="#contact">Contact</a>
     </nav>
 
-    <div class="flex items-center gap-space-xs sm:gap-space-md">
-      <!-- Theme Toggle Button -->
-      <button id="theme-toggle-btn" class="p-2.5 rounded-full text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors focus:outline-none flex items-center justify-center" aria-label="Toggle Theme">
-        <span id="theme-toggle-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
-      </button>
-
+    <div class="flex items-center gap-space-md">
       <a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary font-body-sm text-body-sm hover:bg-secondary hover:text-on-secondary transition-colors duration-150 shadow-sm" data-path="contact" href="#contact">
         <span>Let's Talk</span>
         <span class="material-symbols-outlined text-[16px] leading-none">arrow_outward</span>
@@ -185,785 +139,658 @@
   </div>
 
   <!-- Mobile Navigation Dropdown -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-surface-container-highest bg-surface/95 backdrop-blur-md px-margin-mobile py-4 shadow-lg transition-all duration-200">
-    <nav class="flex flex-col gap-2">
-      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="about" href="#about">
-        <span>About</span>
-        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
-      </a>
-      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="ventures" href="#ventures">
-        <span>Ventures</span>
-        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
-      </a>
-      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="currently" href="#currently">
-        <span>Currently</span>
-        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
-      </a>
-      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="idea-lab" href="#idea-lab">
-        <span>Idea Lab</span>
-        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
-      </a>
-      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg flex items-center justify-between" data-path="contact" href="#contact">
-        <span>Contact</span>
-        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
-      </a>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-surface-container-highest bg-surface/95 backdrop-blur-md px-margin-mobile py-4 shadow-lg">
+    <nav class="flex flex-col gap-3">
+      <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2 border-b border-surface-container-high/50" data-path="about" href="#about">About</a>
+      <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2 border-b border-surface-container-high/50" data-path="ventures" href="#ventures">Ventures</a>
+      <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2 border-b border-surface-container-high/50" data-path="currently" href="#currently">Currently</a>
+      <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2 border-b border-surface-container-high/50" data-path="idea-lab" href="#idea-lab">Idea Lab</a>
+      <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2" data-path="contact" href="#contact">Contact</a>
     </nav>
   </div>
 </header>
-
-<main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)] transition-colors duration-200">
-  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin">
-    <div class="flex flex-col w-full">
-
-      <!-- HERO SECTION -->
-      <section class="py-space-2xl md:py-space-3xl flex flex-col justify-between relative" id="overview">
-        <div class="flex flex-col gap-space-md max-w-4xl">
-          <div class="flex items-center gap-space-sm flex-wrap">
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold">
-              <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-              ENTREPRENEUR
-            </span>
-            <span class="text-on-surface-variant font-label-mono-tag text-label-mono-tag tracking-wider hidden sm:inline">
-              DHAKA / WORLDWIDE
-            </span>
-          </div>
-          <h1 class="font-display-hero text-display-hero text-primary mt-space-sm tracking-tight leading-none">
-            I build simple businesses<br class="hidden sm:inline"/>
-            from good ideas.
-          </h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs leading-relaxed">
-            Entrepreneur from Bangladesh. Exploring technology, AI, ecommerce, and online businesses.
+<main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="py-space-2xl md:py-space-3xl flex flex-col justify-between relative">
+<div class="flex flex-col gap-space-md max-w-4xl">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          ENTREPRENEUR
+        </span>
+<span class="text-on-surface-variant font-label-mono-tag text-label-mono-tag tracking-wider hidden sm:inline">
+          DHAKA / WORLDWIDE
+        </span>
+</div>
+<h1 class="font-display-hero text-display-hero text-primary mt-space-sm tracking-tight leading-none">
+        I build simple businesses<br class="hidden sm:inline"/>
+        from good ideas.
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs leading-relaxed">
+        Entrepreneur from Bangladesh. Exploring technology, AI, ecommerce, and online businesses.
+      </p>
+</div>
+<!-- Hero Actions & Status Indicator -->
+<div class="mt-space-2xl flex flex-col sm:flex-row sm:items-center gap-space-md justify-between pt-space-xl bg-surface-container-low/50 p-space-lg rounded-xl">
+<div class="flex items-center gap-space-md flex-wrap">
+<a class="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-all duration-200 shadow-sm" href="#ventures">
+<span>Explore Ventures</span>
+<span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:translate-y-0.5">arrow_downward</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150" href="#about">
+<span>About My Journey</span>
+</a>
+</div>
+<div class="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-surface-container-lowest shadow-sm">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Currently building new projects in Dhaka &amp; online</span>
+</div>
+</div>
+</section>
+<!-- REFINED EDITORIAL DIVIDER (No visible line, tonal spacer) -->
+<div class="w-full h-12"></div>
+<!-- ABOUT SECTION -->
+<section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="about">
+<div class="flex flex-col gap-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
+            01 // ABOUT ME
+          </span>
+<span class="font-label-mono-tag text-label-mono-tag text-on-surface-variant">OPERATOR PERSPECTIVE</span>
+</div>
+<h2 class="font-headline-section text-headline-section text-primary max-w-3xl leading-tight">
+          I'm Sydin Rahman, an entrepreneur from Bangladesh.
+        </h2>
+</div>
+<!-- Narrative & Portrait Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+            I enjoy finding interesting ideas, building simple products, and exploring new business opportunities. I'm deeply interested in technology, AI, ecommerce, digital products, and sustainable online businesses.
           </p>
-        </div>
-
-        <!-- Hero Actions & Status Indicator -->
-        <div class="mt-space-2xl flex flex-col sm:flex-row sm:items-center gap-space-md justify-between pt-space-xl bg-surface-container-low/60 p-space-lg rounded-2xl border border-surface-container-highest/40">
-          <div class="flex items-center gap-space-md flex-wrap">
-            <a class="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-all duration-200 shadow-sm" href="#ventures">
-              <span>Explore Ventures</span>
-              <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:translate-y-0.5">arrow_downward</span>
-            </a>
-            <a class="inline-flex items-center gap-1.5 px-5 py-3 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150" href="#about">
-              <span>About My Journey</span>
-            </a>
-          </div>
-          <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-surface-container-lowest shadow-sm border border-surface-container-highest/50">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
-            </span>
-            <span class="font-body-sm text-body-sm text-on-surface font-medium">Currently building new projects in Dhaka &amp; online</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
-
-      <!-- ABOUT SECTION -->
-      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="about">
-        <div class="flex flex-col gap-space-xl">
-          <!-- Section Header -->
-          <div class="flex flex-col gap-space-xs">
-            <div class="flex items-center justify-between pb-space-sm">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-                01 // ABOUT ME
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Rather than chasing hype, my conviction is anchored in straightforward software and lean operations: creating things people want, charging fairly, and testing ideas directly in the open marketplace.
+          </p>
+<!-- Philosophy Tagline Badge -->
+<div class="mt-space-sm p-space-md rounded-xl bg-surface-container-high flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">loop</span>
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.15em] text-on-surface font-semibold">Core Loop</span>
+</div>
+<div class="flex items-center gap-2 font-label-mono-tag text-label-mono-tag tracking-wider text-primary font-medium">
+<span>Build</span>
+<span class="text-secondary">→</span>
+<span>Launch</span>
+<span class="text-secondary">→</span>
+<span>Learn</span>
+<span class="text-secondary">→</span>
+<span class="text-secondary font-bold">Grow</span>
+</div>
+</div>
+</div>
+<!-- Metric and Contextual Card -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col gap-space-sm relative overflow-hidden">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant">Focus Areas</span>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="px-3 py-1.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm shadow-sm">AI Tooling</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm shadow-sm">Consumer Web Apps</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm shadow-sm">Handloom &amp; Heritage Retail</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface text-on-surface font-body-sm text-body-sm shadow-sm">Micro-SaaS Models</span>
+</div>
+<div class="mt-space-sm pt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Based in</span>
+<span class="font-medium text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span> Dhaka, Bangladesh
               </span>
-              <span class="font-label-mono-tag text-label-mono-tag text-on-surface-variant">OPERATOR PERSPECTIVE</span>
-            </div>
-            <h2 class="font-headline-section text-headline-section text-primary max-w-3xl leading-tight">
-              I'm Sydin Rahman, an entrepreneur from Bangladesh.
-            </h2>
-          </div>
-
-          <!-- Narrative & Portrait Layout -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-            <div class="lg:col-span-7 flex flex-col gap-space-md">
-              <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
-                I enjoy finding interesting ideas, building simple products, and exploring new business opportunities. I'm deeply interested in technology, AI, ecommerce, digital products, and sustainable online businesses.
-              </p>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Rather than chasing hype, my conviction is anchored in straightforward software and lean operations: creating things people want, charging fairly, and testing ideas directly in the open marketplace.
-              </p>
-
-              <!-- Philosophy Tagline Badge -->
-              <div class="mt-space-sm p-space-md rounded-2xl bg-surface-container-high flex flex-wrap items-center justify-between gap-4 border border-surface-container-highest/40">
-                <div class="flex items-center gap-2">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">loop</span>
-                  <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.15em] text-on-surface font-semibold">Core Loop</span>
-                </div>
-                <div class="flex items-center gap-2 font-label-mono-tag text-label-mono-tag tracking-wider text-primary font-medium">
-                  <span>Build</span>
-                  <span class="text-secondary">→</span>
-                  <span>Launch</span>
-                  <span class="text-secondary">→</span>
-                  <span>Learn</span>
-                  <span class="text-secondary">→</span>
-                  <span class="text-secondary font-bold">Grow</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Metric and Contextual Card -->
-            <div class="lg:col-span-5 flex flex-col gap-space-md">
-              <div class="p-space-lg rounded-2xl bg-surface-container-low flex flex-col gap-space-sm relative overflow-hidden border border-surface-container-highest/40 card-hover-effect">
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant">Focus Areas</span>
-                <div class="flex flex-wrap gap-2 pt-1">
-                  <span class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm border border-surface-container-highest/30">AI Tooling</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm border border-surface-container-highest/30">Consumer Web Apps</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm border border-surface-container-highest/30">Handloom &amp; Heritage Retail</span>
-                  <span class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-sm border border-surface-container-highest/30">Micro-SaaS Models</span>
-                </div>
-                <div class="mt-space-sm pt-space-sm flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container-highest/40">
-                  <span>Based in</span>
-                  <span class="font-medium text-on-surface flex items-center gap-1">
-                    <span class="material-symbols-outlined text-[16px] text-secondary">location_on</span> Dhaka, Bangladesh
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- My Journey Visual Pathway -->
-          <div class="mt-space-xl flex flex-col gap-space-md">
-            <div class="flex items-center justify-between">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] text-on-surface-variant font-medium">
-                MY JOURNEY
+</div>
+</div>
+</div>
+</div>
+<!-- My Journey Visual Pathway -->
+<div class="mt-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] text-on-surface-variant font-medium">
+            MY JOURNEY
+          </span>
+<span class="font-label-mono-tag text-label-mono-tag text-outline">EVOLUTION OVER TIME</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm">
+<!-- Step 1 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors duration-150 flex flex-col justify-between min-h-[160px]">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 01</span>
+<h3 class="font-title-md text-title-md text-primary font-medium">Started</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Began exploring computers, technology, and the internet.</p>
+</div>
+<!-- Step 2 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors duration-150 flex flex-col justify-between min-h-[160px]">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 02</span>
+<h3 class="font-title-md text-title-md text-primary font-medium">Learned</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mastered digital tools, interface design, websites, and marketing.</p>
+</div>
+<!-- Step 3 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors duration-150 flex flex-col justify-between min-h-[160px]">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 03</span>
+<h3 class="font-title-md text-title-md text-primary font-medium">Built</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Started creating websites and digital product ideas.</p>
+</div>
+<!-- Step 4 -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors duration-150 flex flex-col justify-between min-h-[160px]">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 04</span>
+<h3 class="font-title-md text-title-md text-primary font-medium">Exploring</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Venturing into entrepreneurship, AI tools, ecommerce, and online businesses.</p>
+</div>
+<!-- Step 5: Active -->
+<div class="p-space-md rounded-xl bg-primary text-on-primary shadow-md flex flex-col justify-between min-h-[160px]">
+<div class="flex flex-col gap-1">
+<span class="font-label-mono-tag text-[11px] text-secondary-fixed font-semibold">PHASE 05 / ACTIVE</span>
+<h3 class="font-title-md text-title-md text-on-primary font-medium">Now</h3>
+</div>
+<p class="font-body-sm text-body-sm text-surface-container-highest">Building and actively testing new business ideas.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TONAL SPACER -->
+<div class="w-full h-12"></div>
+<!-- VENTURES SECTION -->
+<section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="ventures">
+<div class="flex flex-col gap-space-xl">
+<!-- Section Top -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
+            02 // PORTFOLIO
+          </span>
+<h2 class="font-headline-section text-headline-section text-primary leading-tight">
+            Ventures
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Things I'm building, testing, and exploring in the real world.
+          </p>
+</div>
+<!-- Legend Pill Cluster -->
+<div class="flex items-center flex-wrap gap-2 p-2 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium">
+<span class="w-2 h-2 rounded-full bg-[#16A34A]"></span>
+<span>LIVE</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>BUILDING</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium">
+<span class="w-2 h-2 rounded-full bg-[#D97706]"></span>
+<span>EXPLORING</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>ARCHIVED</span>
+</div>
+</div>
+</div>
+<!-- 4 Venture Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Venture 01: MyAgeNow (Live) -->
+<div class="group p-space-xl rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-200 flex flex-col justify-between min-h-[320px]">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
+                01 / UTILITY
               </span>
-              <span class="font-label-mono-tag text-label-mono-tag text-outline">EVOLUTION OVER TIME</span>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm">
-              <!-- Step 1 -->
-              <div class="p-space-md rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[160px] border border-surface-container-highest/40">
-                <div class="flex flex-col gap-1">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 01</span>
-                  <h3 class="font-title-md text-title-md text-primary font-medium">Started</h3>
-                </div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Began exploring computers, technology, and the internet.</p>
-              </div>
-
-              <!-- Step 2 -->
-              <div class="p-space-md rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[160px] border border-surface-container-highest/40">
-                <div class="flex flex-col gap-1">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 02</span>
-                  <h3 class="font-title-md text-title-md text-primary font-medium">Learned</h3>
-                </div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Mastered digital tools, interface design, websites, and marketing.</p>
-              </div>
-
-              <!-- Step 3 -->
-              <div class="p-space-md rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[160px] border border-surface-container-highest/40">
-                <div class="flex flex-col gap-1">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 03</span>
-                  <h3 class="font-title-md text-title-md text-primary font-medium">Built</h3>
-                </div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Started creating websites and digital product ideas.</p>
-              </div>
-
-              <!-- Step 4 -->
-              <div class="p-space-md rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[160px] border border-surface-container-highest/40">
-                <div class="flex flex-col gap-1">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-semibold">PHASE 04</span>
-                  <h3 class="font-title-md text-title-md text-primary font-medium">Exploring</h3>
-                </div>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Venturing into entrepreneurship, AI tools, ecommerce, and online businesses.</p>
-              </div>
-
-              <!-- Step 5: Active -->
-              <div class="p-space-md rounded-2xl bg-primary text-on-primary shadow-md card-hover-effect flex flex-col justify-between min-h-[160px]">
-                <div class="flex flex-col gap-1">
-                  <span class="font-label-mono-tag text-[11px] text-secondary-fixed-dim font-semibold">PHASE 05 / ACTIVE</span>
-                  <h3 class="font-title-md text-title-md text-on-primary font-medium">Now</h3>
-                </div>
-                <p class="font-body-sm text-body-sm opacity-90">Building and actively testing new business ideas.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
-
-      <!-- VENTURES SECTION -->
-      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="ventures">
-        <div class="flex flex-col gap-space-xl">
-          <!-- Section Top -->
-          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm">
-            <div class="flex flex-col gap-space-xs">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-                02 // PORTFOLIO
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DCFCE7] text-[#15803D] font-label-status text-label-status font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#16A34A] animate-pulse"></span>
+                LIVE
               </span>
-              <h2 class="font-headline-section text-headline-section text-primary leading-tight">
-                Ventures
-              </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant">
-                Things I'm building, testing, and exploring in the real world.
-              </p>
-            </div>
-
-            <!-- Legend Pill Cluster -->
-            <div class="flex items-center flex-wrap gap-2 p-2 rounded-xl bg-surface-container-low border border-surface-container-highest/40">
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium border border-surface-container-highest/30">
-                <span class="w-2 h-2 rounded-full bg-[#16A34A]"></span>
-                <span>LIVE</span>
-              </div>
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium border border-surface-container-highest/30">
-                <span class="w-2 h-2 rounded-full bg-secondary"></span>
-                <span>BUILDING</span>
-              </div>
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium border border-surface-container-highest/30">
-                <span class="w-2 h-2 rounded-full bg-[#D97706]"></span>
-                <span>EXPLORING</span>
-              </div>
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-[11px] font-label-status text-on-surface font-medium border border-surface-container-highest/30">
-                <span class="w-2 h-2 rounded-full bg-outline"></span>
-                <span>ARCHIVED</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4 Venture Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-            <!-- Venture 01: MyAgeNow (Live) -->
-            <div class="group p-space-xl rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[320px] border border-surface-container-highest/40">
-              <div>
-                <div class="flex items-center justify-between mb-space-md">
-                  <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
-                    01 / UTILITY
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DCFCE7] dark:bg-green-950/60 text-[#15803D] dark:text-green-400 font-label-status text-label-status font-medium">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#16A34A] animate-pulse"></span>
-                    LIVE
-                  </span>
-                </div>
-                <h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
-                  MyAgeNow
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
-                  A simple, ultra-fast online age calculator and chronological time tool built for precision, friction-free calculations, and shareable milestones.
-                </p>
-              </div>
-              <div class="pt-space-lg flex items-center justify-between border-t border-surface-container-highest/40">
-                <span class="font-label-mono-tag text-label-mono-tag text-outline">Web Application</span>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="https://myagenow.com" rel="noopener noreferrer" target="_blank">
-                  <span>Visit live site</span>
-                  <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Venture 02: Tangail Saree (Building) -->
-            <div class="group p-space-xl rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[320px] border border-surface-container-highest/40">
-              <div>
-                <div class="flex items-center justify-between mb-space-md">
-                  <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
-                    02 / ECOMMERCE
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DBEAFE] dark:bg-blue-950/60 text-secondary dark:text-blue-400 font-label-status text-label-status font-medium">
-                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                    BUILDING
-                  </span>
-                </div>
-                <h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
-                  Tangail Saree
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
-                  An authentic online direct-to-consumer business celebrating traditional Tangail handloom sarees, connecting regional artisans with modern shoppers worldwide.
-                </p>
-              </div>
-              <div class="pt-space-lg flex items-center justify-between border-t border-surface-container-highest/40">
-                <span class="font-label-mono-tag text-label-mono-tag text-outline">DTC Brand &amp; Supply</span>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#contact">
-                  <span>Explore venture</span>
-                  <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Venture 03: MemoryFix (Exploring) -->
-            <div class="group p-space-xl rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[320px] border border-surface-container-highest/40">
-              <div>
-                <div class="flex items-center justify-between mb-space-md">
-                  <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
-                    03 / APPLIED AI
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FEF3C7] dark:bg-amber-950/60 text-[#B45309] dark:text-amber-400 font-label-status text-label-status font-medium">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#D97706]"></span>
-                    EXPLORING
-                  </span>
-                </div>
-                <h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
-                  MemoryFix
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
-                  An AI product concept dedicated to restoring, sharpening, and colorizing heritage family photographs through lightweight neural restoration pipelines.
-                </p>
-              </div>
-              <div class="pt-space-lg flex items-center justify-between border-t border-surface-container-highest/40">
-                <span class="font-label-mono-tag text-label-mono-tag text-outline">Research Prototype</span>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#idea-lab">
-                  <span>View concept</span>
-                  <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Venture 04: QuoteFlow (Building) -->
-            <div class="group p-space-xl rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[320px] border border-surface-container-highest/40">
-              <div>
-                <div class="flex items-center justify-between mb-space-md">
-                  <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
-                    04 / MICRO-SAAS
-                  </span>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DBEAFE] dark:bg-blue-950/60 text-secondary dark:text-blue-400 font-label-status text-label-status font-medium">
-                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                    BUILDING
-                  </span>
-                </div>
-                <h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
-                  QuoteFlow
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
-                  A lightweight, hassle-free tool for freelancers and agencies to generate professional commercial quotations, calculate margins, and close client contracts faster.
-                </p>
-              </div>
-              <div class="pt-space-lg flex items-center justify-between border-t border-surface-container-highest/40">
-                <span class="font-label-mono-tag text-label-mono-tag text-outline">Workflow Utility</span>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#contact">
-                  <span>View progress</span>
-                  <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
-
-      <!-- CURRENTLY SECTION -->
-      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="currently">
-        <div class="flex flex-col gap-space-xl">
-          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-sm">
-            <div class="flex flex-col gap-space-xs">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-                03 // RADAR
-              </span>
-              <h2 class="font-headline-section text-headline-section text-primary leading-tight">
-                Currently
-              </h2>
-            </div>
-            <p class="font-body-sm text-body-sm text-on-surface-variant">
-              Updated quarterly to stay accountable and transparent.
+</div>
+<h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
+              MyAgeNow
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
+              A simple, ultra-fast online age calculator and chronological time tool built for precision, friction-free calculations, and shareable milestones.
             </p>
-          </div>
-
-          <!-- 4-Column Structured Matrix -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
-              <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl bg-surface-container-high flex items-center justify-center mb-2">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">construction</span>
-                </div>
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">01 / FOCUS</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Building</h3>
-              </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Small online businesses &amp; practical web utilities with high utility density.
-              </p>
-            </div>
-
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
-              <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl bg-surface-container-high flex items-center justify-center mb-2">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">explore</span>
-                </div>
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">02 / EXPERIMENTS</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Exploring</h3>
-              </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Applied AI models, workflow automation, and regional artisanal ecommerce systems.
-              </p>
-            </div>
-
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
-              <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl bg-surface-container-high flex items-center justify-center mb-2">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
-                </div>
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">03 / KNOWLEDGE</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Learning</h3>
-              </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Direct-response marketing, product distribution, and tight unit economics.
-              </p>
-            </div>
-
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
-              <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl bg-surface-container-high flex items-center justify-center mb-2">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">handshake</span>
-                </div>
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">04 / DISCOVERY</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Looking for</h3>
-              </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Interesting ideas, collaborator conversations, and unserved everyday niches.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
-
-      <!-- IDEA LAB SECTION -->
-      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="idea-lab">
-        <div class="flex flex-col gap-space-xl">
-          <div class="flex flex-col gap-space-xs pb-space-sm">
-            <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-              04 // RESEARCH &amp; CONCEPTS
-            </span>
-            <h2 class="font-headline-section text-headline-section text-primary leading-tight">
-              Idea Lab
-            </h2>
-            <p class="font-body-md text-body-md text-on-surface-variant">
-              Concepts and themes I'm researching before writing code.
-            </p>
-          </div>
-
-          <!-- Interactive Concept Cards -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
-            <!-- Concept 1 -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
-              <div class="flex flex-col gap-space-xs">
-                <div class="flex items-center justify-between">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 01</span>
-                  <span class="material-symbols-outlined text-outline text-[18px]">psychology</span>
-                </div>
-                <h3 class="font-title-md text-title-md text-primary font-medium">AI Products</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Workflow assistants, generative media pipelines, and localized tools solving repetitive data preparation tasks.
-                </p>
-              </div>
-              <div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
-                <span>Active Investigation</span>
-              </div>
-            </div>
-
-            <!-- Concept 2 -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
-              <div class="flex flex-col gap-space-xs">
-                <div class="flex items-center justify-between">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 02</span>
-                  <span class="material-symbols-outlined text-outline text-[18px]">code</span>
-                </div>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Micro-SaaS</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Single-purpose web utilities and document workflows tailored for solo entrepreneurs without bloated feature sets.
-                </p>
-              </div>
-              <div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
-                <span>Prototyping UI</span>
-              </div>
-            </div>
-
-            <!-- Concept 3 -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
-              <div class="flex flex-col gap-space-xs">
-                <div class="flex items-center justify-between">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 03</span>
-                  <span class="material-symbols-outlined text-outline text-[18px]">shopping_bag</span>
-                </div>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Ecommerce</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Handcrafted cultural goods, niche physical items, and modern storytelling packaging for heritage crafts.
-                </p>
-              </div>
-              <div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
-                <span>Supply Chain Scoping</span>
-              </div>
-            </div>
-
-            <!-- Concept 4 -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
-              <div class="flex flex-col gap-space-xs">
-                <div class="flex items-center justify-between">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 04</span>
-                  <span class="material-symbols-outlined text-outline text-[18px]">smartphone</span>
-                </div>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Consumer Apps</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Everyday utility calculators, time tracking interfaces, and clean habit trackers built without subscription traps.
-                </p>
-              </div>
-              <div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
-                <span>Validation Stage</span>
-              </div>
-            </div>
-
-            <!-- Concept 5 -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
-              <div class="flex flex-col gap-space-xs">
-                <div class="flex items-center justify-between">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 05</span>
-                  <span class="material-symbols-outlined text-outline text-[18px]">inventory_2</span>
-                </div>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Digital Products</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Practical agency templates, design systems, boilerplate codebases, and operational founder checklists.
-                </p>
-              </div>
-              <div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
-                <span>Resource Drafting</span>
-              </div>
-            </div>
-
-            <!-- Editorial Disclaimer Card -->
-            <div class="p-space-lg rounded-2xl bg-surface-container-high flex flex-col justify-between min-h-[200px] border border-surface-container-highest/40">
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-secondary text-[20px]">science</span>
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-primary font-semibold">METHOD</span>
-              </div>
-              <p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
-                "Showing how I think about opportunities without claiming every experiment is a finished company."
-              </p>
-              <span class="font-label-mono-tag text-[11px] text-on-surface-variant">Continuous Field Notebook</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
-
-      <!-- HOW I THINK (PHILOSOPHY) -->
-      <section class="py-space-2xl md:py-space-3xl">
-        <div class="flex flex-col gap-space-xl">
-          <div class="flex flex-col gap-space-xs pb-space-sm">
-            <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-              05 // OPERATING PRINCIPLES
-            </span>
-            <h2 class="font-headline-section text-headline-section text-primary leading-tight">
-              How I Think
-            </h2>
-            <p class="font-body-md text-body-md text-on-surface-variant">
-              Core principles guiding my decisions across products, ventures, and execution.
-            </p>
-          </div>
-
-          <!-- 5 Editorial Blocks -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-space-sm">
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
-              <span class="font-label-mono-tag text-[12px] text-secondary font-bold">01</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="font-title-md text-title-md text-primary font-medium">Start small.</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Don't wait for everything to be perfect before showing your work.</p>
-              </div>
-            </div>
-
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
-              <span class="font-label-mono-tag text-[12px] text-secondary font-bold">02</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="font-title-md text-title-md text-primary font-medium">Solve problems.</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Good businesses start with clear, tangible solutions to real pain points.</p>
-              </div>
-            </div>
-
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
-              <span class="font-label-mono-tag text-[12px] text-secondary font-bold">03</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="font-title-md text-title-md text-primary font-medium">Launch.</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ideas only become valuable when tested against genuine market behavior.</p>
-              </div>
-            </div>
-
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
-              <span class="font-label-mono-tag text-[12px] text-secondary font-bold">04</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="font-title-md text-title-md text-primary font-medium">Learn.</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Every experiment, whether it fails or succeeds, teaches something crucial.</p>
-              </div>
-            </div>
-
-            <div class="p-space-lg rounded-2xl bg-surface-container-low card-hover-effect flex flex-col justify-between min-h-[220px] border border-surface-container-highest/40">
-              <span class="font-label-mono-tag text-[12px] text-secondary font-bold">05</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="font-title-md text-title-md text-primary font-medium">Improve.</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Keep making the product and business iteratively better day by day.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
-
-      <!-- CONTACT SECTION -->
-      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="contact">
-        <div class="rounded-2xl bg-surface-container-low p-space-xl md:p-space-2xl flex flex-col gap-space-xl border border-surface-container-highest/40">
-          <div class="flex flex-col gap-space-sm max-w-2xl">
-            <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-              06 // INITIATE CONTACT
-            </span>
-            <h2 class="font-headline-section text-headline-section text-primary leading-tight">
-              Have an interesting idea, opportunity, or business to discuss?
-            </h2>
-            <p class="font-body-md text-body-md text-on-surface-variant">
-              I'm always open to talking with builders, operators, and creators about technology, commerce, and collaborations.
-            </p>
-          </div>
-
-          <!-- Action Cluster -->
-          <div class="flex flex-col gap-space-lg">
-            <!-- Email Buttons Bar -->
-            <div class="flex flex-wrap items-center gap-space-md relative">
-              <a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-colors duration-150 shadow-sm" href="mailto:contact@sydinrahman.com">
-                <span class="material-symbols-outlined text-[18px]">mail</span>
-                <span>Email Me Directly</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
-              </a>
-
-              <button id="copy-email-btn" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150">
-                <span class="material-symbols-outlined text-[18px]">content_copy</span>
-                <span>Copy Address</span>
-              </button>
-
-              <!-- Toast / Feedback message -->
-              <span id="copy-feedback" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary text-xs font-medium opacity-0 transition-opacity duration-300 pointer-events-none shadow-md">
-                <span class="material-symbols-outlined text-[14px]">check_circle</span>
-                <span>Copied to clipboard!</span>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-tag text-label-mono-tag text-outline">Web Application</span>
+<a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="https://myagenow.com" rel="noopener noreferrer" target="_blank">
+<span>Visit live site</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Venture 02: Tangail Saree (Building) -->
+<div class="group p-space-xl rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-200 flex flex-col justify-between min-h-[320px]">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
+                02 / ECOMMERCE
               </span>
-            </div>
-
-            <!-- Social Media Identity Grid -->
-            <div class="flex flex-col gap-space-sm pt-space-md">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">Primary Social Identities</span>
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
-                <!-- Facebook -->
-                <a class="group p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm border border-surface-container-highest/30 flex items-center justify-between" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm">
-                      f
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Facebook</span>
-                      <span class="text-[11px] text-secondary font-medium">Main Social Channel</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-
-                <!-- LinkedIn -->
-                <a class="group p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm border border-surface-container-highest/30 flex items-center justify-between" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-xs">
-                      in
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">LinkedIn</span>
-                      <span class="text-[11px] text-on-surface-variant">Sydin Rahman</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-
-                <!-- GitHub -->
-                <a class="group p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm border border-surface-container-highest/30 flex items-center justify-between" href="https://github.com" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center">
-                      <span class="material-symbols-outlined text-[18px]">terminal</span>
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">GitHub</span>
-                      <span class="text-[11px] text-on-surface-variant">Projects &amp; Code</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-
-                <!-- Behance -->
-                <a class="group p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm border border-surface-container-highest/30 flex items-center justify-between" href="https://behance.net" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-xs">
-                      Bē
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Behance</span>
-                      <span class="text-[11px] text-on-surface-variant">Creative &amp; Design</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Quiet Sign-Off -->
-            <div class="pt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container-highest/40">
-              <span>Dhaka, Bangladesh</span>
-              <span class="font-medium text-primary">Currently building. Always learning.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div>
-  </div>
-</main>
-
-<footer class="w-full bg-surface border-t border-surface-container-highest mt-space-3xl transition-colors duration-200">
-  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin py-space-2xl">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
-      <div class="md:col-span-5 flex flex-col gap-space-xs">
-        <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-primary">SYDIN RAHMAN</span>
-        <p class="font-body-sm text-body-sm text-on-surface">Entrepreneur from Bangladesh</p>
-        <p class="font-body-sm text-body-sm text-on-surface-variant">Currently building. Always learning.</p>
-      </div>
-
-      <div class="md:col-span-4 flex flex-col gap-space-xs">
-        <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-wider text-outline mb-1">Channels &amp; Social</span>
-        <div class="flex flex-col gap-1">
-          <a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
-            <span>Facebook (Sydin Rahman)</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-          <a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
-            <span>LinkedIn</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-          <a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://github.com" rel="noopener noreferrer" target="_blank">
-            <span>GitHub</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-          <a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://behance.net" rel="noopener noreferrer" target="_blank">
-            <span>Behance</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="md:col-span-3 flex flex-col justify-between md:items-end h-full gap-space-sm pt-space-md md:pt-0">
-        <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-wider text-outline md:text-right">Colophon</span>
-        <div class="md:text-right font-body-sm text-body-sm text-on-surface-variant">
-          <p>© 2026 Sydin Rahman.</p>
-          <p>All rights reserved.</p>
-          <p class="mt-1 text-outline">Built with simplicity.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Floating Back to Top Button -->
-<button id="back-to-top-btn" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-primary text-on-primary shadow-lg flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-secondary focus:outline-none" aria-label="Back to Top">
-  <span class="material-symbols-outlined text-xl">arrow_upward</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DBEAFE] text-secondary font-label-status text-label-status font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                BUILDING
+              </span>
+</div>
+<h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
+              Tangail Saree
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
+              An authentic online direct-to-consumer business celebrating traditional Tangail handloom sarees, connecting regional artisans with modern shoppers worldwide.
+            </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-tag text-label-mono-tag text-outline">DTC Brand &amp; Supply</span>
+<a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#contact">
+<span>Explore venture</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Venture 03: MemoryFix (Exploring) -->
+<div class="group p-space-xl rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-200 flex flex-col justify-between min-h-[320px]">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
+                03 / APPLIED AI
+              </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FEF3C7] text-[#B45309] font-label-status text-label-status font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-[#D97706]"></span>
+                EXPLORING
+              </span>
+</div>
+<h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
+              MemoryFix
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
+              An AI product concept dedicated to restoring, sharpening, and colorizing heritage family photographs through lightweight neural restoration pipelines.
+            </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-tag text-label-mono-tag text-outline">Research Prototype</span>
+<a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#idea-lab">
+<span>View concept</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Venture 04: QuoteFlow (Building) -->
+<div class="group p-space-xl rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-200 flex flex-col justify-between min-h-[320px]">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">
+                04 / MICRO-SAAS
+              </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DBEAFE] text-secondary font-label-status text-label-status font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                BUILDING
+              </span>
+</div>
+<h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
+              QuoteFlow
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
+              A lightweight, hassle-free tool for freelancers and agencies to generate professional commercial quotations, calculate margins, and close client contracts faster.
+            </p>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-tag text-label-mono-tag text-outline">Workflow Utility</span>
+<a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#contact">
+<span>View progress</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TONAL SPACER -->
+<div class="w-full h-12"></div>
+<!-- CURRENTLY SECTION -->
+<section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="currently">
+<div class="flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-sm">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
+            03 // RADAR
+          </span>
+<h2 class="font-headline-section text-headline-section text-primary leading-tight">
+            Currently
+          </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Updated quarterly to stay accountable and transparent.
+        </p>
+</div>
+<!-- 4-Column Structured Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between min-h-[220px]">
+<div class="flex flex-col gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">construction</span>
+</div>
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">01 / FOCUS</span>
+<h3 class="font-title-md text-title-md text-primary font-medium">Building</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Small online businesses &amp; practical web utilities with high utility density.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between min-h-[220px]">
+<div class="flex flex-col gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">explore</span>
+</div>
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">02 / EXPERIMENTS</span>
+<h3 class="font-title-md text-title-md text-primary font-medium">Exploring</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Applied AI models, workflow automation, and regional artisanal ecommerce systems.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between min-h-[220px]">
+<div class="flex flex-col gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
+</div>
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">03 / KNOWLEDGE</span>
+<h3 class="font-title-md text-title-md text-primary font-medium">Learning</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Direct-response marketing, product distribution, and tight unit economics.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between min-h-[220px]">
+<div class="flex flex-col gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">handshake</span>
+</div>
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">04 / DISCOVERY</span>
+<h3 class="font-title-md text-title-md text-primary font-medium">Looking for</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Interesting ideas, collaborator conversations, and unserved everyday niches.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- TONAL SPACER -->
+<div class="w-full h-12"></div>
+<!-- IDEA LAB SECTION -->
+<section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="idea-lab">
+<div class="flex flex-col gap-space-xl">
+<div class="flex flex-col gap-space-xs pb-space-sm">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
+          04 // RESEARCH &amp; CONCEPTS
+        </span>
+<h2 class="font-headline-section text-headline-section text-primary leading-tight">
+          Idea Lab
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Concepts and themes I'm researching before writing code.
+        </p>
+</div>
+<!-- Interactive Concept Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Concept 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors duration-150 flex flex-col justify-between min-h-[200px]">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 01</span>
+<span class="material-symbols-outlined text-outline text-[18px]">psychology</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-medium">AI Products</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Workflow assistants, generative media pipelines, and localized tools solving repetitive data preparation tasks.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
+<span>Active Investigation</span>
+</div>
+</div>
+<!-- Concept 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors duration-150 flex flex-col justify-between min-h-[200px]">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 02</span>
+<span class="material-symbols-outlined text-outline text-[18px]">code</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-medium">Micro-SaaS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Single-purpose web utilities and document workflows tailored for solo entrepreneurs without bloated feature sets.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
+<span>Prototyping UI</span>
+</div>
+</div>
+<!-- Concept 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors duration-150 flex flex-col justify-between min-h-[200px]">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 03</span>
+<span class="material-symbols-outlined text-outline text-[18px]">shopping_bag</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-medium">Ecommerce</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Handcrafted cultural goods, niche physical items, and modern storytelling packaging for heritage crafts.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
+<span>Supply Chain Scoping</span>
+</div>
+</div>
+<!-- Concept 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors duration-150 flex flex-col justify-between min-h-[200px]">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 04</span>
+<span class="material-symbols-outlined text-outline text-[18px]">smartphone</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-medium">Consumer Apps</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Everyday utility calculators, time tracking interfaces, and clean habit trackers built without subscription traps.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
+<span>Validation Stage</span>
+</div>
+</div>
+<!-- Concept 5 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors duration-150 flex flex-col justify-between min-h-[200px]">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-mono-tag text-[11px] text-secondary font-medium">RESEARCH 05</span>
+<span class="material-symbols-outlined text-outline text-[18px]">inventory_2</span>
+</div>
+<h3 class="font-title-md text-title-md text-primary font-medium">Digital Products</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Practical agency templates, design systems, boilerplate codebases, and operational founder checklists.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
+<span>Resource Drafting</span>
+</div>
+</div>
+<!-- Editorial Disclaimer Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-high flex flex-col justify-between min-h-[200px]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">science</span>
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-primary font-semibold">METHOD</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
+            "Showing how I think about opportunities without claiming every experiment is a finished company."
+          </p>
+<span class="font-label-mono-tag text-[11px] text-on-surface-variant">Continuous Field Notebook</span>
+</div>
+</div>
+</div>
+</section>
+<!-- TONAL SPACER -->
+<div class="w-full h-12"></div>
+<!-- HOW I THINK (PHILOSOPHY) -->
+<section class="py-space-2xl md:py-space-3xl">
+<div class="flex flex-col gap-space-xl">
+<div class="flex flex-col gap-space-xs pb-space-sm">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
+          05 // OPERATING PRINCIPLES
+        </span>
+<h2 class="font-headline-section text-headline-section text-primary leading-tight">
+          How I Think
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Core principles guiding my decisions across products, ventures, and execution.
+        </p>
+</div>
+<!-- 5 Editorial Blocks -->
+<div class="grid grid-cols-1 md:grid-cols-5 gap-space-sm">
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between min-h-[220px]">
+<span class="font-label-mono-tag text-[12px] text-secondary font-bold">01</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-primary font-medium">Start small.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Don't wait for everything to be perfect before showing your work.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between min-h-[220px]">
+<span class="font-label-mono-tag text-[12px] text-secondary font-bold">02</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-primary font-medium">Solve problems.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Good businesses start with clear, tangible solutions to real pain points.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between min-h-[220px]">
+<span class="font-label-mono-tag text-[12px] text-secondary font-bold">03</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-primary font-medium">Launch.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ideas only become valuable when tested against genuine market behavior.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between min-h-[220px]">
+<span class="font-label-mono-tag text-[12px] text-secondary font-bold">04</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-primary font-medium">Learn.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Every experiment, whether it fails or succeeds, teaches something crucial.</p>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col justify-between min-h-[220px]">
+<span class="font-label-mono-tag text-[12px] text-secondary font-bold">05</span>
+<div class="flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-primary font-medium">Improve.</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Keep making the product and business iteratively better day by day.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- TONAL SPACER -->
+<div class="w-full h-12"></div>
+<!-- CONTACT SECTION -->
+<section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="contact">
+<div class="rounded-xl bg-surface-container-low p-space-xl md:p-space-2xl flex flex-col gap-space-xl">
+<div class="flex flex-col gap-space-sm max-w-2xl">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
+          06 // INITIATE CONTACT
+        </span>
+<h2 class="font-headline-section text-headline-section text-primary leading-tight">
+          Have an interesting idea, opportunity, or business to discuss?
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          I'm always open to talking with builders, operators, and creators about technology, commerce, and collaborations.
+        </p>
+</div>
+<!-- Action Cluster -->
+<div class="flex flex-col gap-space-lg">
+<!-- Email Buttons Bar -->
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-colors duration-150 shadow-sm" href="mailto:contact@sydinrahman.com">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span>Email Me Directly</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+<button class="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150" id="copy-email-btn" onclick="navigator.clipboard.writeText('contact@sydinrahman.com'); const el = document.getElementById('copy-feedback'); el.classList.remove('opacity-0'); setTimeout(() =&gt; el.classList.add('opacity-0'), 2000);">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>Copy Address</span>
 </button>
-
-<script src="script.js"></script>
-</body>
-</html>
+<span class="text-secondary font-label-mono-tag text-label-mono-tag opacity-0 transition-opacity duration-200" id="copy-feedback" aria-live="polite">Copied to clipboard!</span>
+</div>
+<!-- Social Media Identity Grid -->
+<div class="flex flex-col gap-space-sm pt-space-md">
+<span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">Primary Social Identities</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Facebook (Highlighted as requested) -->
+<a class="group p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm flex items-center justify-between" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm">
+                  f
+                </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Facebook</span>
+<span class="text-[11px] text-secondary font-medium">Main Social Channel</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+</a>
+<!-- LinkedIn -->
+<a class="group p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm flex items-center justify-between" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-xs">
+                  in
+                </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">LinkedIn</span>
+<span class="text-[11px] text-on-surface-variant">Sydin Rahman</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+</a>
+<!-- GitHub -->
+<a class="group p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm flex items-center justify-between" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">GitHub</span>
+<span class="text-[11px] text-on-surface-variant">Projects &amp; Code</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+</a>
+<!-- Behance -->
+<a class="group p-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-variant transition-all duration-150 shadow-sm flex items-center justify-between" href="https://behance.net" rel="noopener noreferrer" target="_blank">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-xs">
+                  Bē
+                </div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Behance</span>
+<span class="text-[11px] text-on-surface-variant">Creative &amp; Design</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Quiet Sign-Off -->
+<div class="pt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Dhaka, Bangladesh</span>
+<span class="font-medium text-primary">Currently building. Always learning.</span>
+</div>
+</div>
+</div>
+</section>
+</div></div></main><footer class="w-full bg-surface border-t border-surface-container-highest mt-space-3xl"><div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start"><div class="md:col-span-5 flex flex-col gap-space-xs"><span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-primary">SYDIN RAHMAN</span><p class="font-body-sm text-body-sm text-on-surface">Entrepreneur from Bangladesh</p><p class="font-body-sm text-body-sm text-on-surface-variant">Currently building. Always learning.</p></div><div class="md:col-span-4 flex flex-col gap-space-xs"><span class="font-label-mono-tag text-label-mono-tag uppercase tracking-wider text-outline mb-1">Channels &amp; Social</span><div class="flex flex-col gap-1"><a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://facebook.com" rel="noopener noreferrer" target="_blank"><span>Facebook (Sydin Rahman)</span><span class="material-symbols-outlined text-[14px]">arrow_outward</span></a><a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://linkedin.com" rel="noopener noreferrer" target="_blank"><span>LinkedIn</span><span class="material-symbols-outlined text-[14px]">arrow_outward</span></a><a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://github.com" rel="noopener noreferrer" target="_blank"><span>GitHub</span><span class="material-symbols-outlined text-[14px]">arrow_outward</span></a><a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://behance.net" rel="noopener noreferrer" target="_blank"><span>Behance</span><span class="material-symbols-outlined text-[14px]">arrow_outward</span></a></div></div><div class="md:col-span-3 flex flex-col justify-between md:items-end h-full gap-space-sm pt-space-md md:pt-0"><span class="font-label-mono-tag text-label-mono-tag uppercase tracking-wider text-outline md:text-right">Colophon</span><div class="md:text-right font-body-sm text-body-sm text-on-surface-variant"><p>© 2026 Sydin Rahman.</p><p>All rights reserved.</p><p class="mt-1 text-outline">Built with simplicity.</p></div></div></div></div></footer><script src="script.js"></script>
+</body></html>
