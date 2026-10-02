@@ -19,27 +19,6 @@
   --on-secondary-container-rgb: 254, 252, 255;
 }
 
-html.dark {
-  --background-rgb: 15, 17, 21;
-  --surface-rgb: 15, 17, 21;
-  --surface-container-low-rgb: 24, 27, 33;
-  --surface-container-high-rgb: 36, 40, 48;
-  --surface-container-lowest-rgb: 20, 23, 29;
-  --surface-container-highest-rgb: 45, 51, 61;
-  --surface-variant-rgb: 38, 43, 52;
-  --primary-rgb: 245, 245, 247;
-  --on-primary-rgb: 15, 17, 21;
-  --on-surface-rgb: 240, 242, 245;
-  --on-surface-variant-rgb: 160, 166, 178;
-  --outline-rgb: 120, 126, 138;
-  --outline-variant-rgb: 55, 62, 74;
-  --secondary-rgb: 59, 130, 246;
-  --on-secondary-rgb: 255, 255, 255;
-  --secondary-fixed-dim-rgb: 96, 165, 250;
-  --secondary-container-rgb: 30, 58, 138;
-  --on-secondary-container-rgb: 219, 234, 254;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -71,18 +50,77 @@ img {
   line-height: 1;
 }
 
-/* Card Hover Elevation Effects */
+/* Apple Glassmorphism Effects */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+.glass-menu {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.9), 0 8px 32px 0 rgba(0, 0, 0, 0.04);
+}
+
+.glass-card-accent {
+  background: rgba(0, 0, 0, 0.92) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.3), 0 12px 36px 0 rgba(0, 0, 0, 0.2);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Micro-interactions and Tactile Feedback */
 .card-hover-effect {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .card-hover-effect:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px) scale(1.005);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 1), 0 20px 40px -12px rgba(0, 0, 0, 0.08);
 }
 
-html.dark .card-hover-effect:hover {
-  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.5);
+/* Button micro-interactions */
+.btn-tactile {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease;
+}
+
+.btn-tactile:active {
+  transform: scale(0.96) translateY(1px);
+}
+
+/* Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Scrollbar styling */
