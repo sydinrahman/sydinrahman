@@ -175,4 +175,48 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- Interactive Contact Form Handling ---
+  const contactForm = document.getElementById('contact-form');
+  const formSubmitBtn = document.getElementById('form-submit-btn');
+  const formStatus = document.getElementById('form-status');
+
+  if (contactForm && formSubmitBtn && formStatus) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('contact-name')?.value.trim();
+      const email = document.getElementById('contact-email')?.value.trim();
+      const message = document.getElementById('contact-message')?.value.trim();
+
+      if (!name || !email || !message) {
+        formStatus.textContent = 'Please fill out all required fields.';
+        formStatus.className = 'text-error font-medium text-body-sm transition-all duration-200';
+        formStatus.classList.remove('hidden');
+        return;
+      }
+
+      // Simulate sending feedback
+      const originalBtnText = formSubmitBtn.innerHTML;
+      formSubmitBtn.disabled = true;
+      formSubmitBtn.innerHTML = `
+        <span class="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
+        <span>Sending...</span>
+      `;
+
+      setTimeout(() => {
+        formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+        formStatus.className = 'text-[#16A34A] font-medium text-body-sm transition-all duration-200';
+        formStatus.classList.remove('hidden');
+
+        contactForm.reset();
+        formSubmitBtn.disabled = false;
+        formSubmitBtn.innerHTML = originalBtnText;
+
+        setTimeout(() => {
+          formStatus.classList.add('hidden');
+        }, 5000);
+      }, 1000);
+    });
+  }
 });

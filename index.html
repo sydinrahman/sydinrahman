@@ -201,43 +201,68 @@
     <div class="flex flex-col w-full">
 
       <!-- HERO SECTION -->
-      <section class="py-space-2xl md:py-space-3xl flex flex-col justify-between relative" id="overview">
-        <div class="flex flex-col gap-space-md max-w-4xl">
+      <section class="py-space-2xl md:py-space-3xl flex flex-col justify-between relative overflow-hidden" id="overview">
+        <div class="hero-ambient-glow"></div>
+
+        <div class="relative z-10 flex flex-col gap-space-md max-w-4xl">
           <div class="flex items-center gap-space-sm flex-wrap">
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold">
               <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-              ENTREPRENEUR
+              ENTREPRENEUR &amp; BUILDER
             </span>
             <span class="text-on-surface-variant font-label-mono-tag text-label-mono-tag tracking-wider hidden sm:inline">
-              DHAKA / WORLDWIDE
+              DHAKA, BANGLADESH • WORLDWIDE
             </span>
           </div>
+
           <h1 class="font-display-hero text-[36px] xs:text-[42px] sm:text-[56px] md:text-display-hero text-primary mt-space-sm tracking-tight leading-[1.08] sm:leading-none">
-            I build simple businesses<br class="hidden sm:inline"/>
-            from good ideas.
+            Building simple, practical<br class="hidden sm:inline"/>
+            businesses from good ideas.
           </h1>
+
           <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs leading-relaxed">
-            Entrepreneur from Bangladesh. Exploring technology, AI, ecommerce, and online businesses.
+            Entrepreneur exploring applied AI, ecommerce, and micro-SaaS products. Turning clear market needs into lean, functional software and digital brands.
           </p>
+
+          <!-- Key Stats / Focus Highlights Cluster -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-space-sm max-w-xl">
+            <div class="hero-stat-badge p-3.5 rounded-2xl flex flex-col justify-center">
+              <span class="font-display-hero text-xl sm:text-2xl font-semibold text-primary">04</span>
+              <span class="font-label-mono-tag text-[11px] uppercase tracking-wider text-on-surface-variant mt-0.5">Active Ventures</span>
+            </div>
+            <div class="hero-stat-badge p-3.5 rounded-2xl flex flex-col justify-center">
+              <span class="font-display-hero text-xl sm:text-2xl font-semibold text-secondary">AI &amp; Web</span>
+              <span class="font-label-mono-tag text-[11px] uppercase tracking-wider text-on-surface-variant mt-0.5">Core Domain</span>
+            </div>
+            <div class="hero-stat-badge p-3.5 rounded-2xl flex flex-col justify-center col-span-2 sm:col-span-1">
+              <span class="font-display-hero text-xl sm:text-2xl font-semibold text-primary">Dhaka</span>
+              <span class="font-label-mono-tag text-[11px] uppercase tracking-wider text-on-surface-variant mt-0.5">Base Location</span>
+            </div>
+          </div>
         </div>
 
         <!-- Hero Actions & Status Indicator -->
-        <div class="mt-space-2xl flex flex-col sm:flex-row sm:items-center gap-space-md justify-between p-4 sm:p-space-lg rounded-2xl glass-card">
+        <div class="relative z-10 mt-space-2xl flex flex-col sm:flex-row sm:items-center gap-space-md justify-between p-4 sm:p-space-lg rounded-2xl glass-card">
           <div class="flex items-center gap-space-md flex-wrap">
-            <a class="btn-tactile group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-all duration-200 shadow-sm min-h-[44px]" href="#ventures">
+            <a class="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-all duration-200 shadow-md min-h-[44px]" href="#contact">
+              <span>Let's Talk</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+            <a class="btn-tactile group inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full glass-pill text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-all duration-200 min-h-[44px]" href="#ventures">
               <span>Explore Ventures</span>
               <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:translate-y-0.5">arrow_downward</span>
             </a>
-            <a class="btn-tactile inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full glass-pill text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150 min-h-[44px]" href="#about">
-              <span>About My Journey</span>
+            <a class="btn-tactile inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-full text-on-surface-variant font-body-sm text-body-sm hover:text-primary transition-colors duration-150 min-h-[44px]" href="#about">
+              <span>About Journey</span>
             </a>
           </div>
+
           <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-full glass-pill">
             <span class="relative flex h-2.5 w-2.5">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
             </span>
-            <span class="font-body-sm text-body-sm text-on-surface font-medium">Currently building new projects in Dhaka &amp; online</span>
+            <span class="font-body-sm text-body-sm text-on-surface font-medium">Open to collaborations &amp; new ideas</span>
           </div>
         </div>
       </section>
@@ -792,107 +817,159 @@
       <!-- CONTACT SECTION -->
       <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="contact">
         <div class="rounded-2xl glass-card p-space-xl md:p-space-2xl flex flex-col gap-space-xl">
-          <div class="flex flex-col gap-space-sm max-w-2xl">
-            <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-              06 // INITIATE CONTACT
-            </span>
-            <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
-              Have an interesting idea, opportunity, or business to discuss?
-            </h2>
-            <p class="font-body-md text-body-md text-on-surface-variant">
-              I'm always open to talking with builders, operators, and creators about technology, commerce, and collaborations.
-            </p>
-          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
 
-          <!-- Action Cluster -->
-          <div class="flex flex-col gap-space-lg">
-            <!-- Email Buttons Bar -->
-            <div class="flex flex-wrap items-center gap-space-md relative">
-              <a class="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-colors duration-150 shadow-sm min-h-[44px]" href="mailto:contact@sydinrahman.com">
-                <span class="material-symbols-outlined text-[18px]">mail</span>
-                <span>Email Me Directly</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
-              </a>
+            <!-- Left Info Column -->
+            <div class="lg:col-span-5 flex flex-col gap-space-md">
+              <div class="flex flex-col gap-space-xs">
+                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
+                  06 // INITIATE CONTACT
+                </span>
+                <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
+                  Let's discuss an idea, venture, or opportunity.
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mt- space-xs">
+                  Whether you have an interesting business concept, a collaboration proposal, or simply want to connect with a fellow builder, feel free to send a message.
+                </p>
+              </div>
 
-              <button id="copy-email-btn" class="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full glass-pill text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150 min-h-[44px]">
-                <span class="material-symbols-outlined text-[18px]">content_copy</span>
-                <span>Copy Address</span>
-              </button>
+              <!-- Quick Email Actions -->
+              <div class="flex flex-col gap-space-sm mt-space-xs">
+                <span class="font-label-mono-tag text-[11px] uppercase tracking-wider text-outline font-medium">Direct Reach</span>
+                <div class="flex flex-wrap items-center gap-space-sm relative">
+                  <a class="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-colors duration-150 shadow-sm min-h-[44px]" href="mailto:contact@sydinrahman.com">
+                    <span class="material-symbols-outlined text-[18px]">mail</span>
+                    <span>contact@sydinrahman.com</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+                  </a>
 
-              <!-- Toast / Feedback message -->
-              <span id="copy-feedback" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary text-xs font-medium opacity-0 transition-opacity duration-300 pointer-events-none shadow-md">
-                <span class="material-symbols-outlined text-[14px]">check_circle</span>
-                <span>Copied to clipboard!</span>
-              </span>
-            </div>
+                  <button id="copy-email-btn" class="btn-tactile inline-flex items-center justify-center gap-2 px-4 py-3 rounded-full glass-pill text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150 min-h-[44px]" title="Copy Email Address">
+                    <span class="material-symbols-outlined text-[18px]">content_copy</span>
+                    <span class="sr-only sm:not-sr-only">Copy</span>
+                  </button>
 
-            <!-- Social Media Identity Grid -->
-            <div class="flex flex-col gap-space-sm pt-space-md">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">Primary Social Identities</span>
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
-                <!-- Facebook -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm">
-                      f
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Facebook</span>
-                      <span class="text-[11px] text-secondary font-medium">Main Social Channel</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-
-                <!-- LinkedIn -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center font-bold text-xs">
-                      in
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">LinkedIn</span>
-                      <span class="text-[11px] text-on-surface-variant">Sydin Rahman</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-
-                <!-- GitHub -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://github.com" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center">
-                      <span class="material-symbols-outlined text-[18px]">terminal</span>
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">GitHub</span>
-                      <span class="text-[11px] text-on-surface-variant">Projects &amp; Code</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-
-                <!-- Behance -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://behance.net" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center font-bold text-xs">
-                      Bē
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Behance</span>
-                      <span class="text-[11px] text-on-surface-variant">Creative &amp; Design</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
+                  <span id="copy-feedback" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary text-xs font-medium opacity-0 transition-opacity duration-300 pointer-events-none shadow-md">
+                    <span class="material-symbols-outlined text-[14px]">check_circle</span>
+                    <span>Copied!</span>
+                  </span>
+                </div>
               </div>
             </div>
 
-            <!-- Quiet Sign-Off -->
-            <div class="pt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container-highest/40">
-              <span>Dhaka, Bangladesh</span>
-              <span class="font-medium text-primary">Currently building. Always learning.</span>
+            <!-- Right Interactive Contact Form Column -->
+            <div class="lg:col-span-7 w-full">
+              <form id="contact-form" class="p-space-lg sm:p-space-xl rounded-2xl glass-card flex flex-col gap-space-md">
+                <div class="flex items-center justify-between pb-space-xs border-b border-surface-container-highest/40">
+                  <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-primary font-semibold">Send Message</span>
+                  <span class="font-label-mono-tag text-[11px] text-on-surface-variant">Direct Inquiry</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                  <div class="flex flex-col gap-1.5">
+                    <label for="contact-name" class="font-body-sm text-body-sm font-medium text-on-surface">Your Name <span class="text-secondary">*</span></label>
+                    <input type="text" id="contact-name" name="name" required placeholder="e.g. Alex Morgan" class="glass-input px-4 py-3 rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline/70 w-full"/>
+                  </div>
+
+                  <div class="flex flex-col gap-1.5">
+                    <label for="contact-email" class="font-body-sm text-body-sm font-medium text-on-surface">Email Address <span class="text-secondary">*</span></label>
+                    <input type="email" id="contact-email" name="email" required placeholder="alex@example.com" class="glass-input px-4 py-3 rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline/70 w-full"/>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                  <label for="contact-topic" class="font-body-sm text-body-sm font-medium text-on-surface">Inquiry Type</label>
+                  <select id="contact-topic" name="topic" class="glass-input px-4 py-3 rounded-xl font-body-sm text-body-sm text-on-surface w-full bg-white/80">
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="New Venture / Collaboration">New Venture / Collaboration</option>
+                    <option value="Feedback on Projects">Feedback on Projects</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                  <label for="contact-message" class="font-body-sm text-body-sm font-medium text-on-surface">Message <span class="text-secondary">*</span></label>
+                  <textarea id="contact-message" name="message" rows="4" required placeholder="Tell me about your idea, project, or question..." class="glass-input px-4 py-3 rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-outline/70 w-full resize-none"></textarea>
+                </div>
+
+                <div class="flex items-center justify-between pt-space-xs">
+                  <button type="submit" id="form-submit-btn" class="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-colors duration-150 shadow-md min-h-[44px]">
+                    <span>Send Message</span>
+                    <span class="material-symbols-outlined text-[18px]">send</span>
+                  </button>
+
+                  <div id="form-status" class="hidden text-body-sm font-medium transition-all duration-200"></div>
+                </div>
+              </form>
             </div>
+
+          </div>
+
+          <!-- Social Media Identity Grid -->
+          <div class="flex flex-col gap-space-sm pt-space-md border-t border-surface-container-highest/40">
+            <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">Primary Social Identities</span>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+              <!-- Facebook -->
+              <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/90 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://facebook.com" rel="noopener noreferrer" target="_blank">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-xl bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm">
+                    f
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Facebook</span>
+                    <span class="text-[11px] text-secondary font-medium">Main Social Channel</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+              </a>
+
+              <!-- LinkedIn -->
+              <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/90 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center font-bold text-xs">
+                    in
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">LinkedIn</span>
+                    <span class="text-[11px] text-on-surface-variant">Sydin Rahman</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+              </a>
+
+              <!-- GitHub -->
+              <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/90 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://github.com" rel="noopener noreferrer" target="_blank">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[18px]">terminal</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">GitHub</span>
+                    <span class="text-[11px] text-on-surface-variant">Projects &amp; Code</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+              </a>
+
+              <!-- Behance -->
+              <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/90 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://behance.net" rel="noopener noreferrer" target="_blank">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center font-bold text-xs">
+                    Bē
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Behance</span>
+                    <span class="text-[11px] text-on-surface-variant">Creative &amp; Design</span>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quiet Sign-Off -->
+          <div class="pt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm border-t border-surface-container-highest/40">
+            <span>Dhaka, Bangladesh</span>
+            <span class="font-medium text-primary">Currently building. Always learning.</span>
           </div>
         </div>
       </section>
