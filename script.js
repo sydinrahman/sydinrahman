@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Close menu on resize to desktop (Optimized with { passive: true } to prevent blocking scroll/layout thread)
+  // Close menu on resize to desktop
   window.addEventListener('resize', () => {
     if (window.innerWidth >= 768) {
       closeMobileMenu();
     }
-  }, { passive: true });
+  });
 
   // --- Smooth Scrolling ---
   links.forEach((link) => {
@@ -129,19 +129,11 @@ document.addEventListener('DOMContentLoaded', () => {
     threshold: 0.1
   };
 
-  // Performance Optimization: Unobserve elements once revealed and remove 'will-change' after animation
-  // to free up GPU hardware layers and improve scrolling FPS performance.
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const el = entry.target;
-        el.classList.add('visible');
-        observer.unobserve(el);
-
-        // Remove will-change hint after transition completes (600ms) to conserve GPU memory
-        setTimeout(() => {
-          el.style.willChange = 'auto';
-        }, 650);
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
     });
   }, revealObserverOptions);
@@ -152,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const backToTopBtn = document.getElementById('back-to-top-btn');
 
   if (backToTopBtn) {
-    // Performance Optimization: Add { passive: true } to scroll listener so the browser doesn't block scrolling waiting for JS execution
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
         backToTopBtn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
@@ -161,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         backToTopBtn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
         backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
       }
-    }, { passive: true });
+    });
 
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
