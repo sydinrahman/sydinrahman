@@ -184,4 +184,57 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- Modal Open/Close Logic for Venture Visual Showcase ---
+  const modalOpenBtns = document.querySelectorAll('.modal-open-btn');
+  const modalCloseBtns = document.querySelectorAll('.modal-close-btn');
+  const modalOverlays = document.querySelectorAll('.modal-overlay');
+
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+  }
+
+  function closeModal(modal) {
+    if (modal) {
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  }
+
+  modalOpenBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const modalId = btn.getAttribute('data-modal');
+      if (modalId) openModal(modalId);
+    });
+  });
+
+  modalCloseBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const modal = btn.closest('.modal-overlay');
+      closeModal(modal);
+    });
+  });
+
+  modalOverlays.forEach((overlay) => {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        closeModal(overlay);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      modalOverlays.forEach((modal) => {
+        if (!modal.classList.contains('hidden')) {
+          closeModal(modal);
+        }
+      });
+    }
+  });
 });
