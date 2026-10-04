@@ -1,4 +1,4 @@
-// SYDIN RAHMAN — Interactive Entrepreneur's Desk & Portfolio Logic
+// Sydin Rahman — Playful & Personal Portfolio Script
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -17,12 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. Interactive Desk & Floating Cards Parallax
-    const deskCanvas = document.getElementById('desk-canvas');
-    const deskCards = document.querySelectorAll('.desk-card');
+    // 2. Interactive Character Eye & Playful Floating Parallax
     const heroSection = document.getElementById('hero');
+    const eyeLeft = document.getElementById('eye-left');
+    const eyeRight = document.getElementById('eye-right');
+    const playfulItems = document.querySelectorAll('.playful-item');
+    const playfulCanvas = document.getElementById('playful-canvas');
 
-    if (heroSection && deskCards.length > 0) {
+    if (heroSection) {
         heroSection.addEventListener('mousemove', (e) => {
             const rect = heroSection.getBoundingClientRect();
             const centerX = rect.left + rect.width / 2;
@@ -31,33 +33,44 @@ document.addEventListener('DOMContentLoaded', () => {
             const mouseX = e.clientX - centerX;
             const mouseY = e.clientY - centerY;
 
-            // Tilt desk canvas slightly
-            if (deskCanvas) {
-                const tiltX = (mouseY / rect.height) * -8;
-                const tiltY = (mouseX / rect.width) * 8;
-                deskCanvas.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+            // Character Eyes Follow Cursor
+            if (eyeLeft && eyeRight) {
+                const eyeMoveX = Math.max(-4, Math.min(4, mouseX / 60));
+                const eyeMoveY = Math.max(-4, Math.min(4, mouseY / 60));
+                eyeLeft.style.transform = `translate(${eyeMoveX}px, ${eyeMoveY}px)`;
+                eyeRight.style.transform = `translate(${eyeMoveX}px, ${eyeMoveY}px)`;
             }
 
-            // Move individual floating cards based on their data-speed
-            deskCards.forEach(card => {
-                const speed = parseFloat(card.getAttribute('data-speed')) || 0.04;
+            // Tilt canvas container
+            if (playfulCanvas) {
+                const tiltX = (mouseY / rect.height) * -6;
+                const tiltY = (mouseX / rect.width) * 6;
+                playfulCanvas.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+            }
+
+            // Move individual floating playful cards
+            playfulItems.forEach(item => {
+                const speed = parseFloat(item.getAttribute('data-speed')) || 0.04;
                 const moveX = mouseX * speed;
                 const moveY = mouseY * speed;
 
-                // Keep scale hover effect intact if hovered
-                if (!card.matches(':hover')) {
-                    card.style.transform = `translate3d(${moveX}px, ${moveY}px, 0px)`;
+                if (!item.matches(':hover')) {
+                    item.style.transform = `translate3d(${moveX}px, ${moveY}px, 0px)`;
                 }
             });
         });
 
         // Reset positions when mouse leaves hero
         heroSection.addEventListener('mouseleave', () => {
-            if (deskCanvas) {
-                deskCanvas.style.transform = `rotateX(0deg) rotateY(0deg)`;
+            if (eyeLeft && eyeRight) {
+                eyeLeft.style.transform = `translate(0px, 0px)`;
+                eyeRight.style.transform = `translate(0px, 0px)`;
             }
-            deskCards.forEach(card => {
-                card.style.transform = `translate3d(0px, 0px, 0px)`;
+            if (playfulCanvas) {
+                playfulCanvas.style.transform = `rotateX(0deg) rotateY(0deg)`;
+            }
+            playfulItems.forEach(item => {
+                item.style.transform = `translate3d(0px, 0px, 0px)`;
             });
         });
     }
@@ -77,139 +90,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Background Interactive Canvas Dots Reacting to Cursor
-    const canvas = document.getElementById('bg-dots-canvas');
-    if (canvas) {
-        const ctx = canvas.getContext('2d');
-        let width = canvas.width = canvas.parentElement.offsetWidth;
-        let height = canvas.height = canvas.parentElement.offsetHeight;
-
-        window.addEventListener('resize', () => {
-            if (canvas.parentElement) {
-                width = canvas.width = canvas.parentElement.offsetWidth;
-                height = canvas.height = canvas.parentElement.offsetHeight;
-                initDots();
-            }
-        });
-
-        const dots = [];
-        const spacing = 36;
-        let mouse = { x: -1000, y: -1000 };
-
-        function initDots() {
-            dots.length = 0;
-            for (let x = 18; x < width; x += spacing) {
-                for (let y = 18; y < height; y += spacing) {
-                    dots.push({
-                        baseX: x,
-                        baseY: y,
-                        x: x,
-                        y: y,
-                        size: 1.5
-                    });
-                }
-            }
-        }
-
-        initDots();
-
-        heroSection.addEventListener('mousemove', (e) => {
-            const rect = canvas.getBoundingClientRect();
-            mouse.x = e.clientX - rect.left;
-            mouse.y = e.clientY - rect.top;
-        });
-
-        heroSection.addEventListener('mouseleave', () => {
-            mouse.x = -1000;
-            mouse.y = -1000;
-        });
-
-        function animateCanvas() {
-            ctx.clearRect(0, 0, width, height);
-
-            dots.forEach(dot => {
-                const dx = mouse.x - dot.baseX;
-                const dy = mouse.y - dot.baseY;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                const maxDist = 120;
-
-                if (dist < maxDist) {
-                    const force = (maxDist - dist) / maxDist;
-                    const angle = Math.atan2(dy, dx);
-                    dot.x = dot.baseX - Math.cos(angle) * force * 12;
-                    dot.y = dot.baseY - Math.sin(angle) * force * 12;
-                    ctx.fillStyle = '#2563EB';
-                } else {
-                    dot.x += (dot.baseX - dot.x) * 0.1;
-                    dot.y += (dot.baseY - dot.y) * 0.1;
-                    ctx.fillStyle = '#D1D1CD';
-                }
-
-                ctx.beginPath();
-                ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
-                ctx.fill();
-            });
-
-            requestAnimationFrame(animateCanvas);
-        }
-
-        animateCanvas();
-    }
-
-    // 5. Scroll Reveal Effect
-    const revealElements = document.querySelectorAll('section > div, .venture-card, #currently .group');
+    // 4. Scroll Reveal Effect
+    const revealElements = document.querySelectorAll('section > div, #upto .group, #ventures .group');
     revealElements.forEach(el => el.classList.add('reveal'));
 
     const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
         revealElements.forEach(el => {
             const elementTop = el.getBoundingClientRect().top;
-            if (elementTop < windowHeight - 80) {
+            if (elementTop < windowHeight - 60) {
                 el.classList.add('active');
             }
         });
     };
 
     window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll(); // Trigger initial check
+    revealOnScroll();
 });
 
 // Venture Modal Data & Functions
 const ventureDetails = {
     myagenow: {
+        icon: "🧮",
         title: "MyAgeNow",
         badge: "LIVE",
         badgeBg: "bg-emerald-100 text-emerald-800",
-        category: "Micro-App / AI Utility",
-        description: "MyAgeNow is an interactive milestone discovery tool and high-precision age calculator designed for engagement and personalized analytics.",
-        highlights: ["High-traffic micro application", "Sleek date calculation algorithms", "Personalized life milestones timeline"],
+        category: "Micro-App",
+        description: "A fun and precise age calculation tool and milestone tracker.",
+        highlights: ["High precision calculation engine", "Milestones timeline", "Engaging web micro-app"],
         link: "https://myagenow.com"
     },
     tangail: {
+        icon: "🥻",
         title: "Tangail Saree Market",
         badge: "BUILDING",
         badgeBg: "bg-blue-100 text-accentBlue",
-        category: "D2C Ecommerce Platform",
-        description: "A specialized e-commerce brand and direct-to-consumer marketplace connecting traditional weavers in Tangail with diaspora customers worldwide.",
-        highlights: ["Direct artisan revenue sourcing", "Optimized Shopify/Web funnel", "Cultural narrative storytelling"],
+        category: "E-Commerce",
+        description: "Direct-to-consumer store bringing traditional Tangail sarees directly from local weavers to global shoppers.",
+        highlights: ["Direct weaver support", "Curated heritage collections", "Modern e-commerce UX"],
         link: "#"
     },
     memoryfix: {
+        icon: "🤖",
         title: "MemoryFix",
         badge: "EXPLORING",
         badgeBg: "bg-purple-100 text-purple-800",
-        category: "Productivity / AI Media",
-        description: "An automated media curation and photo restoration platform that utilizes AI models to fix, restore, and organize old digital photo collections.",
-        highlights: ["Automated photo enhancement", "Intelligent duplicate detection", "Private family archives"],
+        category: "AI Utility",
+        description: "Smart photo restoration and memory curation assistant powered by lightweight AI models.",
+        highlights: ["Instant photo restoration", "Smart tagging & organization", "Family archives"],
         link: "#"
     },
     quoteflow: {
+        icon: "📋",
         title: "QuoteFlow",
         badge: "CONCEPT",
-        badgeBg: "bg-blue-100 text-accentBlue",
-        category: "SaaS Proposal Builder",
-        description: "A lightweight estimation tool built for agencies and tech freelancers to generate interactive quotes and convert leads into signed deals faster.",
-        highlights: ["Real-time pricing sliders", "Dynamic proposal output", "Stripe & invoice integration"],
+        badgeBg: "bg-amber-100 text-amber-800",
+        category: "SaaS Tool",
+        description: "Automated proposal and cost estimator built for freelancers and boutique agencies.",
+        highlights: ["Interactive price sliders", "One-click proposal export", "Stripe payment integration"],
         link: "#"
     }
 };
@@ -224,20 +162,20 @@ function openVentureModal(key) {
 
     modalBody.innerHTML = `
         <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-space font-semibold uppercase px-3 py-1 rounded-full ${data.badgeBg}">${data.badge}</span>
-            <span class="text-xs font-space text-subtleText">${data.category}</span>
+            <span class="text-3xl">${data.icon}</span>
+            <span class="text-xs font-space font-bold uppercase px-3 py-1 rounded-full ${data.badgeBg}">${data.badge}</span>
         </div>
-        <h3 class="font-space font-bold text-2xl text-textMain mb-3">${data.title}</h3>
-        <p class="text-subtleText text-sm leading-relaxed mb-6">${data.description}</p>
+        <h3 class="font-space font-bold text-2xl text-textMain mb-2">${data.title}</h3>
+        <p class="text-subtleText font-space text-sm mb-6">${data.description}</p>
         <div class="mb-6">
-            <h4 class="font-space font-bold text-xs uppercase tracking-wider text-textMain mb-2">Key Highlights</h4>
-            <ul class="space-y-1.5 text-sm text-subtleText">
-                ${data.highlights.map(h => `<li class="flex items-center gap-2"><i class="fa-solid fa-check text-accentBlue text-xs"></i> ${h}</li>`).join('')}
+            <h4 class="font-space font-bold text-xs uppercase tracking-wider text-textMain mb-2">Highlights</h4>
+            <ul class="space-y-1.5 text-sm font-space text-subtleText">
+                ${data.highlights.map(h => `<li class="flex items-center gap-2"><span class="text-accentBlue font-bold">✓</span> ${h}</li>`).join('')}
             </ul>
         </div>
         <div class="flex items-center justify-end gap-3 pt-4 border-t border-borderMuted">
             <button onclick="closeVentureModal()" class="px-5 py-2.5 rounded-full border border-borderMuted text-xs font-space font-medium text-textMain hover:bg-slate-50 transition-colors">Close</button>
-            ${data.link !== '#' ? `<a href="${data.link}" target="_blank" class="px-5 py-2.5 rounded-full bg-accentBlue text-white text-xs font-space font-medium hover:bg-blue-700 transition-colors">Visit Site ↗</a>` : ''}
+            ${data.link !== '#' ? `<a href="${data.link}" target="_blank" class="px-5 py-2.5 rounded-full bg-accentBlue text-white text-xs font-space font-bold hover:bg-blue-700 transition-colors">Visit Site →</a>` : ''}
         </div>
     `;
 

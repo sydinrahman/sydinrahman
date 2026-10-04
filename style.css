@@ -25,44 +25,36 @@ h1, h2, h3, h4, h5, h6, .font-space {
     background: #2563EB;
 }
 
-/* Desk Canvas Interactive Styling */
-#desk-canvas {
+/* Playful Canvas Interactive Styling */
+#playful-canvas {
     perspective: 1000px;
     transform-style: preserve-3d;
 }
 
-.desk-card {
+.playful-item {
     transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
     will-change: transform, box-shadow;
 }
 
-.desk-card:hover {
+.playful-item:hover {
     z-index: 40 !important;
-    transform: translateY(-8px) scale(1.04) rotate(1.5deg) !important;
+    transform: translateY(-6px) scale(1.05) !important;
     border-color: #2563EB !important;
-    box-shadow: 0 20px 30px -10px rgba(37, 99, 235, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
 }
 
-.desk-card-desc {
-    transition: all 0.3s ease;
-}
-
-.desk-card.bg-white:hover .desk-card-desc {
-    color: #111111;
-}
-
-/* Slow spin animation for radar element */
-@keyframes spinSlow {
-    from {
-        transform: rotate(0deg);
+/* Floating sparkles subtle float animation */
+@keyframes sparkleFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
     }
-    to {
-        transform: rotate(360deg);
+    50% {
+        transform: translateY(-8px) rotate(6deg);
     }
 }
 
-.animate-spin-slow {
-    animation: spinSlow 20s linear infinite;
+.floating-sparkle {
+    animation: sparkleFloat 4s ease-in-out infinite;
 }
 
 /* Magnetic Button Hover Feel */
@@ -70,21 +62,11 @@ h1, h2, h3, h4, h5, h6, .font-space {
     transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Card hover animation */
-.venture-card {
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-}
-
-.venture-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(37, 99, 235, 0.4);
-}
-
 /* Reveal on Scroll */
 .reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .reveal.active {

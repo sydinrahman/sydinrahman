@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SYDIN RAHMAN — Entrepreneur & Builder</title>
-    <meta name="description" content="Sydin Rahman — Entrepreneur, Builder, and Product Creator based in Dhaka. Building businesses, one idea at a time.">
+    <title>Sydin Rahman — Entrepreneur & Builder</title>
+    <meta name="description" content="Hi, I'm Sydin. I'm an entrepreneur who likes building things and trying new ideas.">
 
     <!-- Google Fonts: Space Grotesk & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,160 +43,114 @@
 <body class="bg-bgMain text-textMain font-sans antialiased selection:bg-accentBlue selection:text-white relative overflow-x-hidden min-h-screen">
 
     <!-- Subtle Interactive Cursor Spotlight Glow -->
-    <div id="cursor-glow" class="pointer-events-none fixed top-0 left-0 w-96 h-96 rounded-full bg-accentBlue/10 blur-3xl transition-transform duration-100 ease-out z-0 -translate-x-1/2 -translate-y-1/2"></div>
+    <div id="cursor-glow" class="pointer-events-none fixed top-0 left-0 w-80 h-80 rounded-full bg-accentBlue/10 blur-3xl transition-transform duration-100 ease-out z-0 -translate-x-1/2 -translate-y-1/2"></div>
 
     <!-- Navigation Bar -->
     <nav class="fixed top-0 left-0 w-full z-50 bg-bgMain/80 backdrop-blur-md border-b border-borderMuted/60 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#hero" class="font-space font-bold text-lg tracking-tight hover:text-accentBlue transition-colors duration-200 flex items-center gap-2">
-                <span class="inline-block w-2.5 h-2.5 rounded-full bg-accentBlue animate-pulse"></span>
-                SYDIN RAHMAN
+                <span class="text-xl">👋</span>
+                <span>SYDIN RAHMAN</span>
             </a>
 
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                <a href="#currently" class="hover:text-accentBlue transition-colors py-1">Currently</a>
-                <a href="#about" class="hover:text-accentBlue transition-colors py-1">About</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium font-space">
+                <a href="#upto" class="hover:text-accentBlue transition-colors py-1">What I'm Up To</a>
                 <a href="#ventures" class="hover:text-accentBlue transition-colors py-1">Ventures</a>
+                <a href="#about" class="hover:text-accentBlue transition-colors py-1">About</a>
                 <a href="#contact" class="hover:text-accentBlue transition-colors py-1">Contact</a>
             </div>
 
             <a href="#contact" class="btn-magnetic px-5 py-2.5 rounded-full bg-textMain text-white text-xs font-space tracking-wider uppercase font-semibold hover:bg-accentBlue transition-all duration-300 shadow-sm hover:shadow-md">
-                Let's Talk ↗
+                Let's Talk →
             </a>
         </div>
     </nav>
 
     <!-- Main Container -->
-    <main class="relative z-10 pt-24">
+    <main class="relative z-10 pt-20">
 
-        <!-- ================= HERO: THE ENTREPRENEUR'S DESK ================= -->
-        <section id="hero" class="min-h-[88vh] flex items-center relative px-6 max-w-7xl mx-auto py-12">
+        <!-- ================= HERO: HI, I'M SYDIN ================= -->
+        <section id="hero" class="min-h-[85vh] flex items-center relative px-6 max-w-6xl mx-auto py-12">
 
-            <!-- Dynamic Background Canvas Lines & Dots -->
-            <canvas id="bg-dots-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
+            <!-- Floating background decorative elements -->
+            <div class="floating-sparkle absolute top-12 left-10 text-xl opacity-60 text-amber-500 pointer-events-none">✦</div>
+            <div class="floating-sparkle absolute top-28 right-1/2 text-2xl opacity-40 text-accentBlue pointer-events-none">💡</div>
+            <div class="floating-sparkle absolute bottom-12 left-1/4 text-lg opacity-50 text-indigo-500 pointer-events-none">🚀</div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full z-10">
 
                 <!-- Left Hero Column -->
-                <div class="lg:col-span-5 flex flex-col items-start space-y-6">
+                <div class="lg:col-span-6 flex flex-col items-start space-y-6">
 
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-borderMuted shadow-sm text-xs font-space font-medium text-subtleText">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-borderMuted shadow-sm text-xs font-space font-semibold text-textMain">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                         SYDIN RAHMAN
                     </div>
 
-                    <h1 class="font-space font-bold text-5xl sm:text-6xl md:text-7xl tracking-tight text-textMain leading-tight">
-                        Entrepreneur
+                    <h1 class="font-space font-bold text-5xl sm:text-6xl md:text-7xl tracking-tight text-textMain leading-[1.1]">
+                        👋 Hi, I'm Sydin.
                     </h1>
 
-                    <p class="text-xl text-subtleText font-normal max-w-md leading-relaxed">
-                        Building businesses, one idea at a time.
+                    <p class="text-xl sm:text-2xl font-space font-medium text-subtleText max-w-lg leading-relaxed">
+                        I'm an entrepreneur who likes <span class="text-textMain border-b-2 border-accentBlue">building things</span> and <span class="text-textMain border-b-2 border-amber-400">trying new ideas</span>.
                     </p>
 
                     <div class="pt-2 flex flex-wrap items-center gap-4">
-                        <a href="#currently" class="btn-magnetic inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-accentBlue text-white font-space font-medium text-sm shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 group">
+                        <a href="#upto" class="btn-magnetic inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-accentBlue text-white font-space font-semibold text-sm shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 group">
                             <span>See What I'm Building</span>
-                            <i class="fa-solid font-bold fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1.5 transition-transform"></i>
                         </a>
                         <a href="#about" class="px-6 py-3.5 rounded-full bg-white border border-borderMuted text-textMain font-space font-medium text-sm hover:border-textMain transition-all">
-                            More About Me
+                            A Little About Me 👋
                         </a>
                     </div>
 
-                    <!-- Category Pills -->
-                    <div class="pt-6 flex flex-wrap gap-2 text-xs font-space tracking-wider uppercase text-subtleText font-medium">
-                        <span class="px-3 py-1 rounded-md bg-white border border-borderMuted">AI</span>
-                        <span class="px-3 py-1 rounded-md bg-white border border-borderMuted">Ecommerce</span>
-                        <span class="px-3 py-1 rounded-md bg-white border border-borderMuted">Digital Products</span>
-                        <span class="px-3 py-1 rounded-md bg-white border border-borderMuted">Ventures</span>
-                    </div>
-
                 </div>
 
-                <!-- Right Hero Column: Interactive Entrepreneur's Desk -->
-                <div class="lg:col-span-7 relative h-[480px] sm:h-[540px] w-full flex items-center justify-center">
+                <!-- Right Hero Column: Interactive Character Canvas -->
+                <div class="lg:col-span-6 relative h-[420px] sm:h-[480px] w-full flex items-center justify-center">
 
-                    <div id="desk-canvas" class="relative w-full h-full max-w-xl rounded-2xl bg-white/60 backdrop-blur-md border border-borderMuted/80 p-6 shadow-xl overflow-hidden group/desk transition-transform duration-300 ease-out">
+                    <div id="playful-canvas" class="relative w-full h-full max-w-lg rounded-3xl bg-white/70 backdrop-blur-md border border-borderMuted/80 p-6 shadow-xl flex items-center justify-center overflow-visible group/canvas">
 
-                        <!-- Desk Workspace Header -->
-                        <div class="flex items-center justify-between border-b border-borderMuted/60 pb-3 mb-4">
-                            <div class="flex items-center space-x-2">
-                                <span class="w-3 h-3 rounded-full bg-red-400"></span>
-                                <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
-                                <span class="w-3 h-3 rounded-full bg-green-400"></span>
-                                <span class="text-xs font-space text-subtleText font-medium ml-2">the-entrepreneurs-desk.workspace</span>
+                        <!-- 🧑‍💻 Center Avatar / Character with Eye Tracking -->
+                        <div id="character-avatar" class="relative z-20 flex flex-col items-center">
+                            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-tr from-blue-100 via-amber-50 to-blue-200 border-2 border-borderMuted flex items-center justify-center shadow-lg relative cursor-pointer hover:scale-105 transition-transform">
+                                <div class="text-5xl sm:text-6xl select-none">🧑‍💻</div>
+                                <!-- Interactive Eye Balls -->
+                                <div id="eye-left" class="absolute top-10 left-9 sm:top-12 sm:left-10 w-2.5 h-2.5 bg-textMain rounded-full transition-transform duration-75"></div>
+                                <div id="eye-right" class="absolute top-10 right-9 sm:top-12 sm:right-10 w-2.5 h-2.5 bg-textMain rounded-full transition-transform duration-75"></div>
                             </div>
-                            <span class="text-[10px] font-space uppercase tracking-widest px-2 py-0.5 rounded bg-accentBlue/10 text-accentBlue font-bold">Active Workspace</span>
+                            <div class="mt-3 px-3 py-1 rounded-full bg-white border border-borderMuted text-xs font-space font-semibold text-subtleText shadow-sm">
+                                Sydin's Corner ☕
+                            </div>
                         </div>
 
-                        <!-- Central Desk Canvas Grid / Floating Cards Area -->
-                        <div class="relative w-full h-[380px]">
+                        <!-- 💡 Item 1: Lightbulb (Turns on + "New idea!") -->
+                        <div id="item-lightbulb" class="playful-item absolute top-6 left-6 bg-white border border-borderMuted rounded-2xl p-3 shadow-md hover:shadow-xl transition-all duration-300 z-30 cursor-pointer group/bulb flex items-center gap-2" data-speed="0.05">
+                            <span class="text-3xl bulb-icon group-hover/bulb:scale-125 transition-transform">💡</span>
+                            <span class="font-space font-bold text-xs bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full whitespace-nowrap">
+                                New idea! ✨
+                            </span>
+                        </div>
 
-                            <!-- 💡 Card 1: Idea Card -->
-                            <div class="desk-card absolute top-2 left-2 sm:top-4 sm:left-4 w-44 sm:w-48 bg-white border border-borderMuted rounded-xl p-4 shadow-md hover:shadow-2xl transition-all duration-300 z-20 cursor-pointer"
-                                 data-speed="0.04" data-card="idea">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-xl">💡</span>
-                                    <span class="text-[10px] font-space font-semibold uppercase px-2 py-0.5 rounded bg-amber-50 text-amber-700">Idea Lab</span>
-                                </div>
-                                <h3 class="font-space font-bold text-sm text-textMain">Problem-First</h3>
-                                <p class="desk-card-desc text-xs text-subtleText mt-1 line-clamp-2 transition-all">Validated concepts targeting real market inefficiencies.</p>
-                            </div>
+                        <!-- 🚀 Item 2: Rocket (Moves upward on hover) -->
+                        <div id="item-rocket" class="playful-item absolute top-6 right-6 bg-white border border-borderMuted rounded-2xl p-3 shadow-md hover:shadow-xl transition-all duration-300 z-30 cursor-pointer group/rocket flex items-center gap-2" data-speed="-0.04">
+                            <span class="text-3xl rocket-icon inline-block group-hover/rocket:-translate-y-2 group-hover/rocket:scale-110 transition-transform duration-300">🚀</span>
+                            <span class="font-space text-xs font-bold text-textMain">Launch Mode</span>
+                        </div>
 
-                            <!-- 📈 Card 2: Growth Chart Card -->
-                            <div class="desk-card absolute top-6 right-2 sm:top-8 sm:right-6 w-48 sm:w-52 bg-white border border-borderMuted rounded-xl p-4 shadow-md hover:shadow-2xl transition-all duration-300 z-20 cursor-pointer"
-                                 data-speed="-0.03" data-card="growth">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-xl">📈</span>
-                                    <span class="text-[10px] font-space font-semibold uppercase px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">+142% Traction</span>
-                                </div>
-                                <h3 class="font-space font-bold text-sm text-textMain">Scale & Metric</h3>
-                                <div class="w-full bg-slate-100 rounded-full h-1.5 mt-2 overflow-hidden">
-                                    <div class="bg-accentBlue h-1.5 rounded-full w-3/4"></div>
-                                </div>
-                                <p class="desk-card-desc text-xs text-subtleText mt-2 transition-all">Driven by unit economics, revenue, and product clarity.</p>
-                            </div>
+                        <!-- 🤖 Item 3: AI Robot (Wiggles on hover) -->
+                        <div id="item-robot" class="playful-item absolute bottom-6 left-6 bg-slate-900 text-white border border-slate-800 rounded-2xl p-3 shadow-md hover:shadow-xl transition-all duration-300 z-30 cursor-pointer group/robot flex items-center gap-2" data-speed="0.06">
+                            <span class="text-3xl robot-icon inline-block group-hover/robot:animate-bounce">🤖</span>
+                            <span class="font-space text-xs font-bold text-slate-200">AI Assistant</span>
+                        </div>
 
-                            <!-- 🤖 Card 3: AI Card -->
-                            <div class="desk-card absolute top-36 left-1/4 sm:left-1/3 -translate-x-1/2 w-48 sm:w-52 bg-slate-900 text-white border border-slate-800 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 z-30 cursor-pointer"
-                                 data-speed="0.06" data-card="ai">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-xl">🤖</span>
-                                    <span class="text-[10px] font-space font-semibold uppercase px-2 py-0.5 rounded bg-blue-900/60 text-blue-300">AI Integration</span>
-                                </div>
-                                <h3 class="font-space font-bold text-sm text-white">Smart Workflows</h3>
-                                <p class="desk-card-desc text-xs text-slate-300 mt-1 transition-all">Automating operations and amplifying user capabilities with AI.</p>
-                            </div>
-
-                            <!-- 🛍️ Card 4: Ecommerce Card -->
-                            <div class="desk-card absolute bottom-4 left-2 sm:bottom-6 sm:left-6 w-44 sm:w-48 bg-white border border-borderMuted rounded-xl p-4 shadow-md hover:shadow-2xl transition-all duration-300 z-20 cursor-pointer"
-                                 data-speed="-0.05" data-card="ecommerce">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-xl">🛍️</span>
-                                    <span class="text-[10px] font-space font-semibold uppercase px-2 py-0.5 rounded bg-purple-50 text-purple-700">D2C Brand</span>
-                                </div>
-                                <h3 class="font-space font-bold text-sm text-textMain">Modern Retail</h3>
-                                <p class="desk-card-desc text-xs text-subtleText mt-1 line-clamp-2 transition-all">Bringing heritage products online with seamless UX.</p>
-                            </div>
-
-                            <!-- 🚀 Card 5: Launch Card -->
-                            <div class="desk-card absolute bottom-4 right-2 sm:bottom-6 sm:right-6 w-48 sm:w-52 bg-white border border-borderMuted rounded-xl p-4 shadow-md hover:shadow-2xl transition-all duration-300 z-20 cursor-pointer"
-                                 data-speed="0.05" data-card="launch">
-                                <div class="flex items-center justify-between mb-2">
-                                    <span class="text-xl">🚀</span>
-                                    <span class="text-[10px] font-space font-semibold uppercase px-2 py-0.5 rounded bg-blue-50 text-accentBlue">Velocity</span>
-                                </div>
-                                <h3 class="font-space font-bold text-sm text-textMain">Fast Execution</h3>
-                                <p class="desk-card-desc text-xs text-subtleText mt-1 line-clamp-2 transition-all">From zero to functional MVP in record time.</p>
-                            </div>
-
-                            <!-- Small Profile Visual Badge -->
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20 group-hover/desk:opacity-40 transition-opacity duration-300">
-                                <div class="w-32 h-32 rounded-full border border-dashed border-accentBlue/60 flex items-center justify-center animate-spin-slow">
-                                    <i class="fa-solid fa-compass text-3xl text-accentBlue"></i>
-                                </div>
-                            </div>
-
+                        <!-- 🛍️ Item 4: Shopping Bag ("Business idea") -->
+                        <div id="item-bag" class="playful-item absolute bottom-6 right-6 bg-white border border-borderMuted rounded-2xl p-3 shadow-md hover:shadow-xl transition-all duration-300 z-30 cursor-pointer group/bag flex items-center gap-2" data-speed="-0.05">
+                            <span class="text-3xl bag-icon group-hover/bag:rotate-12 transition-transform">🛍️</span>
+                            <span class="font-space font-bold text-xs bg-purple-100 text-purple-800 px-2.5 py-1 rounded-full whitespace-nowrap">
+                                Business idea 🛒
+                            </span>
                         </div>
 
                     </div>
@@ -207,124 +161,115 @@
         </section>
 
 
-        <!-- ================= SECTION 01: CURRENTLY BUILDING ================= -->
-        <section id="currently" class="py-20 px-6 max-w-7xl mx-auto border-t border-borderMuted/80">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">01 // Dashboard Index</span>
-                    <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain mt-2">Currently Building</h2>
-                </div>
-                <p class="text-subtleText font-space text-sm mt-2 md:mt-0">Real-time status of active ventures and experiments.</p>
+        <!-- ================= SECTION 01: WHAT I'M UP TO ================= -->
+        <section id="upto" class="py-20 px-6 max-w-6xl mx-auto border-t border-borderMuted/80">
+            <div class="mb-12">
+                <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">01 // Current Focus</span>
+                <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain mt-2">What I'm up to</h2>
             </div>
 
-            <!-- Dashboard Index List -->
-            <div class="space-y-4">
+            <!-- 3 Simple Playful Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                <!-- Venture 01 -->
-                <div class="group bg-white border border-borderMuted hover:border-accentBlue/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 cursor-pointer" onclick="openVentureModal('myagenow')">
-                    <div class="flex items-center space-x-6">
-                        <span class="font-space text-xl font-bold text-subtleText group-hover:text-accentBlue transition-colors">01</span>
-                        <div>
-                            <div class="flex items-center gap-3">
-                                <h3 class="font-space font-bold text-xl text-textMain group-hover:text-accentBlue transition-colors">MyAgeNow</h3>
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-semibold bg-emerald-100 text-emerald-800">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
-                                    LIVE
-                                </span>
-                            </div>
-                            <p class="text-sm text-subtleText mt-1">Smart age calculator & milestone discovery tool powered by sleek micro-apps.</p>
-                        </div>
+                <!-- Card 1: Building -->
+                <div class="bg-white border border-borderMuted hover:border-accentBlue/60 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        🚀
                     </div>
-                    <div class="flex items-center gap-4 text-xs font-space text-subtleText">
-                        <span class="hidden md:inline-block">AI / Micro Tool</span>
-                        <span class="px-4 py-2 rounded-full border border-borderMuted group-hover:bg-accentBlue group-hover:text-white group-hover:border-accentBlue transition-all">Details ↗</span>
-                    </div>
+                    <h3 class="font-space font-bold text-2xl text-textMain mb-2">Building</h3>
+                    <p class="text-subtleText text-base">Small online businesses and micro-applications that solve real problems.</p>
                 </div>
 
-                <!-- Venture 02 -->
-                <div class="group bg-white border border-borderMuted hover:border-accentBlue/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 cursor-pointer" onclick="openVentureModal('tangail')">
-                    <div class="flex items-center space-x-6">
-                        <span class="font-space text-xl font-bold text-subtleText group-hover:text-accentBlue transition-colors">02</span>
-                        <div>
-                            <div class="flex items-center gap-3">
-                                <h3 class="font-space font-bold text-xl text-textMain group-hover:text-accentBlue transition-colors">Tangail Saree Market</h3>
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-semibold bg-blue-100 text-accentBlue">
-                                    BUILDING
-                                </span>
-                            </div>
-                            <p class="text-sm text-subtleText mt-1">D2C ecommerce portal connecting artisan weavers directly with global consumers.</p>
-                        </div>
+                <!-- Card 2: Exploring -->
+                <div class="bg-white border border-borderMuted hover:border-amber-400/80 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        💡
                     </div>
-                    <div class="flex items-center gap-4 text-xs font-space text-subtleText">
-                        <span class="hidden md:inline-block">Ecommerce / D2C</span>
-                        <span class="px-4 py-2 rounded-full border border-borderMuted group-hover:bg-accentBlue group-hover:text-white group-hover:border-accentBlue transition-all">Details ↗</span>
-                    </div>
+                    <h3 class="font-space font-bold text-2xl text-textMain mb-2">Exploring</h3>
+                    <p class="text-subtleText text-base">AI technology, automated workflows, and brand-new product concepts.</p>
                 </div>
 
-                <!-- Venture 03 -->
-                <div class="group bg-white border border-borderMuted hover:border-accentBlue/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 cursor-pointer" onclick="openVentureModal('memoryfix')">
-                    <div class="flex items-center space-x-6">
-                        <span class="font-space text-xl font-bold text-subtleText group-hover:text-accentBlue transition-colors">03</span>
-                        <div>
-                            <div class="flex items-center gap-3">
-                                <h3 class="font-space font-bold text-xl text-textMain group-hover:text-accentBlue transition-colors">MemoryFix</h3>
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-semibold bg-purple-100 text-purple-800">
-                                    EXPLORING
-                                </span>
-                            </div>
-                            <p class="text-sm text-subtleText mt-1">Digital memory organization & photo restoration assistant leveraging lightweight AI.</p>
-                        </div>
+                <!-- Card 3: Learning -->
+                <div class="bg-white border border-borderMuted hover:border-purple-400/80 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        📚
                     </div>
-                    <div class="flex items-center gap-4 text-xs font-space text-subtleText">
-                        <span class="hidden md:inline-block">Productivity / AI</span>
-                        <span class="px-4 py-2 rounded-full border border-borderMuted group-hover:bg-accentBlue group-hover:text-white group-hover:border-accentBlue transition-all">Details ↗</span>
-                    </div>
+                    <h3 class="font-space font-bold text-2xl text-textMain mb-2">Learning</h3>
+                    <p class="text-subtleText text-base">Modern business strategies, marketing channels, and software architecture.</p>
                 </div>
 
-            </div>
-
-            <!-- Action Link Below Index -->
-            <div class="mt-8 text-center sm:text-left">
-                <a href="#about" class="inline-flex items-center font-space font-semibold text-textMain hover:text-accentBlue transition-colors group">
-                    <span>More about me</span>
-                    <i class="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1.5 transition-transform"></i>
-                </a>
             </div>
         </section>
 
 
-        <!-- ================= SECTION 02: ABOUT ================= -->
-        <section id="about" class="py-20 px-6 max-w-7xl mx-auto border-t border-borderMuted/80">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- ================= SECTION 02: PLAYFUL VENTURES ================= -->
+        <section id="ventures" class="py-20 px-6 max-w-6xl mx-auto border-t border-borderMuted/80">
+            <div class="mb-12">
+                <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">02 // Projects & Ventures</span>
+                <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain mt-2">Ventures</h2>
+            </div>
 
-                <div class="lg:col-span-5 space-y-4">
-                    <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">02 // Background</span>
-                    <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain leading-tight">
-                        I turn napkin ideas into functioning digital businesses.
-                    </h2>
+            <!-- Playful Compact Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Venture 1: MyAgeNow -->
+                <div class="group bg-white border border-borderMuted hover:border-accentBlue rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-56" onclick="openVentureModal('myagenow')">
+                    <div>
+                        <span class="text-4xl mb-4 block group-hover:scale-110 transition-transform">🧮</span>
+                        <h3 class="font-space font-bold text-2xl text-textMain group-hover:text-accentBlue transition-colors">MyAgeNow</h3>
+                        <p class="text-xs text-subtleText mt-1">Smart age calculator & milestone tool.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-borderMuted/60">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-bold bg-emerald-100 text-emerald-800">
+                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
+                            LIVE
+                        </span>
+                        <span class="text-lg font-bold group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
                 </div>
 
-                <div class="lg:col-span-7 space-y-6 text-subtleText text-base sm:text-lg leading-relaxed">
-                    <p>
-                        Based in Dhaka and operating globally, I focus on combining rapid product execution, thoughtful user experience, and modern tech stacks to launch web apps and ecommerce platforms.
-                    </p>
-                    <p>
-                        Whether it’s automated tools, D2C retail platforms, or productivity suites, my philosophy centers on execution speed, clean architecture, and direct utility.
-                    </p>
+                <!-- Venture 2: Tangail Saree -->
+                <div class="group bg-white border border-borderMuted hover:border-accentBlue rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-56" onclick="openVentureModal('tangail')">
+                    <div>
+                        <span class="text-4xl mb-4 block group-hover:scale-110 transition-transform">🥻</span>
+                        <h3 class="font-space font-bold text-xl text-textMain group-hover:text-accentBlue transition-colors">Tangail Saree</h3>
+                        <p class="text-xs text-subtleText mt-1">D2C traditional weaver marketplace.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-borderMuted/60">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-bold bg-blue-100 text-accentBlue">
+                            BUILDING
+                        </span>
+                        <span class="text-lg font-bold group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
 
-                    <div class="pt-4 flex flex-wrap items-center gap-8 text-sm font-space text-textMain font-medium">
-                        <div>
-                            <span class="block text-2xl font-bold text-accentBlue">04+</span>
-                            <span class="text-xs text-subtleText uppercase tracking-wider">Active Ventures</span>
-                        </div>
-                        <div>
-                            <span class="block text-2xl font-bold text-accentBlue">100%</span>
-                            <span class="text-xs text-subtleText uppercase tracking-wider">Builder Mindset</span>
-                        </div>
-                        <div>
-                            <span class="block text-2xl font-bold text-accentBlue">Global</span>
-                            <span class="text-xs text-subtleText uppercase tracking-wider">Reach</span>
-                        </div>
+                <!-- Venture 3: MemoryFix -->
+                <div class="group bg-white border border-borderMuted hover:border-accentBlue rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-56" onclick="openVentureModal('memoryfix')">
+                    <div>
+                        <span class="text-4xl mb-4 block group-hover:scale-110 transition-transform">🤖</span>
+                        <h3 class="font-space font-bold text-2xl text-textMain group-hover:text-accentBlue transition-colors">MemoryFix</h3>
+                        <p class="text-xs text-subtleText mt-1">AI photo restoration & organization.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-borderMuted/60">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-bold bg-purple-100 text-purple-800">
+                            EXPLORING
+                        </span>
+                        <span class="text-lg font-bold group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+
+                <!-- Venture 4: QuoteFlow -->
+                <div class="group bg-white border border-borderMuted hover:border-accentBlue rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-56" onclick="openVentureModal('quoteflow')">
+                    <div>
+                        <span class="text-4xl mb-4 block group-hover:scale-110 transition-transform">📋</span>
+                        <h3 class="font-space font-bold text-2xl text-textMain group-hover:text-accentBlue transition-colors">QuoteFlow</h3>
+                        <p class="text-xs text-subtleText mt-1">SaaS agency proposal builder.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-borderMuted/60">
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-bold bg-amber-100 text-amber-800">
+                            CONCEPT
+                        </span>
+                        <span class="text-lg font-bold group-hover:translate-x-1 transition-transform">→</span>
                     </div>
                 </div>
 
@@ -332,110 +277,46 @@
         </section>
 
 
-        <!-- ================= SECTION 03: ALL VENTURES ================= -->
-        <section id="ventures" class="py-20 px-6 max-w-7xl mx-auto border-t border-borderMuted/80">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-                <div>
-                    <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">03 // Featured Ventures</span>
-                    <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain mt-2">Selected Works</h2>
-                </div>
-            </div>
-
-            <!-- Venture Cards Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <!-- Venture 1 Card -->
-                <div class="venture-card group bg-white border border-borderMuted rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openVentureModal('myagenow')">
-                    <div class="relative h-64 overflow-hidden bg-slate-900 flex items-center justify-center">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/30 group-hover:scale-105 transition-transform duration-500"></div>
-                        <div class="relative text-center p-6 text-white">
-                            <span class="text-xs font-space tracking-widest uppercase bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">Micro-App</span>
-                            <h3 class="font-space font-bold text-3xl mt-3">MyAgeNow</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-space font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">LIVE</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-subtleText group-hover:text-accentBlue transition-colors"></i>
-                        </div>
-                        <p class="text-sm text-subtleText">Sleek, high-precision age calculation engine and lifespan milestone discovery platform.</p>
-                    </div>
-                </div>
-
-                <!-- Venture 2 Card -->
-                <div class="venture-card group bg-white border border-borderMuted rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openVentureModal('tangail')">
-                    <div class="relative h-64 overflow-hidden bg-amber-950 flex items-center justify-center">
-                        <div class="absolute inset-0 bg-gradient-to-br from-amber-600/30 to-rose-700/30 group-hover:scale-105 transition-transform duration-500"></div>
-                        <div class="relative text-center p-6 text-white">
-                            <span class="text-xs font-space tracking-widest uppercase bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">Ecommerce</span>
-                            <h3 class="font-space font-bold text-3xl mt-3">Tangail Saree Market</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-space font-semibold text-accentBlue bg-blue-50 px-2.5 py-1 rounded-md">BUILDING</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-subtleText group-hover:text-accentBlue transition-colors"></i>
-                        </div>
-                        <p class="text-sm text-subtleText">Direct-to-consumer digital portal empowering traditional weavers in Tangail.</p>
-                    </div>
-                </div>
-
-                <!-- Venture 3 Card -->
-                <div class="venture-card group bg-white border border-borderMuted rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openVentureModal('memoryfix')">
-                    <div class="relative h-64 overflow-hidden bg-slate-800 flex items-center justify-center">
-                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/30 to-purple-800/30 group-hover:scale-105 transition-transform duration-500"></div>
-                        <div class="relative text-center p-6 text-white">
-                            <span class="text-xs font-space tracking-widest uppercase bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">AI Utility</span>
-                            <h3 class="font-space font-bold text-3xl mt-3">MemoryFix</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-space font-semibold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md">EXPLORING</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-subtleText group-hover:text-accentBlue transition-colors"></i>
-                        </div>
-                        <p class="text-sm text-subtleText">AI-powered media restoration and memory cataloging tool for families and archives.</p>
-                    </div>
-                </div>
-
-                <!-- Venture 4 Card -->
-                <div class="venture-card group bg-white border border-borderMuted rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openVentureModal('quoteflow')">
-                    <div class="relative h-64 overflow-hidden bg-blue-950 flex items-center justify-center">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-700/30 to-teal-600/30 group-hover:scale-105 transition-transform duration-500"></div>
-                        <div class="relative text-center p-6 text-white">
-                            <span class="text-xs font-space tracking-widest uppercase bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">SaaS</span>
-                            <h3 class="font-space font-bold text-3xl mt-3">QuoteFlow</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-space font-semibold text-accentBlue bg-blue-50 px-2.5 py-1 rounded-md">CONCEPT</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square text-subtleText group-hover:text-accentBlue transition-colors"></i>
-                        </div>
-                        <p class="text-sm text-subtleText">Automated client proposal and price estimation builder for creative agencies.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ================= SECTION 04: CONTACT ================= -->
-        <section id="contact" class="py-24 px-6 max-w-7xl mx-auto border-t border-borderMuted/80 text-center">
-            <div class="max-w-2xl mx-auto space-y-6">
-                <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">04 // Get In Touch</span>
-
-                <h2 class="font-space font-bold text-4xl sm:text-6xl text-textMain tracking-tight">
-                    Let's build something.
+        <!-- ================= SECTION 03: HUMAN ABOUT ================= -->
+        <section id="about" class="py-20 px-6 max-w-6xl mx-auto border-t border-borderMuted/80">
+            <div class="max-w-2xl">
+                <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">03 // Background</span>
+                <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain mt-2 mb-8">
+                    A little about me 👋
                 </h2>
 
-                <p class="text-subtleText text-base sm:text-lg">
-                    Have an idea, partnership opportunity, or project in mind? Reach out directly.
+                <div class="space-y-4 text-xl sm:text-2xl font-space text-textMain leading-relaxed font-medium">
+                    <p class="flex items-center gap-3">
+                        <span class="text-accentBlue">✦</span> I like ideas.
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <span class="text-amber-500">✦</span> I like building things.
+                    </p>
+                    <p class="flex items-center gap-3">
+                        <span class="text-emerald-500">✦</span> And I like seeing what happens when an idea becomes real.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 04: FINAL CONTACT ================= -->
+        <section id="contact" class="py-24 px-6 max-w-6xl mx-auto border-t border-borderMuted/80 text-center">
+            <div class="max-w-xl mx-auto space-y-6">
+
+                <div class="text-5xl mb-2">💬</div>
+
+                <h2 class="font-space font-bold text-4xl sm:text-5xl text-textMain tracking-tight">
+                    Got an idea?
+                </h2>
+
+                <p class="text-subtleText font-space text-lg sm:text-xl">
+                    Maybe we should build it.
                 </p>
 
                 <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="mailto:contact@sydinrahman.com" class="btn-magnetic px-8 py-4 rounded-full bg-accentBlue text-white font-space font-medium text-base shadow-lg hover:bg-blue-700 transition-all">
-                        contact@sydinrahman.com ↗
+                    <a href="mailto:contact@sydinrahman.com" class="btn-magnetic px-8 py-4 rounded-full bg-accentBlue text-white font-space font-bold text-base shadow-lg hover:bg-blue-700 transition-all">
+                        Let's Talk →
                     </a>
                     <button onclick="copyEmail()" id="copy-email-btn" class="px-6 py-4 rounded-full bg-white border border-borderMuted text-textMain font-space font-medium text-sm hover:border-textMain transition-all">
                         <i class="fa-regular fa-copy mr-2"></i>Copy Email
@@ -456,11 +337,11 @@
 
     <!-- Footer -->
     <footer class="border-t border-borderMuted/80 bg-white/50 py-8 px-6 text-center text-xs font-space text-subtleText">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>© <span id="current-year">2026</span> SYDIN RAHMAN. All rights reserved.</div>
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>© <span id="current-year">2026</span> SYDIN RAHMAN. Sydin's personal corner of the internet.</div>
             <div class="flex items-center space-x-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                <span>Designed with Space Grotesk & Inter</span>
+                <span>Space Grotesk & Inter</span>
             </div>
         </div>
     </footer>
@@ -468,7 +349,7 @@
 
     <!-- Venture Detail Modal Container -->
     <div id="venture-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
-        <div class="bg-white border border-borderMuted rounded-2xl max-w-xl w-full p-6 sm:p-8 relative shadow-2xl scale-95 transition-transform duration-300" id="modal-content-box">
+        <div class="bg-white border border-borderMuted rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl scale-95 transition-transform duration-300" id="modal-content-box">
             <button onclick="closeVentureModal()" class="absolute top-4 right-4 text-subtleText hover:text-textMain p-2 text-xl">
                 <i class="fa-solid fa-xmark"></i>
             </button>
