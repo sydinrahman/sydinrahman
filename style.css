@@ -1,9 +1,22 @@
 :root {
-  --bg: #F7F7F5;
-  --dark: #111111;
-  --accent: #2563EB;
-  --accent-hover: #1D4ED8;
-  --muted: #666666;
+  --background-rgb: 249, 249, 247;
+  --surface-rgb: 249, 249, 247;
+  --surface-container-low-rgb: 244, 244, 242;
+  --surface-container-high-rgb: 232, 232, 230;
+  --surface-container-lowest-rgb: 255, 255, 255;
+  --surface-container-highest-rgb: 226, 227, 225;
+  --surface-variant-rgb: 226, 227, 225;
+  --primary-rgb: 0, 0, 0;
+  --on-primary-rgb: 255, 255, 255;
+  --on-surface-rgb: 26, 28, 27;
+  --on-surface-variant-rgb: 68, 71, 72;
+  --outline-rgb: 116, 120, 120;
+  --outline-variant-rgb: 196, 199, 199;
+  --secondary-rgb: 0, 81, 213;
+  --on-secondary-rgb: 255, 255, 255;
+  --secondary-fixed-dim-rgb: 180, 197, 255;
+  --secondary-container-rgb: 49, 107, 243;
+  --on-secondary-container-rgb: 254, 252, 255;
 }
 
 * {
@@ -12,21 +25,22 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--bg);
-  color: var(--dark);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 body {
   margin: 0;
-  background-color: var(--bg);
-  color: var(--dark);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: rgb(var(--background-rgb));
+  color: rgb(var(--on-surface-rgb));
+  font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.font-display {
-  font-family: 'Space Grotesk', sans-serif;
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .material-symbols-outlined {
@@ -36,120 +50,96 @@ body {
   line-height: 1;
 }
 
-/* Glassmorphism Styles */
+/* Apple Glassmorphism Effects */
 .glass-nav {
-  background: rgba(247, 247, 245, 0.8) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
 }
 
 .glass-menu {
-  background: rgba(247, 247, 245, 0.95) !important;
+  background: rgba(255, 255, 255, 0.82) !important;
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.75) !important;
+  background: rgba(255, 255, 255, 0.65) !important;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(0, 0, 0, 0.07) !important;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.9), 0 8px 32px 0 rgba(0, 0, 0, 0.04);
 }
 
-/* Floating ambient background shapes animation */
-@keyframes floatShape {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -20px) scale(1.08);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.95);
-  }
+.glass-card-accent {
+  background: rgba(0, 0, 0, 0.92) !important;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.3), 0 12px 36px 0 rgba(0, 0, 0, 0.2);
 }
 
-.floating-shape {
-  animation: floatShape 16s ease-in-out infinite;
-  will-change: transform;
+.glass-pill {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px) saturate(160%);
+  -webkit-backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8), 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
-/* Hero visual subtle floating effect */
-@keyframes floatVisual {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+/* Micro-interactions and Tactile Feedback */
+.card-hover-effect {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.floating-hero-visual {
-  animation: floatVisual 6s ease-in-out infinite;
+.card-hover-effect:hover {
+  transform: translateY(-4px) scale(1.005);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 1), 0 20px 40px -12px rgba(0, 0, 0, 0.08);
 }
 
-/* 3D Card Tilt Effect setup */
-.tilt-card {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
-  transform-style: preserve-3d;
-  will-change: transform;
+/* Button micro-interactions */
+.btn-tactile {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease;
 }
 
-/* Magnetic Button Slide Effect */
-.btn-magnetic {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease;
-  will-change: transform;
+.btn-tactile:active {
+  transform: scale(0.96) translateY(1px);
 }
 
-.btn-magnetic:active {
-  transform: scale(0.96);
-}
-
-/* Scroll reveal animations */
-.scroll-reveal {
+/* Animations */
+.fade-in-up {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
-.scroll-reveal.revealed {
+.fade-in-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Hero text initial reveal animation */
-.hero-text-reveal {
-  animation: heroReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes heroReveal {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Custom Scrollbar */
+/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+  background: rgb(var(--surface-rgb));
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgb(var(--outline-variant-rgb));
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(var(--outline-rgb));
+}
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
 }
