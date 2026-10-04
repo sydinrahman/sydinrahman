@@ -7,21 +7,21 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
 
   <title>Sydin Rahman — Entrepreneur</title>
-  <meta name="description" content="Portfolio of Sydin Rahman — Entrepreneur & Builder. I build ideas into businesses." />
+  <meta name="description" content="Portfolio of Sydin Rahman — Entrepreneur. Good ideas should be built." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- Open Graph / Twitter Cards -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sydinrahman.com/" />
   <meta property="og:title" content="Sydin Rahman — Entrepreneur" />
-  <meta property="og:description" content="I build ideas into businesses." />
+  <meta property="og:description" content="Good ideas should be built." />
   <meta property="og:image" content="og-image.svg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
 
   <link href="style.css" rel="stylesheet"/>
@@ -51,8 +51,8 @@
 </head>
 <body class="bg-bg text-dark font-sans antialiased selection:bg-accent selection:text-white relative overflow-x-hidden">
 
-<!-- Cursor Glow Follower -->
-<div id="cursor-glow" class="pointer-events-none fixed top-0 left-0 w-96 h-96 rounded-full bg-accent/10 blur-3xl -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-0 z-0"></div>
+<!-- Interactive Cursor Spotlight -->
+<div id="cursor-spotlight" class="pointer-events-none fixed inset-0 z-0 opacity-0 transition-opacity duration-500"></div>
 
 <!-- Ambient Floating Background Shapes -->
 <div class="pointer-events-none fixed inset-0 overflow-hidden z-0">
@@ -133,90 +133,108 @@
 <main id="main-content" class="relative z-10 pt-28 pb-20">
   <div class="max-w-[1240px] mx-auto px-6">
 
-    <!-- HERO SECTION -->
-    <section class="min-h-[80vh] flex flex-col justify-center py-12 md:py-20" id="overview">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <!-- HERO SECTION WITH INTERACTIVE MOUSE PARALLAX & TILT -->
+    <section class="min-h-[85vh] flex flex-col justify-center py-12 md:py-20 relative" id="hero-container">
 
-        <!-- Left Text Column -->
+      <!-- Parallax Floating Idea Cards scattered around hero -->
+      <div class="hero-parallax-card hidden lg:flex glass-card px-4 py-2 rounded-2xl items-center gap-2 absolute top-8 left-12 z-20 shadow-lg text-xs font-mono font-bold text-dark border border-white/80" data-speed="0.04">
+        <span class="w-2 h-2 rounded-full bg-accent"></span>
+        <span>AI</span>
+      </div>
+
+      <div class="hero-parallax-card hidden lg:flex glass-card px-4 py-2 rounded-2xl items-center gap-2 absolute top-24 right-16 z-20 shadow-lg text-xs font-mono font-bold text-dark border border-white/80" data-speed="-0.03">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span>BUILD</span>
+      </div>
+
+      <div class="hero-parallax-card hidden lg:flex glass-card px-4 py-2 rounded-2xl items-center gap-2 absolute bottom-24 left-8 z-20 shadow-lg text-xs font-mono font-bold text-dark border border-white/80" data-speed="-0.05">
+        <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+        <span>BUSINESS</span>
+      </div>
+
+      <div class="hero-parallax-card hidden lg:flex glass-card px-4 py-2 rounded-2xl items-center gap-2 absolute bottom-12 right-24 z-20 shadow-lg text-xs font-mono font-bold text-dark border border-white/80" data-speed="0.03">
+        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+        <span>ECOMMERCE</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
+
+        <!-- Left Text Column with Subtle Headline Shift -->
         <div class="lg:col-span-7 flex flex-col gap-6 hero-text-reveal">
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-border text-xs font-semibold tracking-wider text-dark uppercase shadow-2xs w-fit">
             <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
             SYDIN RAHMAN · ENTREPRENEUR
           </div>
 
-          <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl text-dark tracking-tight leading-[1.05]">
-            I build ideas into businesses.
+          <h1 id="hero-headline" class="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl text-dark tracking-tight leading-[1.02] uppercase transition-transform duration-100 ease-out">
+            GOOD IDEAS<br/>
+            SHOULD BE<br/>
+            <span class="text-accent">BUILT.</span>
           </h1>
 
-          <div class="flex items-center gap-2 flex-wrap text-sm sm:text-base text-muted font-medium pt-1">
-            <span class="px-3 py-1 rounded-lg bg-white/70 border border-border/60 text-dark">AI</span>
-            <span class="text-muted/40">·</span>
-            <span class="px-3 py-1 rounded-lg bg-white/70 border border-border/60 text-dark">Technology</span>
-            <span class="text-muted/40">·</span>
-            <span class="px-3 py-1 rounded-lg bg-white/70 border border-border/60 text-dark">Ecommerce</span>
-            <span class="text-muted/40">·</span>
-            <span class="px-3 py-1 rounded-lg bg-white/70 border border-border/60 text-dark">Digital Products</span>
-          </div>
+          <p class="text-base sm:text-lg text-muted font-medium max-w-lg leading-relaxed">
+            I explore ideas, build businesses, and learn along the way.
+          </p>
 
-          <div class="pt-4 flex items-center gap-4">
-            <a class="btn-magnetic inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent text-white font-medium text-base hover:bg-accent-hover transition-all shadow-lg shadow-accent/20 group" href="#ventures">
-              <span>Explore</span>
-              <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">east</span>
+          <div class="pt-2 flex items-center gap-4">
+            <a class="btn-magnetic inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-accent text-white font-medium text-base hover:bg-accent-hover transition-all shadow-lg shadow-accent/25 group" href="#ventures">
+              <span>Explore Ventures</span>
+              <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1.5">arrow_forward</span>
             </a>
             <a class="btn-magnetic inline-flex items-center gap-2 px-6 py-4 rounded-full bg-white border border-border text-dark font-medium text-base hover:bg-black/5 transition-all" href="#about">
-              <span>About Me</span>
+              <span>About</span>
             </a>
           </div>
         </div>
 
-        <!-- Right Visual Collage Column -->
+        <!-- Right 3D Interactive Hero Image Card -->
         <div class="lg:col-span-5 relative flex items-center justify-center">
-          <div class="floating-hero-visual relative w-full max-w-md lg:max-w-none aspect-square sm:aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl border border-white/60 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-6 flex flex-col justify-between group">
+          <div id="hero-3d-card" class="relative w-full max-w-md lg:max-w-none aspect-square rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-7 flex flex-col justify-between group transition-transform duration-200 ease-out">
 
-            <!-- Visual Background Image Overlay -->
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Modern Entrepreneur Workspace" class="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-overlay group-hover:scale-105 transition-transform duration-700 ease-out" />
+            <!-- Hero Image Layer -->
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Entrepreneur Workspace" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700 ease-out" />
 
-            <!-- Top Floating Header Pill -->
+            <!-- Top Floating Badge -->
             <div class="relative z-10 flex items-center justify-between">
               <div class="glass-card px-4 py-2 rounded-2xl flex items-center gap-2.5">
                 <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
                 <span class="text-xs font-semibold text-dark tracking-wide uppercase">Builder Studio</span>
               </div>
-              <div class="glass-card px-3 py-1.5 rounded-xl text-[11px] font-mono text-dark font-medium">
+              <div class="glass-card px-3 py-1.5 rounded-xl text-[11px] font-mono text-dark font-semibold">
                 EST. 2026
               </div>
             </div>
 
-            <!-- Central Collage Abstract Cards -->
-            <div class="relative z-10 my-auto flex flex-col gap-3 py-4">
-              <div class="glass-card p-4 rounded-2xl flex items-center gap-3 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+            <!-- Central Glass Accent Blocks -->
+            <div class="relative z-10 my-auto flex flex-col gap-3.5 py-4">
+              <div class="glass-card p-4 rounded-2xl flex items-center gap-3 transform -rotate-1 group-hover:rotate-0 transition-transform duration-300">
                 <div class="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shadow-md">
                   <span class="material-symbols-outlined text-xl">auto_awesome</span>
                 </div>
                 <div class="flex flex-col">
-                  <span class="text-xs font-mono text-muted uppercase">Core Focus</span>
-                  <span class="text-sm font-bold text-dark font-display">Ideas → Scalable Ventures</span>
+                  <span class="text-xs font-mono text-muted uppercase">Vision</span>
+                  <span class="text-sm font-bold text-dark font-display">Ideas → Reality</span>
                 </div>
               </div>
 
-              <div class="glass-card p-4 rounded-2xl flex items-center justify-between transform rotate-2 hover:rotate-0 transition-transform duration-300 ml-6">
+              <div class="glass-card p-4 rounded-2xl flex items-center justify-between transform rotate-2 group-hover:rotate-0 transition-transform duration-300 ml-6">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 rounded-xl bg-dark text-white flex items-center justify-center shadow-md">
                     <span class="material-symbols-outlined text-xl">rocket_launch</span>
                   </div>
                   <div class="flex flex-col">
                     <span class="text-xs font-mono text-muted uppercase">Status</span>
-                    <span class="text-sm font-bold text-dark font-display">Building &amp; Launching</span>
+                    <span class="text-sm font-bold text-dark font-display">Building Active</span>
                   </div>
                 </div>
-                <span class="px-2.5 py-1 rounded-full bg-accent/10 text-accent font-mono text-xs font-bold">4 Active</span>
+                <span class="px-2.5 py-1 rounded-full bg-accent/10 text-accent font-mono text-xs font-bold">4 Projects</span>
               </div>
             </div>
 
-            <!-- Bottom Metric Tag -->
+            <!-- Bottom Footer Tag -->
             <div class="relative z-10 flex items-center justify-between pt-2">
-              <span class="text-xs font-medium text-white/80 backdrop-blur-sm px-3 py-1.5 rounded-lg bg-black/40 border border-white/10">Dhaka / Worldwide</span>
-              <span class="text-xs font-mono text-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg bg-black/40 border border-white/10">01 // HERO</span>
+              <span class="text-xs font-medium text-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded-xl bg-black/40 border border-white/10">Dhaka / Global</span>
+              <span class="text-xs font-mono text-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded-xl bg-black/40 border border-white/10">01 // HERO</span>
             </div>
           </div>
         </div>
@@ -240,7 +258,7 @@
       </div>
     </section>
 
-    <!-- 02 — VENTURES -->
+    <!-- 02 — VENTURES WITH ENHANCED CARD HOVER INTERACTION -->
     <section class="py-20 border-t border-border/60 scroll-mt-24" id="ventures">
       <div class="flex flex-col gap-12">
         <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
@@ -255,7 +273,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           <!-- Venture 1: MyAgeNow -->
-          <div class="tilt-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[440px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl">
+          <div class="venture-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
             <div class="relative z-10 flex flex-col gap-6">
               <div class="flex items-center justify-between">
                 <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
@@ -265,16 +283,16 @@
                 <span class="text-xs font-mono text-muted">WEB APP</span>
               </div>
 
-              <!-- Image Container with Zoom effect -->
-              <div class="w-full h-48 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/30 transition-colors">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="MyAgeNow Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-4 text-white font-mono text-xs">myagenow.com</div>
+              <!-- Image Container with smooth scale expand -->
+              <div class="w-full h-52 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/40 transition-colors">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="MyAgeNow Tool" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-4 text-white font-mono text-xs font-medium">myagenow.com</div>
               </div>
 
               <div>
                 <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">MyAgeNow</h3>
-                <p class="text-muted text-sm mt-2 leading-relaxed">Precision age calculator, life milestone tracking, and chronological planning tool.</p>
+                <p class="text-muted text-sm mt-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">Precision age calculator, life milestone tracking, and chronological planning tool.</p>
               </div>
             </div>
 
@@ -283,15 +301,15 @@
                 <span class="material-symbols-outlined text-base">visibility</span>
                 <span>Inspect Specs</span>
               </button>
-              <a class="btn-magnetic inline-flex items-center gap-1 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="https://myagenow.com" target="_blank" rel="noopener">
+              <a class="btn-magnetic inline-flex items-center gap-1.5 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="https://myagenow.com" target="_blank" rel="noopener">
                 <span>Visit Site</span>
-                <span class="material-symbols-outlined text-base group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+                <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
               </a>
             </div>
           </div>
 
           <!-- Venture 2: Tangail Saree -->
-          <div class="tilt-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[440px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl">
+          <div class="venture-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
             <div class="relative z-10 flex flex-col gap-6">
               <div class="flex items-center justify-between">
                 <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
@@ -301,15 +319,15 @@
                 <span class="text-xs font-mono text-muted">ECOMMERCE</span>
               </div>
 
-              <div class="w-full h-48 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/30 transition-colors">
-                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" alt="Tangail Saree DTC Brand" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-4 text-white font-mono text-xs">Heritage Handloom DTC</div>
+              <div class="w-full h-52 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/40 transition-colors">
+                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" alt="Tangail Saree DTC Brand" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-4 text-white font-mono text-xs font-medium">Heritage Handloom DTC</div>
               </div>
 
               <div>
                 <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">Tangail Saree</h3>
-                <p class="text-muted text-sm mt-2 leading-relaxed">Modern direct-to-consumer ecommerce brand connecting authentic Bangladeshi weavers with global customers.</p>
+                <p class="text-muted text-sm mt-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">Modern direct-to-consumer ecommerce brand connecting authentic Bangladeshi weavers with global customers.</p>
               </div>
             </div>
 
@@ -318,15 +336,15 @@
                 <span class="material-symbols-outlined text-base">visibility</span>
                 <span>Inspect Brand Story</span>
               </button>
-              <a class="btn-magnetic inline-flex items-center gap-1 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
+              <a class="btn-magnetic inline-flex items-center gap-1.5 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
                 <span>Explore Brand</span>
-                <span class="material-symbols-outlined text-base group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+                <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
               </a>
             </div>
           </div>
 
           <!-- Venture 3: MemoryFix -->
-          <div class="tilt-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[440px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl">
+          <div class="venture-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
             <div class="relative z-10 flex flex-col gap-6">
               <div class="flex items-center justify-between">
                 <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
@@ -336,15 +354,15 @@
                 <span class="text-xs font-mono text-muted">AI PRODUCT</span>
               </div>
 
-              <div class="w-full h-48 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/30 transition-colors">
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="MemoryFix AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-4 text-white font-mono text-xs">Neural Restoration Engine</div>
+              <div class="w-full h-52 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/40 transition-colors">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="MemoryFix AI" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-4 text-white font-mono text-xs font-medium">Neural Restoration Engine</div>
               </div>
 
               <div>
                 <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">MemoryFix</h3>
-                <p class="text-muted text-sm mt-2 leading-relaxed">AI-powered web utility for restoring, colorizing, and enhancing legacy family photographs.</p>
+                <p class="text-muted text-sm mt-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">AI-powered web utility for restoring, colorizing, and enhancing legacy family photographs.</p>
               </div>
             </div>
 
@@ -353,15 +371,15 @@
                 <span class="material-symbols-outlined text-base">visibility</span>
                 <span>Inspect AI Prototype</span>
               </button>
-              <a class="btn-magnetic inline-flex items-center gap-1 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
+              <a class="btn-magnetic inline-flex items-center gap-1.5 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
                 <span>View Concept</span>
-                <span class="material-symbols-outlined text-base group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+                <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
               </a>
             </div>
           </div>
 
           <!-- Venture 4: QuoteFlow -->
-          <div class="tilt-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[440px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl">
+          <div class="venture-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
             <div class="relative z-10 flex flex-col gap-6">
               <div class="flex items-center justify-between">
                 <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
@@ -371,15 +389,15 @@
                 <span class="text-xs font-mono text-muted">MICRO-SAAS</span>
               </div>
 
-              <div class="w-full h-48 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/30 transition-colors">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="QuoteFlow Micro-SaaS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-4 text-white font-mono text-xs">Quotation &amp; Invoice Tool</div>
+              <div class="w-full h-52 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/40 transition-colors">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="QuoteFlow Micro-SaaS" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-4 text-white font-mono text-xs font-medium">Quotation &amp; Invoice Tool</div>
               </div>
 
               <div>
                 <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">QuoteFlow</h3>
-                <p class="text-muted text-sm mt-2 leading-relaxed">Lightweight quotation builder and margin calculator designed for freelancers and micro-agencies.</p>
+                <p class="text-muted text-sm mt-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">Lightweight quotation builder and margin calculator designed for freelancers and micro-agencies.</p>
               </div>
             </div>
 
@@ -388,9 +406,9 @@
                 <span class="material-symbols-outlined text-base">visibility</span>
                 <span>Inspect Wireframe</span>
               </button>
-              <a class="btn-magnetic inline-flex items-center gap-1 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
+              <a class="btn-magnetic inline-flex items-center gap-1.5 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
                 <span>View Concept</span>
-                <span class="material-symbols-outlined text-base group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+                <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
               </a>
             </div>
           </div>
@@ -408,7 +426,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="tilt-card glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 transition-colors">
+          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 hover:-translate-y-1 transition-all">
             <div class="flex flex-col gap-4">
               <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center">
                 <span class="material-symbols-outlined text-2xl">construction</span>
@@ -419,7 +437,7 @@
             <span class="text-xs font-mono text-accent font-semibold mt-6">ACTIVE DEVELOPMENT</span>
           </div>
 
-          <div class="tilt-card glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 transition-colors">
+          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 hover:-translate-y-1 transition-all">
             <div class="flex flex-col gap-4">
               <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center">
                 <span class="material-symbols-outlined text-2xl">science</span>
@@ -430,7 +448,7 @@
             <span class="text-xs font-mono text-accent font-semibold mt-6">EXPERIMENTATION</span>
           </div>
 
-          <div class="tilt-card glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 transition-colors">
+          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 hover:-translate-y-1 transition-all">
             <div class="flex flex-col gap-4">
               <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center">
                 <span class="material-symbols-outlined text-2xl">school</span>

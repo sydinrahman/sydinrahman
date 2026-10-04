@@ -38,7 +38,7 @@ body {
 
 /* Glassmorphism Styles */
 .glass-nav {
-  background: rgba(247, 247, 245, 0.8) !important;
+  background: rgba(247, 247, 245, 0.82) !important;
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -59,6 +59,11 @@ body {
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
 }
 
+/* Interactive Cursor Spotlight Radial Background */
+#cursor-spotlight {
+  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(37, 99, 235, 0.08), transparent 80%);
+}
+
 /* Floating ambient background shapes animation */
 @keyframes floatShape {
   0%, 100% {
@@ -77,32 +82,28 @@ body {
   will-change: transform;
 }
 
-/* Hero visual subtle floating effect */
-@keyframes floatVisual {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+/* Hero Parallax Idea Cards Smooth Transition */
+.hero-parallax-card {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
-.floating-hero-visual {
-  animation: floatVisual 6s ease-in-out infinite;
-}
-
-/* 3D Card Tilt Effect setup */
-.tilt-card {
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+/* Hero 3D Card Smooth Transition */
+#hero-3d-card {
   transform-style: preserve-3d;
   will-change: transform;
+}
+
+/* Venture Card Hover Animations */
+.venture-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
 }
 
 /* Magnetic Button Slide Effect */
 .btn-magnetic {
   position: relative;
   overflow: hidden;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease;
   will-change: transform;
 }
 

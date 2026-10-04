@@ -1,15 +1,81 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // --- Cursor Glow Follower ---
-  const cursorGlow = document.getElementById('cursor-glow');
-  if (cursorGlow && window.matchMedia('(pointer: fine)').matches) {
+  // --- Cursor Spotlight Follower ---
+  const cursorSpotlight = document.getElementById('cursor-spotlight');
+  if (cursorSpotlight && window.matchMedia('(pointer: fine)').matches) {
     document.addEventListener('mousemove', (e) => {
-      cursorGlow.style.left = `${e.clientX}px`;
-      cursorGlow.style.top = `${e.clientY}px`;
-      cursorGlow.style.opacity = '1';
+      cursorSpotlight.style.setProperty('--mouse-x', `${e.clientX}px`);
+      cursorSpotlight.style.setProperty('--mouse-y', `${e.clientY}px`);
+      cursorSpotlight.style.opacity = '1';
     }, { passive: true });
 
     document.addEventListener('mouseleave', () => {
-      cursorGlow.style.opacity = '0';
+      cursorSpotlight.style.opacity = '0';
+    });
+  }
+
+  // --- Hero Mouse Parallax & 3D Tilt Interaction ---
+  const heroContainer = document.getElementById('hero-container');
+  const heroHeadline = document.getElementById('hero-headline');
+  const hero3dCard = document.getElementById('hero-3d-card');
+  const parallaxCards = document.querySelectorAll('.hero-parallax-card');
+
+  if (heroContainer && window.matchMedia('(pointer: fine)').matches) {
+    heroContainer.addEventListener('mousemove', (e) => {
+      const rect = heroContainer.getBoundingClientRect();
+      const relativeX = e.clientX - rect.left - rect.width / 2;
+      const relativeY = e.clientY - rect.top - rect.height / 2;
+
+      // 1. Text movement: Headline shifts 2-5px based on mouse
+      if (heroHeadline) {
+        const shiftX = (relativeX / rect.width) * 8; // ~4px
+        const shiftY = (relativeY / rect.height) * 8;
+        heroHeadline.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
+      }
+
+      // 2. Interactive hero image card 3D tilt
+      if (hero3dCard) {
+        const cardRotateX = (relativeY / rect.height) * -12; // Max 6 deg
+        const cardRotateY = (relativeX / rect.width) * 12;
+        hero3dCard.style.transform = `perspective(1000px) rotateX(${cardRotateX}deg) rotateY(${cardRotateY}deg) scale(1.02)`;
+      }
+
+      // 3. Floating idea cards parallax tracking at differing speeds
+      parallaxCards.forEach((card) => {
+        const speed = parseFloat(card.getAttribute('data-speed') || '0.03');
+        const moveX = relativeX * speed;
+        const moveY = relativeY * speed;
+        card.style.transform = `translate(${moveX}px, ${moveY}px)`;
+      });
+    });
+
+    heroContainer.addEventListener('mouseleave', () => {
+      if (heroHeadline) {
+        heroHeadline.style.transform = 'translate(0px, 0px)';
+      }
+      if (hero3dCard) {
+        hero3dCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+      }
+      parallaxCards.forEach((card) => {
+        card.style.transform = 'translate(0px, 0px)';
+      });
+    });
+  }
+
+  // --- Magnetic Buttons Motion ---
+  const magneticBtns = document.querySelectorAll('.btn-magnetic');
+  if (window.matchMedia('(pointer: fine)').matches) {
+    magneticBtns.forEach((btn) => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'translate(0px, 0px)';
+      });
     });
   }
 
@@ -120,46 +186,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach((section) => sectionObserver.observe(section));
 
-  // --- 3D Card Tilt & Mouse Magnetic Movement ---
-  const tiltCards = document.querySelectorAll('.tilt-card');
-  tiltCards.forEach((card) => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      const rotateX = ((y - centerY) / centerY) * -6; // Max 6 deg tilt
-      const rotateY = ((x - centerX) / centerX) * 6;
-
-      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px) scale(1.01)`;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)';
-    });
-  });
-
-  // --- Button Magnetic Slide / Micro Motion ---
-  const magneticBtns = document.querySelectorAll('.btn-magnetic');
-  magneticBtns.forEach((btn) => {
-    btn.addEventListener('mousemove', (e) => {
-      const rect = btn.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-
-      btn.style.transform = `translate(${x * 0.15}px, ${y * 0.15}px)`;
-    });
-
-    btn.addEventListener('mouseleave', () => {
-      btn.style.transform = 'translate(0px, 0px)';
-    });
-  });
-
   // --- Scroll Text / Card Reveal Animation ---
-  const scrollElements = document.querySelectorAll('section, .tilt-card, .glass-card');
+  const scrollElements = document.querySelectorAll('section, .glass-card, .venture-card');
   scrollElements.forEach((el) => {
     if (!el.classList.contains('hero-text-reveal')) {
       el.classList.add('scroll-reveal');
