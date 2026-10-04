@@ -4,30 +4,26 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="web_standard" name="shell-type"/>
-  <!-- Security: Restrict allowed resource locations to prevent cross-site scripting (XSS) and resource injection -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
 
-  <title>Sydin Rahman — Entrepreneur &amp; Builder</title>
-  <meta name="description" content="Portfolio of Sydin Rahman, an entrepreneur from Bangladesh building digital products, exploring new business ideas, and turning concepts into real-world projects." />
+  <title>Sydin Rahman — Entrepreneur</title>
+  <meta name="description" content="Portfolio of Sydin Rahman — Entrepreneur & Builder. I build ideas into businesses." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-  <!-- Open Graph / Social Media Preview Tags -->
+  <!-- Open Graph / Twitter Cards -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sydinrahman.com/" />
-  <meta property="og:title" content="Sydin Rahman — Entrepreneur &amp; Builder" />
-  <meta property="og:description" content="Portfolio of Sydin Rahman, an entrepreneur from Bangladesh building digital products, exploring new business ideas, and turning concepts into real-world projects." />
+  <meta property="og:title" content="Sydin Rahman — Entrepreneur" />
+  <meta property="og:description" content="I build ideas into businesses." />
   <meta property="og:image" content="og-image.svg" />
-
-  <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Sydin Rahman — Entrepreneur &amp; Builder" />
-  <meta name="twitter:description" content="Portfolio of Sydin Rahman, an entrepreneur from Bangladesh building digital products, exploring new business ideas, and turning concepts into real-world projects." />
-  <meta name="twitter:image" content="og-image.svg" />
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+
   <link href="style.css" rel="stylesheet"/>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -35,1056 +31,540 @@
     tailwind.config = {
       theme: {
         extend: {
-          "colors": {
-            "tertiary-fixed-dim": "#cac6c3",
-            "on-surface": "rgb(var(--on-surface-rgb) / <alpha-value>)",
-            "background": "rgb(var(--background-rgb) / <alpha-value>)",
-            "tertiary": "#000000",
-            "on-tertiary-fixed-variant": "#484645",
-            "outline-variant": "rgb(var(--outline-variant-rgb) / <alpha-value>)",
-            "on-secondary": "rgb(var(--on-secondary-rgb) / <alpha-value>)",
-            "surface-container-high": "rgb(var(--surface-container-high-rgb) / <alpha-value>)",
-            "secondary-fixed-dim": "rgb(var(--secondary-fixed-dim-rgb) / <alpha-value>)",
-            "error": "#ba1a1a",
-            "surface-variant": "rgb(var(--surface-variant-rgb) / <alpha-value>)",
-            "on-error-container": "#93000a",
-            "on-primary-container": "#858383",
-            "surface-dim": "#dadad8",
-            "surface-tint": "#5f5e5e",
-            "surface-container-highest": "rgb(var(--surface-container-highest-rgb) / <alpha-value>)",
-            "surface-container-lowest": "rgb(var(--surface-container-lowest-rgb) / <alpha-value>)",
-            "tertiary-fixed": "#e6e1df",
-            "on-background": "rgb(var(--on-surface-rgb) / <alpha-value>)",
-            "surface-container-low": "rgb(var(--surface-container-low-rgb) / <alpha-value>)",
-            "primary-fixed-dim": "#c8c6c5",
-            "outline": "rgb(var(--outline-rgb) / <alpha-value>)",
-            "error-container": "#ffdad6",
-            "inverse-surface": "#2f3130",
-            "on-secondary-fixed": "#00174b",
-            "on-primary": "rgb(var(--on-primary-rgb) / <alpha-value>)",
-            "surface": "rgb(var(--surface-rgb) / <alpha-value>)",
-            "on-secondary-fixed-variant": "#003ea8",
-            "on-surface-variant": "rgb(var(--on-surface-variant-rgb) / <alpha-value>)",
-            "tertiary-container": "#1d1b1a",
-            "secondary-container": "rgb(var(--secondary-container-rgb) / <alpha-value>)",
-            "on-primary-fixed-variant": "#474646",
-            "on-tertiary": "#ffffff",
-            "on-error": "#ffffff",
-            "on-secondary-container": "rgb(var(--on-secondary-container-rgb) / <alpha-value>)",
-            "secondary-fixed": "#dbe1ff",
-            "primary-fixed": "#e5e2e1",
-            "primary": "rgb(var(--primary-rgb) / <alpha-value>)",
-            "on-tertiary-fixed": "#1d1b1a",
-            "inverse-on-surface": "#f1f1ef",
-            "secondary": "rgb(var(--secondary-rgb) / <alpha-value>)",
-            "primary-container": "#1c1b1b",
-            "surface-container": "rgb(var(--surface-container-low-rgb) / <alpha-value>)",
-            "on-tertiary-container": "#868381",
-            "surface-bright": "rgb(var(--surface-rgb) / <alpha-value>)",
-            "on-primary-fixed": "#1c1b1b",
-            "inverse-primary": "#c8c6c5"
+          colors: {
+            bg: '#F7F7F5',
+            dark: '#111111',
+            accent: '#2563EB',
+            'accent-hover': '#1D4ED8',
+            muted: '#666666',
+            card: 'rgba(255, 255, 255, 0.75)',
+            border: 'rgba(0, 0, 0, 0.08)'
           },
-          "borderRadius": {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
-          },
-          "spacing": {
-            "space-xl": "2.5rem",
-            "space-2xl": "4rem",
-            "gutter-mobile": "1rem",
-            "margin": "3rem",
-            "space-3xl": "6rem",
-            "space-sm": "0.5rem",
-            "space-md": "1rem",
-            "space-lg": "1.5rem",
-            "space-xs": "0.25rem",
-            "gutter": "2rem",
-            "margin-mobile": "1.25rem"
-          },
-          "fontFamily": {
-            "body-sm": ["Inter"],
-            "body-md": ["Inter"],
-            "display-hero-mobile": ["Inter"],
-            "headline-section": ["Inter"],
-            "headline-venture": ["Inter"],
-            "headline-section-mobile": ["Inter"],
-            "display-hero": ["Inter"],
-            "title-md": ["Inter"],
-            "headline-venture-mobile": ["Inter"],
-            "label-status": ["Inter"],
-            "body-lg": ["Inter"],
-            "label-mono-tag": ["Inter"]
-          },
-          "fontSize": {
-            "body-sm": ["14px", {"lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400"}],
-            "body-md": ["16px", {"lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400"}],
-            "display-hero-mobile": ["42px", {"lineHeight": "46px", "letterSpacing": "-0.025em", "fontWeight": "600"}],
-            "headline-section": ["48px", {"lineHeight": "54px", "letterSpacing": "-0.025em", "fontWeight": "500"}],
-            "headline-venture": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
-            "headline-section-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
-            "display-hero": ["72px", {"lineHeight": "78px", "letterSpacing": "-0.035em", "fontWeight": "600"}],
-            "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
-            "headline-venture-mobile": ["24px", {"lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "500"}],
-            "label-status": ["13px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
-            "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
-            "label-mono-tag": ["12px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "500"}]
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif']
           }
         }
       }
     };
   </script>
 </head>
-<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-surface-container-high selection:text-on-surface transition-colors duration-200">
+<body class="bg-bg text-dark font-sans antialiased selection:bg-accent selection:text-white relative overflow-x-hidden">
+
+<!-- Cursor Glow Follower -->
+<div id="cursor-glow" class="pointer-events-none fixed top-0 left-0 w-96 h-96 rounded-full bg-accent/10 blur-3xl -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-0 z-0"></div>
+
+<!-- Ambient Floating Background Shapes -->
+<div class="pointer-events-none fixed inset-0 overflow-hidden z-0">
+  <div class="floating-shape absolute -top-20 -right-20 w-96 h-96 rounded-full bg-blue-200/30 blur-3xl"></div>
+  <div class="floating-shape absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-indigo-200/25 blur-3xl" style="animation-delay: -4s;"></div>
+  <div class="floating-shape absolute -bottom-20 right-1/3 w-96 h-96 rounded-full bg-sky-200/30 blur-3xl" style="animation-delay: -8s;"></div>
+</div>
 
 <!-- Skip to main content link for keyboard accessibility -->
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-black focus:text-white focus:rounded-lg focus:shadow-xl focus:outline-none focus:ring-2 focus:ring-secondary">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-dark focus:text-white focus:rounded-lg focus:shadow-xl focus:outline-none">
   Skip to main content
 </a>
 
-<header class="fixed top-0 left-0 right-0 w-full z-50 glass-nav transition-all duration-200">
-  <div class="max-w-[1200px] mx-auto px-4 sm:px-margin-mobile md:px-margin h-20 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <a class="group flex flex-col justify-center" data-path="overview" href="#overview">
-        <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-primary group-hover:text-secondary transition-colors duration-150">SYDIN RAHMAN</span>
-        <span class="flex items-center gap-1.5 mt-0.5">
-          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-          <span class="font-label-mono-tag text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">ENTREPRENEUR · BUILDER</span>
-        </span>
-      </a>
-    </div>
+<!-- Header Navigation -->
+<header class="fixed top-0 left-0 right-0 w-full z-50 glass-nav transition-all duration-300">
+  <div class="max-w-[1240px] mx-auto px-6 h-20 flex items-center justify-between">
+    <a class="group flex flex-col" href="#overview">
+      <span class="font-display font-bold text-lg tracking-tight text-dark group-hover:text-accent transition-colors">SYDIN RAHMAN</span>
+      <span class="text-[11px] font-medium tracking-widest text-muted uppercase">Entrepreneur</span>
+    </a>
 
     <!-- Desktop Navigation -->
-    <nav class="nav-links hidden md:flex items-center gap-space-lg">
-      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="about" href="#about">
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="nav-link text-sm font-medium text-muted hover:text-dark transition-colors relative py-1" href="#about">
         <span>About</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 transition-transform duration-200 origin-left"></span>
       </a>
-      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="ventures" href="#ventures">
+      <a class="nav-link text-sm font-medium text-muted hover:text-dark transition-colors relative py-1" href="#ventures">
         <span>Ventures</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 transition-transform duration-200 origin-left"></span>
       </a>
-      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="currently" href="#currently">
+      <a class="nav-link text-sm font-medium text-muted hover:text-dark transition-colors relative py-1" href="#currently">
         <span>Currently</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 transition-transform duration-200 origin-left"></span>
       </a>
-      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="idea-lab" href="#idea-lab">
-        <span>Ideas</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
-      </a>
-      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="contact" href="#contact">
+      <a class="nav-link text-sm font-medium text-muted hover:text-dark transition-colors relative py-1" href="#contact">
         <span>Contact</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 transition-transform duration-200 origin-left"></span>
       </a>
     </nav>
 
-    <div class="flex items-center gap-space-xs sm:gap-space-md">
-      <a class="btn-tactile inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary hover:text-on-secondary transition-all duration-150 shadow-sm min-h-[44px]" data-path="contact" href="#contact">
+    <div class="flex items-center gap-4">
+      <a class="btn-magnetic inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-dark text-white text-sm font-medium hover:bg-accent transition-all shadow-sm" href="#contact">
         <span>Let's Talk</span>
-        <span class="material-symbols-outlined text-[16px] leading-none">arrow_outward</span>
+        <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
       </a>
 
-      <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-btn" class="btn-tactile md:hidden flex items-center justify-center p-2.5 rounded-xl text-primary hover:bg-surface-container-high/60 transition-colors focus:outline-none min-w-[44px] min-h-[44px] glass-pill" aria-label="Toggle Navigation Menu" aria-expanded="false">
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center p-2 rounded-xl text-dark hover:bg-black/5 transition-colors focus:outline-none" aria-label="Toggle Navigation Menu">
         <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
       </button>
     </div>
   </div>
 
-  <!-- Mobile Navigation Dropdown -->
-  <div id="mobile-menu" class="hidden md:hidden glass-menu px-4 sm:px-margin-mobile py-4 transition-all duration-200">
-    <nav class="flex flex-col gap-2">
-      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="about" href="#about">
+  <!-- Mobile Dropdown Navigation -->
+  <div id="mobile-menu" class="hidden md:hidden glass-menu px-6 py-4">
+    <nav class="flex flex-col gap-3">
+      <a class="mobile-nav-link text-base font-medium text-muted hover:text-dark py-2 border-b border-border flex items-center justify-between" href="#about">
         <span>About</span>
-        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+        <span class="material-symbols-outlined text-sm text-muted">chevron_right</span>
       </a>
-      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="ventures" href="#ventures">
+      <a class="mobile-nav-link text-base font-medium text-muted hover:text-dark py-2 border-b border-border flex items-center justify-between" href="#ventures">
         <span>Ventures</span>
-        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+        <span class="material-symbols-outlined text-sm text-muted">chevron_right</span>
       </a>
-      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="currently" href="#currently">
+      <a class="mobile-nav-link text-base font-medium text-muted hover:text-dark py-2 border-b border-border flex items-center justify-between" href="#currently">
         <span>Currently</span>
-        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+        <span class="material-symbols-outlined text-sm text-muted">chevron_right</span>
       </a>
-      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="idea-lab" href="#idea-lab">
-        <span>Ideas</span>
-        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
-      </a>
-      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg flex items-center justify-between" data-path="contact" href="#contact">
+      <a class="mobile-nav-link text-base font-medium text-muted hover:text-dark py-2 flex items-center justify-between" href="#contact">
         <span>Contact</span>
-        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+        <span class="material-symbols-outlined text-sm text-muted">chevron_right</span>
       </a>
     </nav>
   </div>
 </header>
 
-<main id="main-content" tabindex="-1" class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)] transition-colors duration-200 focus:outline-none">
-  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin">
-    <div class="flex flex-col w-full">
+<main id="main-content" class="relative z-10 pt-28 pb-20">
+  <div class="max-w-[1240px] mx-auto px-6">
 
-      <!-- 01 / HERO SECTION -->
-      <section class="py-space-2xl md:py-space-3xl flex flex-col justify-between relative" id="overview">
-        <div class="flex flex-col gap-space-md max-w-4xl">
-          <div class="flex items-center gap-space-sm flex-wrap">
-            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-on-surface font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold">
-              <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-              01 // ENTREPRENEUR · BUILDER
-            </span>
-            <span class="text-on-surface-variant font-label-mono-tag text-label-mono-tag tracking-wider hidden sm:inline">
-              DHAKA / WORLDWIDE
-            </span>
+    <!-- HERO SECTION -->
+    <section class="min-h-[80vh] flex flex-col justify-center py-12 md:py-20" id="overview">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+        <!-- Left Text Column -->
+        <div class="lg:col-span-7 flex flex-col gap-6 hero-text-reveal">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-border text-xs font-semibold tracking-wider text-dark uppercase shadow-2xs w-fit">
+            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+            SYDIN RAHMAN · ENTREPRENEUR
           </div>
-          <h1 class="font-display-hero text-[36px] xs:text-[42px] sm:text-[56px] md:text-display-hero text-primary mt-space-sm tracking-tight leading-[1.08] sm:leading-none">
-            I build simple businesses<br class="hidden sm:inline"/>
-            from good ideas.
+
+          <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl text-dark tracking-tight leading-[1.05]">
+            I build ideas into businesses.
           </h1>
-          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs leading-relaxed">
-            Entrepreneur from Bangladesh, building digital products, exploring new business ideas, and turning concepts into real-world projects.
-          </p>
 
-          <!-- Core Focus Tags -->
-          <div class="flex items-center gap-2 flex-wrap pt-2">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm font-medium">
-              Digital Products
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm font-medium">
-              AI
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm font-medium">
-              Ecommerce
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm font-medium">
-              Web
-            </span>
+          <div class="flex items-center gap-2 flex-wrap text-sm sm:text-base text-muted font-medium pt-1">
+            <span class="px-3 py-1 rounded-lg bg-white/70 border border-border/60 text-dark">AI</span>
+            <span class="text-muted/40">·</span>
+            <span class="px-3 py-1 rounded-lg bg-white/70 border border-border/60 text-dark">Technology</span>
+            <span class="text-muted/40">·</span>
+            <span class="px-3 py-1 rounded-lg bg-white/70 border border-border/60 text-dark">Ecommerce</span>
+            <span class="text-muted/40">·</span>
+            <span class="px-3 py-1 rounded-lg bg-white/70 border border-border/60 text-dark">Digital Products</span>
           </div>
-        </div>
 
-        <!-- Hero Actions & Status Indicator -->
-        <div class="mt-space-2xl flex flex-col sm:flex-row sm:items-center gap-space-md justify-between p-4 sm:p-space-lg rounded-2xl glass-card">
-          <div class="flex items-center gap-space-md flex-wrap">
-            <a class="btn-tactile group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-all duration-200 shadow-sm min-h-[44px]" href="#ventures">
-              <span>Explore Ventures</span>
-              <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+          <div class="pt-4 flex items-center gap-4">
+            <a class="btn-magnetic inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent text-white font-medium text-base hover:bg-accent-hover transition-all shadow-lg shadow-accent/20 group" href="#ventures">
+              <span>Explore</span>
+              <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">east</span>
             </a>
-            <a class="btn-tactile inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full glass-pill text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150 min-h-[44px]" href="#about">
+            <a class="btn-magnetic inline-flex items-center gap-2 px-6 py-4 rounded-full bg-white border border-border text-dark font-medium text-base hover:bg-black/5 transition-all" href="#about">
               <span>About Me</span>
             </a>
           </div>
-          <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-full glass-pill">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
-            </span>
-            <span class="font-body-sm text-body-sm text-on-surface font-medium">Currently building and experimenting with digital products.</span>
-          </div>
         </div>
-      </section>
 
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
+        <!-- Right Visual Collage Column -->
+        <div class="lg:col-span-5 relative flex items-center justify-center">
+          <div class="floating-hero-visual relative w-full max-w-md lg:max-w-none aspect-square sm:aspect-[4/3] lg:aspect-square rounded-3xl overflow-hidden shadow-2xl border border-white/60 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-6 flex flex-col justify-between group">
 
-      <!-- 02 / ABOUT SECTION -->
-      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="about">
-        <div class="flex flex-col gap-space-xl">
-          <!-- Section Header -->
-          <div class="flex flex-col gap-space-xs">
-            <div class="flex items-center justify-between pb-space-sm">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-                02 // ABOUT
-              </span>
-              <span class="font-label-mono-tag text-label-mono-tag text-on-surface-variant">FOUNDER PERSPECTIVE</span>
-            </div>
-            <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary max-w-3xl leading-tight">
-              I'm Sydin Rahman, an entrepreneur from Bangladesh.
-            </h2>
-          </div>
+            <!-- Visual Background Image Overlay -->
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Modern Entrepreneur Workspace" class="absolute inset-0 w-full h-full object-cover opacity-35 mix-blend-overlay group-hover:scale-105 transition-transform duration-700 ease-out" />
 
-          <!-- Narrative & Focus Cards Layout -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
-            <div class="lg:col-span-7 flex flex-col gap-space-md">
-              <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
-                I enjoy turning simple ideas into useful products and businesses. I'm interested in technology, AI, ecommerce, and digital products — especially ideas that can start small and grow over time.
-              </p>
-              <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Rather than chasing hype, my conviction is anchored in straightforward software and lean operations: creating things people want, charging fairly, and testing ideas directly in the open marketplace.
-              </p>
-
-              <!-- Philosophy Tagline Badge -->
-              <div class="mt-space-sm p-space-md rounded-2xl glass-card flex flex-wrap items-center justify-between gap-4">
-                <div class="flex items-center gap-2">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">loop</span>
-                  <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.15em] text-on-surface font-semibold">Core Loop</span>
-                </div>
-                <div class="flex items-center gap-2 font-label-mono-tag text-label-mono-tag tracking-wider text-primary font-medium">
-                  <span>Build</span>
-                  <span class="text-secondary">→</span>
-                  <span>Launch</span>
-                  <span class="text-secondary">→</span>
-                  <span>Learn</span>
-                  <span class="text-secondary">→</span>
-                  <span class="text-secondary font-bold">Grow</span>
-                </div>
+            <!-- Top Floating Header Pill -->
+            <div class="relative z-10 flex items-center justify-between">
+              <div class="glass-card px-4 py-2 rounded-2xl flex items-center gap-2.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                <span class="text-xs font-semibold text-dark tracking-wide uppercase">Builder Studio</span>
+              </div>
+              <div class="glass-card px-3 py-1.5 rounded-xl text-[11px] font-mono text-dark font-medium">
+                EST. 2026
               </div>
             </div>
 
-            <!-- Focus Areas Grid -->
-            <div class="lg:col-span-5 flex flex-col gap-space-sm">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-on-surface-variant font-semibold">What I work on</span>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
-                <div class="p-4 rounded-2xl glass-card flex flex-col gap-1">
-                  <h3 class="font-title-md text-base font-semibold text-primary">Digital Products</h3>
-                  <p class="font-body-sm text-xs text-on-surface-variant">Building simple web tools and SaaS ideas.</p>
+            <!-- Central Collage Abstract Cards -->
+            <div class="relative z-10 my-auto flex flex-col gap-3 py-4">
+              <div class="glass-card p-4 rounded-2xl flex items-center gap-3 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div class="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shadow-md">
+                  <span class="material-symbols-outlined text-xl">auto_awesome</span>
                 </div>
-                <div class="p-4 rounded-2xl glass-card flex flex-col gap-1">
-                  <h3 class="font-title-md text-base font-semibold text-primary">AI</h3>
-                  <p class="font-body-sm text-xs text-on-surface-variant">Exploring useful AI-powered products.</p>
-                </div>
-                <div class="p-4 rounded-2xl glass-card flex flex-col gap-1">
-                  <h3 class="font-title-md text-base font-semibold text-primary">Ecommerce</h3>
-                  <p class="font-body-sm text-xs text-on-surface-variant">Building and experimenting with online brands.</p>
-                </div>
-                <div class="p-4 rounded-2xl glass-card flex flex-col gap-1">
-                  <h3 class="font-title-md text-base font-semibold text-primary">Web</h3>
-                  <p class="font-body-sm text-xs text-on-surface-variant">Designing simple digital experiences.</p>
+                <div class="flex flex-col">
+                  <span class="text-xs font-mono text-muted uppercase">Core Focus</span>
+                  <span class="text-sm font-bold text-dark font-display">Ideas → Scalable Ventures</span>
                 </div>
               </div>
+
+              <div class="glass-card p-4 rounded-2xl flex items-center justify-between transform rotate-2 hover:rotate-0 transition-transform duration-300 ml-6">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-dark text-white flex items-center justify-center shadow-md">
+                    <span class="material-symbols-outlined text-xl">rocket_launch</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="text-xs font-mono text-muted uppercase">Status</span>
+                    <span class="text-sm font-bold text-dark font-display">Building &amp; Launching</span>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-accent/10 text-accent font-mono text-xs font-bold">4 Active</span>
+              </div>
+            </div>
+
+            <!-- Bottom Metric Tag -->
+            <div class="relative z-10 flex items-center justify-between pt-2">
+              <span class="text-xs font-medium text-white/80 backdrop-blur-sm px-3 py-1.5 rounded-lg bg-black/40 border border-white/10">Dhaka / Worldwide</span>
+              <span class="text-xs font-mono text-white/90 backdrop-blur-sm px-3 py-1.5 rounded-lg bg-black/40 border border-white/10">01 // HERO</span>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
+      </div>
+    </section>
 
-      <!-- 03 / VENTURES SECTION -->
-      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="ventures">
-        <div class="flex flex-col gap-space-xl">
-          <!-- Section Top -->
-          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm">
-            <div class="flex flex-col gap-space-xs">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-                03 // VENTURES
-              </span>
-              <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
-                Things I'm building.
-              </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant">
-                Digital products, brands, and experiments I'm turning into real projects.
-              </p>
-            </div>
+    <!-- 01 — ABOUT -->
+    <section class="py-20 border-t border-border/60 scroll-mt-24" id="about">
+      <div class="max-w-3xl flex flex-col gap-6">
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono font-bold tracking-widest text-accent uppercase">01 // ABOUT</span>
+          <span class="w-8 h-px bg-accent/40"></span>
+        </div>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-dark leading-tight">
+          Entrepreneur from Bangladesh building digital products, exploring new business ideas, and turning concepts into real-world projects.
+        </h2>
+        <p class="text-lg text-muted leading-relaxed font-normal">
+          I enjoy taking simple concepts and refining them into useful software, ecommerce brands, and automated tools. My goal is simple: build things that solve real problems and bring value to people.
+        </p>
+      </div>
+    </section>
 
-            <!-- Legend Pill Cluster -->
-            <div class="flex items-center flex-wrap gap-2 p-2 rounded-xl glass-pill">
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full glass-pill text-[11px] font-label-status text-on-surface font-medium">
-                <span class="w-2 h-2 rounded-full bg-[#16A34A]"></span>
-                <span>LIVE</span>
-              </div>
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full glass-pill text-[11px] font-label-status text-on-surface font-medium">
-                <span class="w-2 h-2 rounded-full bg-secondary"></span>
-                <span>BUILDING</span>
-              </div>
-              <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full glass-pill text-[11px] font-label-status text-on-surface font-medium">
-                <span class="w-2 h-2 rounded-full bg-[#D97706]"></span>
-                <span>EXPLORING</span>
-              </div>
-            </div>
+    <!-- 02 — VENTURES -->
+    <section class="py-20 border-t border-border/60 scroll-mt-24" id="ventures">
+      <div class="flex flex-col gap-12">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div class="flex flex-col gap-2">
+            <span class="text-xs font-mono font-bold tracking-widest text-accent uppercase">02 // VENTURES</span>
+            <h2 class="font-display font-bold text-3xl sm:text-4xl text-dark">Selected Ventures</h2>
           </div>
+          <p class="text-sm text-muted">Featured products and brands built with purpose.</p>
+        </div>
 
-          <!-- 4 Venture Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-            <!-- Venture 01: MyAgeNow (Live) -->
-            <div class="group p-space-xl rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[420px]">
+        <!-- 4 Large Venture Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <!-- Venture 1: MyAgeNow -->
+          <div class="tilt-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[440px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl">
+            <div class="relative z-10 flex flex-col gap-6">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                  LIVE
+                </span>
+                <span class="text-xs font-mono text-muted">WEB APP</span>
+              </div>
+
+              <!-- Image Container with Zoom effect -->
+              <div class="w-full h-48 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/30 transition-colors">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="MyAgeNow Tool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-4 text-white font-mono text-xs">myagenow.com</div>
+              </div>
+
               <div>
-                <div class="flex items-center justify-between mb-space-md">
-                  <div class="flex items-center gap-2">
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Web App</span>
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Live</span>
-                  </div>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DCFCE7] text-[#15803D] font-label-status text-label-status font-medium">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#16A34A] animate-pulse"></span>
-                    LIVE
-                  </span>
-                </div>
-                <h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
-                  MyAgeNow
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
-                  Age calculator and planning tool.
-                </p>
-
-                <!-- Visual Browser Preview Frame -->
-                <div class="mt-space-md p-3 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2">
-                  <div class="flex items-center justify-between border-b border-surface-container-highest/60 pb-2 px-1">
-                    <div class="flex items-center gap-1.5">
-                      <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]"></span>
-                      <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]"></span>
-                      <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]"></span>
-                    </div>
-                    <span class="font-mono text-[11px] text-on-surface-variant bg-white/80 px-2 py-0.5 rounded">myagenow.com</span>
-                    <span class="material-symbols-outlined text-[14px] text-outline">lock</span>
-                  </div>
-                  <div class="p-2.5 bg-white rounded-lg flex items-center justify-between shadow-2xs">
-                    <div class="flex flex-col">
-                      <span class="text-[10px] font-mono text-outline uppercase">CHRONO CALCULATOR</span>
-                      <span class="text-xs font-semibold text-primary">28 Years, 4 Months, 12 Days</span>
-                    </div>
-                    <span class="px-2 py-1 rounded bg-secondary/10 text-secondary text-[10px] font-mono font-medium">Next.js / Tailwind</span>
-                  </div>
-                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant">
-                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span> 99.9% Uptime</span>
-                    <span>&lt; 50ms Latency</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-surface-container-highest/40">
-                <button class="modal-open-btn inline-flex items-center gap-1.5 text-xs font-medium text-secondary hover:underline" data-modal="modal-myagenow">
-                  <span class="material-symbols-outlined text-[16px]">visibility</span>
-                  <span>Inspect Visual Specs</span>
-                </button>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="https://myagenow.com" rel="noopener noreferrer" target="_blank">
-                  <span>Visit →</span>
-                  <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
+                <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">MyAgeNow</h3>
+                <p class="text-muted text-sm mt-2 leading-relaxed">Precision age calculator, life milestone tracking, and chronological planning tool.</p>
               </div>
             </div>
 
-            <!-- Venture 02: Tangail Saree (Building) -->
-            <div class="group p-space-xl rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[420px]">
+            <div class="relative z-10 pt-6 mt-6 border-t border-border flex items-center justify-between">
+              <button class="modal-open-btn text-xs font-medium text-accent hover:underline flex items-center gap-1" data-modal="modal-myagenow">
+                <span class="material-symbols-outlined text-base">visibility</span>
+                <span>Inspect Specs</span>
+              </button>
+              <a class="btn-magnetic inline-flex items-center gap-1 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="https://myagenow.com" target="_blank" rel="noopener">
+                <span>Visit Site</span>
+                <span class="material-symbols-outlined text-base group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Venture 2: Tangail Saree -->
+          <div class="tilt-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[440px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl">
+            <div class="relative z-10 flex flex-col gap-6">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                  BUILDING
+                </span>
+                <span class="text-xs font-mono text-muted">ECOMMERCE</span>
+              </div>
+
+              <div class="w-full h-48 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/30 transition-colors">
+                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" alt="Tangail Saree DTC Brand" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-4 text-white font-mono text-xs">Heritage Handloom DTC</div>
+              </div>
+
               <div>
-                <div class="flex items-center justify-between mb-space-md">
-                  <div class="flex items-center gap-2">
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Ecommerce</span>
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Brand</span>
-                  </div>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DBEAFE] text-secondary font-label-status text-label-status font-medium">
-                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                    BUILDING
-                  </span>
-                </div>
-                <h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
-                  Tangail Saree
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
-                  Traditional Tangail sarees with a modern ecommerce approach.
-                </p>
-
-                <!-- Brand Story Snippet -->
-                <div class="mt-space-md p-3 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2">
-                  <div class="flex items-center justify-between">
-                    <span class="text-[11px] font-label-mono-tag uppercase text-on-surface font-semibold tracking-wider">HERITAGE BRAND STORY</span>
-                    <span class="text-[10px] font-mono text-secondary px-2 py-0.5 rounded bg-secondary/10">DTC ECOMMERCE</span>
-                  </div>
-                  <div class="grid grid-cols-3 gap-1.5">
-                    <div class="h-16 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] flex items-center justify-center p-1 text-center">
-                      <span class="text-[9px] text-white font-medium">Handloom Weaves</span>
-                    </div>
-                    <div class="h-16 rounded-lg bg-gradient-to-br from-[#EC4899] to-[#F43F5E] flex items-center justify-center p-1 text-center">
-                      <span class="text-[9px] text-white font-medium">Artisan Stories</span>
-                    </div>
-                    <div class="h-16 rounded-lg bg-gradient-to-br from-[#10B981] to-[#059669] flex items-center justify-center p-1 text-center">
-                      <span class="text-[9px] text-white font-medium">Global DTC</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant">
-                    <span>Authentic Sourcing</span>
-                    <span>Shopify / Custom Webstore</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-surface-container-highest/40">
-                <button class="modal-open-btn inline-flex items-center gap-1.5 text-xs font-medium text-secondary hover:underline" data-modal="modal-tangail">
-                  <span class="material-symbols-outlined text-[16px]">visibility</span>
-                  <span>Inspect Brand Moodboard</span>
-                </button>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#contact">
-                  <span>Explore →</span>
-                  <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
+                <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">Tangail Saree</h3>
+                <p class="text-muted text-sm mt-2 leading-relaxed">Modern direct-to-consumer ecommerce brand connecting authentic Bangladeshi weavers with global customers.</p>
               </div>
             </div>
 
-            <!-- Venture 03: MemoryFix (Exploring) -->
-            <div class="group p-space-xl rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[420px]">
+            <div class="relative z-10 pt-6 mt-6 border-t border-border flex items-center justify-between">
+              <button class="modal-open-btn text-xs font-medium text-accent hover:underline flex items-center gap-1" data-modal="modal-tangail">
+                <span class="material-symbols-outlined text-base">visibility</span>
+                <span>Inspect Brand Story</span>
+              </button>
+              <a class="btn-magnetic inline-flex items-center gap-1 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
+                <span>Explore Brand</span>
+                <span class="material-symbols-outlined text-base group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Venture 3: MemoryFix -->
+          <div class="tilt-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[440px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl">
+            <div class="relative z-10 flex flex-col gap-6">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
+                  EXPLORING
+                </span>
+                <span class="text-xs font-mono text-muted">AI PRODUCT</span>
+              </div>
+
+              <div class="w-full h-48 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/30 transition-colors">
+                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="MemoryFix AI" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-4 text-white font-mono text-xs">Neural Restoration Engine</div>
+              </div>
+
               <div>
-                <div class="flex items-center justify-between mb-space-md">
-                  <div class="flex items-center gap-2">
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">AI</span>
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Product</span>
-                  </div>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FEF3C7] text-[#B45309] font-label-status text-label-status font-medium">
-                    <span class="w-1.5 h-1.5 rounded-full bg-[#D97706]"></span>
-                    EXPLORING
-                  </span>
-                </div>
-                <h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
-                  MemoryFix
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
-                  AI-powered restoration for old family photographs.
-                </p>
-
-                <!-- AI Restoration Box -->
-                <div class="mt-space-md p-3 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2">
-                  <div class="flex items-center justify-between">
-                    <span class="text-[11px] font-label-mono-tag uppercase text-on-surface font-semibold tracking-wider">NEURAL RESTORATION WIREFRAME</span>
-                    <span class="text-[10px] font-mono text-[#B45309] px-2 py-0.5 rounded bg-[#FEF3C7]">AI PIPELINE</span>
-                  </div>
-                  <div class="p-2.5 bg-white rounded-lg flex items-center justify-between border border-dashed border-outline-variant">
-                    <div class="flex items-center gap-2">
-                      <div class="w-10 h-10 rounded bg-gray-200 flex items-center justify-center text-xs font-mono text-gray-500">OLD</div>
-                      <span class="material-symbols-outlined text-secondary text-base">auto_fix_high</span>
-                      <div class="w-10 h-10 rounded bg-blue-100 flex items-center justify-center text-xs font-mono text-secondary font-bold">HD</div>
-                    </div>
-                    <div class="text-right">
-                      <span class="text-[10px] font-mono block text-outline">NEURAL SCALE</span>
-                      <span class="text-xs font-semibold text-primary">4x Super-Res</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant">
-                    <span>Face Restoration AI</span>
-                    <span>Python / PyTorch / WebGL</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-surface-container-highest/40">
-                <button class="modal-open-btn inline-flex items-center gap-1.5 text-xs font-medium text-secondary hover:underline" data-modal="modal-memoryfix">
-                  <span class="material-symbols-outlined text-[16px]">visibility</span>
-                  <span>Inspect AI Prototype UI</span>
-                </button>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#idea-lab">
-                  <span>View Concept →</span>
-                  <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
+                <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">MemoryFix</h3>
+                <p class="text-muted text-sm mt-2 leading-relaxed">AI-powered web utility for restoring, colorizing, and enhancing legacy family photographs.</p>
               </div>
             </div>
 
-            <!-- Venture 04: QuoteFlow (Building) -->
-            <div class="group p-space-xl rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[420px]">
+            <div class="relative z-10 pt-6 mt-6 border-t border-border flex items-center justify-between">
+              <button class="modal-open-btn text-xs font-medium text-accent hover:underline flex items-center gap-1" data-modal="modal-memoryfix">
+                <span class="material-symbols-outlined text-base">visibility</span>
+                <span>Inspect AI Prototype</span>
+              </button>
+              <a class="btn-magnetic inline-flex items-center gap-1 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
+                <span>View Concept</span>
+                <span class="material-symbols-outlined text-base group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Venture 4: QuoteFlow -->
+          <div class="tilt-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[440px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl">
+            <div class="relative z-10 flex flex-col gap-6">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
+                  BUILDING
+                </span>
+                <span class="text-xs font-mono text-muted">MICRO-SAAS</span>
+              </div>
+
+              <div class="w-full h-48 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/30 transition-colors">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="QuoteFlow Micro-SaaS" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-4 text-white font-mono text-xs">Quotation &amp; Invoice Tool</div>
+              </div>
+
               <div>
-                <div class="flex items-center justify-between mb-space-md">
-                  <div class="flex items-center gap-2">
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Micro-SaaS</span>
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Product</span>
-                  </div>
-                  <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DBEAFE] text-secondary font-label-status text-label-status font-medium">
-                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-                    BUILDING
-                  </span>
-                </div>
-                <h3 class="font-headline-venture text-headline-venture text-primary group-hover:text-secondary transition-colors duration-150 font-medium">
-                  QuoteFlow
-                </h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
-                  A simple quote and invoice tool for small businesses.
-                </p>
-
-                <!-- Commercial Quotation Wireframe Preview -->
-                <div class="mt-space-md p-3 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2">
-                  <div class="flex items-center justify-between">
-                    <span class="text-[11px] font-label-mono-tag uppercase text-on-surface font-semibold tracking-wider">QUOTATION BUILDER MOCKUP</span>
-                    <span class="text-[10px] font-mono text-secondary px-2 py-0.5 rounded bg-secondary/10">SAAS UTILITY</span>
-                  </div>
-                  <div class="p-2.5 bg-white rounded-lg flex items-center justify-between border border-outline-variant">
-                    <div class="flex flex-col">
-                      <span class="text-[10px] font-mono text-outline">ESTIMATE #QF-2026</span>
-                      <span class="text-xs font-semibold text-primary">$3,400.00 — Approved</span>
-                    </div>
-                    <span class="px-2 py-1 rounded bg-emerald-50 text-emerald-700 text-[10px] font-mono font-medium">PDF Auto-Gen</span>
-                  </div>
-                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant">
-                    <span>Margin Calculator</span>
-                    <span>React / TypeScript / Tailwind</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-surface-container-highest/40">
-                <button class="modal-open-btn inline-flex items-center gap-1.5 text-xs font-medium text-secondary hover:underline" data-modal="modal-quoteflow">
-                  <span class="material-symbols-outlined text-[16px]">visibility</span>
-                  <span>Inspect Workflow Mockups</span>
-                </button>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#contact">
-                  <span>View Concept →</span>
-                  <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
+                <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">QuoteFlow</h3>
+                <p class="text-muted text-sm mt-2 leading-relaxed">Lightweight quotation builder and margin calculator designed for freelancers and micro-agencies.</p>
               </div>
             </div>
+
+            <div class="relative z-10 pt-6 mt-6 border-t border-border flex items-center justify-between">
+              <button class="modal-open-btn text-xs font-medium text-accent hover:underline flex items-center gap-1" data-modal="modal-quoteflow">
+                <span class="material-symbols-outlined text-base">visibility</span>
+                <span>Inspect Wireframe</span>
+              </button>
+              <a class="btn-magnetic inline-flex items-center gap-1 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
+                <span>View Concept</span>
+                <span class="material-symbols-outlined text-base group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 — CURRENTLY -->
+    <section class="py-20 border-t border-border/60 scroll-mt-24" id="currently">
+      <div class="flex flex-col gap-10">
+        <div class="flex flex-col gap-2">
+          <span class="text-xs font-mono font-bold tracking-widest text-accent uppercase">03 // CURRENTLY</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-dark">Building. Exploring. Learning.</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="tilt-card glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 transition-colors">
+            <div class="flex flex-col gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl">construction</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-dark">Building</h3>
+              <p class="text-muted text-sm leading-relaxed">Designing simple digital tools, micro-SaaS utilities, and DTC web platforms with modern web tech.</p>
+            </div>
+            <span class="text-xs font-mono text-accent font-semibold mt-6">ACTIVE DEVELOPMENT</span>
+          </div>
+
+          <div class="tilt-card glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 transition-colors">
+            <div class="flex flex-col gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl">science</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-dark">Exploring</h3>
+              <p class="text-muted text-sm leading-relaxed">Applied AI workflows, generative image tools, automated operations, and emerging business models.</p>
+            </div>
+            <span class="text-xs font-mono text-accent font-semibold mt-6">EXPERIMENTATION</span>
+          </div>
+
+          <div class="tilt-card glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 transition-colors">
+            <div class="flex flex-col gap-4">
+              <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl">school</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-dark">Learning</h3>
+              <p class="text-muted text-sm leading-relaxed">Lean startup execution, marketing automation, customer acquisition channels, and product design systems.</p>
+            </div>
+            <span class="text-xs font-mono text-accent font-semibold mt-6">CONTINUOUS GROWTH</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
+    <!-- 04 — CONTACT -->
+    <section class="py-20 border-t border-border/60 scroll-mt-24" id="contact">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 md:p-16 flex flex-col gap-10 shadow-xl relative overflow-hidden">
 
-      <!-- 04 / CURRENTLY SECTION -->
-      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="currently">
-        <div class="flex flex-col gap-space-xl">
-          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-sm">
-            <div class="flex flex-col gap-space-xs">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-                04 // CURRENTLY
-              </span>
-              <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
-                What I'm doing now
-              </h2>
-            </div>
-            <p class="font-body-sm text-body-sm text-on-surface-variant font-medium">
-              Updated regularly.
-            </p>
-          </div>
-
-          <!-- 4 Cards Matrix -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
-              <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl glass-pill flex items-center justify-center mb-2">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">construction</span>
-                </div>
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">01</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Building</h3>
-              </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Small digital products and web tools.
-              </p>
-            </div>
-
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
-              <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl glass-pill flex items-center justify-center mb-2">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">science</span>
-                </div>
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">02</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Experimenting</h3>
-              </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                AI products, automation and new ideas.
-              </p>
-            </div>
-
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
-              <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl glass-pill flex items-center justify-center mb-2">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">explore</span>
-                </div>
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">03</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Exploring</h3>
-              </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Ecommerce, branding and online businesses.
-              </p>
-            </div>
-
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
-              <div class="flex flex-col gap-space-xs">
-                <div class="w-8 h-8 rounded-xl glass-pill flex items-center justify-center mb-2">
-                  <span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
-                </div>
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">04</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Learning</h3>
-              </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Business, technology and product development.
-              </p>
-            </div>
-          </div>
+        <div class="flex flex-col gap-4 max-w-2xl">
+          <span class="text-xs font-mono font-bold tracking-widest text-accent uppercase">04 // CONTACT</span>
+          <h2 class="font-display font-bold text-4xl sm:text-5xl text-dark tracking-tight">
+            Let's build something.
+          </h2>
+          <p class="text-muted text-base sm:text-lg">
+            Have an idea, partnership proposal, or opportunity? I'm always open to discussing new projects and collaborations.
+          </p>
         </div>
-      </section>
 
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-wrap items-center gap-4">
+            <a class="btn-magnetic inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent text-white font-medium hover:bg-accent-hover transition-all shadow-lg shadow-accent/25" href="mailto:contact@sydinrahman.com">
+              <span class="material-symbols-outlined text-lg">mail</span>
+              <span>contact@sydinrahman.com</span>
+            </a>
 
-      <!-- 05 / IDEA LAB SECTION -->
-      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="idea-lab">
-        <div class="flex flex-col gap-space-xl">
-          <div class="flex flex-col gap-space-xs pb-space-sm">
-            <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-              05 // IDEA LAB
+            <button id="copy-email-btn" class="btn-magnetic inline-flex items-center gap-2 px-6 py-4 rounded-full bg-white border border-border text-dark font-medium hover:bg-black/5 transition-all">
+              <span class="material-symbols-outlined text-lg">content_copy</span>
+              <span>Copy Address</span>
+            </button>
+
+            <!-- Feedback Toast -->
+            <span id="copy-feedback" role="status" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-dark text-white text-xs font-medium opacity-0 transition-opacity duration-300 pointer-events-none">
+              <span class="material-symbols-outlined text-sm">check_circle</span>
+              <span>Copied contact@sydinrahman.com</span>
             </span>
-            <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
-              Ideas worth exploring.
-            </h2>
-            <p class="font-body-md text-body-md text-on-surface-variant">
-              Concepts I'm researching before turning them into products.
-            </p>
           </div>
 
-          <!-- Concept Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
-            <!-- Card 1 -->
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[200px]">
-              <div class="flex flex-col gap-space-xs">
-                <div class="flex items-center justify-between">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-medium">CONCEPT 01</span>
-                  <span class="material-symbols-outlined text-outline text-[18px]">psychology</span>
-                </div>
-                <h3 class="font-title-md text-title-md text-primary font-medium">AI Products</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Useful AI tools for everyday problems.
-                </p>
+          <!-- Social Profiles Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+            <a class="group glass-card p-4 rounded-2xl flex items-center justify-between hover:border-accent transition-colors" href="https://facebook.com/sydinrahman" target="_blank" rel="noopener">
+              <div class="flex flex-col">
+                <span class="text-xs text-muted font-mono uppercase">Facebook</span>
+                <span class="text-sm font-semibold text-dark group-hover:text-accent transition-colors">@sydinrahman</span>
               </div>
-              <div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
-                <span>Active Research</span>
-              </div>
-            </div>
+              <span class="material-symbols-outlined text-sm text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+            </a>
 
-            <!-- Card 2 -->
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[200px]">
-              <div class="flex flex-col gap-space-xs">
-                <div class="flex items-center justify-between">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-medium">CONCEPT 02</span>
-                  <span class="material-symbols-outlined text-outline text-[18px]">code</span>
-                </div>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Micro-SaaS</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Small software products solving specific problems.
-                </p>
+            <a class="group glass-card p-4 rounded-2xl flex items-center justify-between hover:border-accent transition-colors" href="https://linkedin.com/in/sydinrahman" target="_blank" rel="noopener">
+              <div class="flex flex-col">
+                <span class="text-xs text-muted font-mono uppercase">LinkedIn</span>
+                <span class="text-sm font-semibold text-dark group-hover:text-accent transition-colors">in/sydinrahman</span>
               </div>
-              <div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
-                <span>Prototyping</span>
-              </div>
-            </div>
+              <span class="material-symbols-outlined text-sm text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+            </a>
 
-            <!-- Card 3 -->
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[200px]">
-              <div class="flex flex-col gap-space-xs">
-                <div class="flex items-center justify-between">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-medium">CONCEPT 03</span>
-                  <span class="material-symbols-outlined text-outline text-[18px]">shopping_bag</span>
-                </div>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Ecommerce</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Digital-first brands and commerce experiments.
-                </p>
+            <a class="group glass-card p-4 rounded-2xl flex items-center justify-between hover:border-accent transition-colors" href="https://github.com/sydinrahman" target="_blank" rel="noopener">
+              <div class="flex flex-col">
+                <span class="text-xs text-muted font-mono uppercase">GitHub</span>
+                <span class="text-sm font-semibold text-dark group-hover:text-accent transition-colors">@sydinrahman</span>
               </div>
-              <div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
-                <span>Market Analysis</span>
-              </div>
-            </div>
+              <span class="material-symbols-outlined text-sm text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+            </a>
 
-            <!-- Card 4 -->
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[200px]">
-              <div class="flex flex-col gap-space-xs">
-                <div class="flex items-center justify-between">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-medium">CONCEPT 04</span>
-                  <span class="material-symbols-outlined text-outline text-[18px]">smartphone</span>
-                </div>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Consumer Apps</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Simple products designed around everyday needs.
-                </p>
+            <a class="group glass-card p-4 rounded-2xl flex items-center justify-between hover:border-accent transition-colors" href="https://behance.net/sydinrahman" target="_blank" rel="noopener">
+              <div class="flex flex-col">
+                <span class="text-xs text-muted font-mono uppercase">Behance</span>
+                <span class="text-sm font-semibold text-dark group-hover:text-accent transition-colors">be.net/sydinrahman</span>
               </div>
-              <div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
-                <span>Validation</span>
-              </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[200px]">
-              <div class="flex flex-col gap-space-xs">
-                <div class="flex items-center justify-between">
-                  <span class="font-label-mono-tag text-[11px] text-secondary font-medium">CONCEPT 05</span>
-                  <span class="material-symbols-outlined text-outline text-[18px]">inventory_2</span>
-                </div>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Digital Products</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
-                  Templates, tools and downloadable products.
-                </p>
-              </div>
-              <div class="pt-space-sm flex items-center gap-1.5 text-outline font-label-mono-tag text-[11px]">
-                <span>Drafting</span>
-              </div>
-            </div>
-
-            <!-- Method Disclaimer Card -->
-            <div class="p-space-lg rounded-2xl glass-card flex flex-col justify-between min-h-[200px]">
-              <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-secondary text-[20px]">science</span>
-                <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-primary font-semibold">METHOD</span>
-              </div>
-              <p class="font-body-sm text-body-sm text-on-surface italic leading-relaxed">
-                "Showing how I think about opportunities without claiming every experiment is a finished company."
-              </p>
-              <span class="font-label-mono-tag text-[11px] text-on-surface-variant">Continuous Field Notebook</span>
-            </div>
+              <span class="material-symbols-outlined text-sm text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
+            </a>
           </div>
+
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
-
-      <!-- 06 / HOW I THINK (PHILOSOPHY) -->
-      <section class="py-space-2xl md:py-space-3xl">
-        <div class="flex flex-col gap-space-xl">
-          <div class="flex flex-col gap-space-xs pb-space-sm">
-            <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-              06 // HOW I THINK
-            </span>
-            <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
-              Operating Principles
-            </h2>
-            <p class="font-body-md text-body-md text-on-surface-variant">
-              Core principles guiding my decisions across products, ventures, and execution.
-            </p>
-          </div>
-
-          <!-- 5 Editorial Blocks -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-space-sm">
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
-              <span class="font-label-mono-tag text-[12px] text-secondary font-bold">01</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="font-title-md text-title-md text-primary font-medium">Start small.</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Don't wait for a perfect product.</p>
-              </div>
-            </div>
-
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
-              <span class="font-label-mono-tag text-[12px] text-secondary font-bold">02</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="font-title-md text-title-md text-primary font-medium">Solve problems.</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Build things people actually need.</p>
-              </div>
-            </div>
-
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
-              <span class="font-label-mono-tag text-[12px] text-secondary font-bold">03</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="font-title-md text-title-md text-primary font-medium">Launch.</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ideas become valuable when they're real.</p>
-              </div>
-            </div>
-
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
-              <span class="font-label-mono-tag text-[12px] text-secondary font-bold">04</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="font-title-md text-title-md text-primary font-medium">Learn.</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Every project teaches something.</p>
-              </div>
-            </div>
-
-            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[220px]">
-              <span class="font-label-mono-tag text-[12px] text-secondary font-bold">05</span>
-              <div class="flex flex-col gap-1">
-                <h3 class="font-title-md text-title-md text-primary font-medium">Improve.</h3>
-                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Build, measure, refine, repeat.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TONAL SPACER -->
-      <div class="w-full h-12"></div>
-
-      <!-- 07 / CONTACT SECTION -->
-      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="contact">
-        <div class="rounded-2xl glass-card p-space-xl md:p-space-2xl flex flex-col gap-space-xl">
-          <div class="flex flex-col gap-space-sm max-w-2xl">
-            <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
-              07 // CONTACT
-            </span>
-            <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
-              Have an idea worth building?
-            </h2>
-            <p class="font-body-md text-body-md text-on-surface-variant">
-              I'm always interested in interesting products, businesses, collaborations, and opportunities.
-            </p>
-          </div>
-
-          <!-- Action Cluster -->
-          <div class="flex flex-col gap-space-lg">
-            <!-- Email Buttons Bar with Visible Raw Address Fallback -->
-            <div class="flex flex-col sm:flex-row sm:items-center gap-space-md relative">
-              <div class="flex flex-wrap items-center gap-space-md">
-                <a class="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-colors duration-150 shadow-sm min-h-[44px]" href="mailto:contact@sydinrahman.com">
-                  <span class="material-symbols-outlined text-[18px]">mail</span>
-                  <span>Email Me →</span>
-                </a>
-
-                <button id="copy-email-btn" class="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full glass-pill text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150 min-h-[44px]" aria-label="Copy contact@sydinrahman.com to clipboard">
-                  <span class="material-symbols-outlined text-[18px]">content_copy</span>
-                  <span>Copy Address</span>
-                </button>
-              </div>
-
-              <!-- Desktop Raw Email Badge Fallback -->
-              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass-pill font-mono text-xs text-on-surface select-all">
-                <span class="material-symbols-outlined text-[14px] text-secondary">alternate_email</span>
-                <span class="font-semibold">contact@sydinrahman.com</span>
-              </div>
-
-              <!-- Toast / Feedback message -->
-              <span id="copy-feedback" role="status" aria-live="polite" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary text-xs font-medium opacity-0 transition-opacity duration-300 pointer-events-none shadow-md">
-                <span class="material-symbols-outlined text-[14px]">check_circle</span>
-                <span>Copied contact@sydinrahman.com!</span>
-              </span>
-            </div>
-
-            <!-- Social Media Identity Grid -->
-            <div class="flex flex-col gap-space-sm pt-space-md">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">Primary Social Profiles</span>
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
-                <!-- Facebook -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://facebook.com/sydinrahman" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm">
-                      f
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Facebook →</span>
-                      <span class="text-[11px] text-secondary font-medium">@sydinrahman</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-
-                <!-- LinkedIn -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://linkedin.com/in/sydinrahman" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center font-bold text-xs">
-                      in
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">LinkedIn →</span>
-                      <span class="text-[11px] text-on-surface-variant">in/sydinrahman</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-
-                <!-- GitHub -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://github.com/sydinrahman" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center">
-                      <span class="material-symbols-outlined text-[18px]">terminal</span>
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">GitHub →</span>
-                      <span class="text-[11px] text-on-surface-variant">@sydinrahman</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-
-                <!-- Behance -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://behance.net/sydinrahman" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center font-bold text-xs">
-                      Bē
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Behance →</span>
-                      <span class="text-[11px] text-on-surface-variant">be.net/sydinrahman</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Open To Tags -->
-            <div class="pt-space-md flex flex-col gap-2 border-t border-surface-container-highest/40">
-              <span class="font-label-mono-tag text-xs uppercase tracking-wider text-outline">Open to:</span>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 rounded-full glass-pill text-xs font-medium text-on-surface">Business Ideas</span>
-                <span class="px-3 py-1 rounded-full glass-pill text-xs font-medium text-on-surface">Collaborations</span>
-                <span class="px-3 py-1 rounded-full glass-pill text-xs font-medium text-on-surface">Digital Products</span>
-                <span class="px-3 py-1 rounded-full glass-pill text-xs font-medium text-on-surface">Ecommerce</span>
-                <span class="px-3 py-1 rounded-full glass-pill text-xs font-medium text-on-surface">Interesting Opportunities</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </div>
   </div>
 </main>
 
-<footer class="w-full bg-surface border-t border-surface-container-highest mt-space-3xl transition-colors duration-200">
-  <div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin py-space-2xl">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
-      <div class="md:col-span-5 flex flex-col gap-space-xs">
-        <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-primary">SYDIN RAHMAN</span>
-        <p class="font-body-sm text-body-sm text-on-surface font-medium">Entrepreneur · Builder</p>
-        <p class="font-body-sm text-body-sm text-on-surface-variant">Currently building. Always learning.</p>
-      </div>
-
-      <div class="md:col-span-4 flex flex-col gap-space-xs">
-        <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-wider text-outline mb-1">Channels &amp; Social</span>
-        <div class="flex flex-col gap-1">
-          <a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://facebook.com/sydinrahman" rel="noopener noreferrer" target="_blank">
-            <span>Facebook (Sydin Rahman)</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-          <a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://linkedin.com/in/sydinrahman" rel="noopener noreferrer" target="_blank">
-            <span>LinkedIn</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-          <a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://github.com/sydinrahman" rel="noopener noreferrer" target="_blank">
-            <span>GitHub</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-          <a class="inline-flex items-center gap-1 text-on-surface hover:text-secondary font-body-sm text-body-sm transition-colors duration-150" href="https://behance.net/sydinrahman" rel="noopener noreferrer" target="_blank">
-            <span>Behance</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-        </div>
-      </div>
-
-      <div class="md:col-span-3 flex flex-col justify-between md:items-end h-full gap-space-sm pt-space-md md:pt-0">
-        <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-wider text-outline md:text-right">Colophon</span>
-        <div class="md:text-right font-body-sm text-body-sm text-on-surface-variant">
-          <p>© 2026 Sydin Rahman.</p>
-          <p>All rights reserved.</p>
-          <p class="mt-1 text-outline">Built with simplicity.</p>
-        </div>
-      </div>
+<footer class="w-full border-t border-border/60 py-10">
+  <div class="max-w-[1240px] mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-muted">
+    <div class="flex items-center gap-2">
+      <span class="font-bold text-dark">SYDIN RAHMAN</span>
+      <span>© 2026</span>
     </div>
+    <p>Entrepreneur &amp; Builder · Built with simplicity and motion.</p>
   </div>
 </footer>
 
-<!-- Venture Visual Showcase Modals -->
+<!-- Modals -->
 <!-- Modal 01: MyAgeNow -->
 <div id="modal-myagenow" class="modal-overlay fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-  <div class="modal-container bg-surface max-w-2xl w-full rounded-2xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
-    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full glass-pill flex items-center justify-center text-primary hover:bg-surface-variant transition-colors" aria-label="Close Modal">
+  <div class="modal-container bg-bg max-w-2xl w-full rounded-3xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
+    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full bg-black/5 flex items-center justify-center text-dark hover:bg-black/10 transition-colors" aria-label="Close Modal">
       <span class="material-symbols-outlined text-lg">close</span>
     </button>
     <div class="flex items-center gap-2 mb-2">
       <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-medium">LIVE WEB APP</span>
-      <span class="text-xs text-outline font-mono">UTILITY TOOL</span>
+      <span class="text-xs text-muted font-mono">UTILITY TOOL</span>
     </div>
-    <h3 class="font-headline-venture text-2xl font-bold text-primary mb-2">MyAgeNow — Interactive Browser Preview</h3>
-    <p class="font-body-sm text-on-surface-variant mb-6">Ultra-fast chronological time & age calculator with zero lag, instant URL milestone sharing, and precision date math.</p>
+    <h3 class="font-display font-bold text-2xl text-dark mb-2">MyAgeNow — Interactive Tool Specs</h3>
+    <p class="text-sm text-muted mb-6">High-speed chronological age calculator with milestone tracking, time elapsed indicators, and shareable URLs.</p>
 
-    <!-- Wireframe Preview Frame -->
-    <div class="p-4 rounded-xl bg-slate-900 text-white font-mono text-xs flex flex-col gap-3 shadow-inner">
+    <div class="p-4 rounded-2xl bg-slate-900 text-white font-mono text-xs flex flex-col gap-3 shadow-inner">
       <div class="flex items-center justify-between border-b border-slate-700 pb-2">
-        <span class="text-slate-400">browser_preview.html — MyAgeNow UI</span>
+        <span class="text-slate-400">myagenow.com</span>
         <span class="text-emerald-400">● 100% Operational</span>
       </div>
-      <div class="p-3 bg-slate-800 rounded-lg flex flex-col gap-2">
-        <span class="text-slate-400 text-[11px]">INPUT: Date of Birth: 1998-05-18</span>
+      <div class="p-3 bg-slate-800 rounded-xl flex flex-col gap-2">
+        <span class="text-slate-400 text-[11px]">CALCULATION PREVIEW</span>
         <div class="p-2 bg-slate-900 rounded border border-slate-700 text-emerald-300 font-bold text-sm">
-          CALCULATED AGE: 28 Years, 4 Months, 12 Days | 10,361 Days
+          28 Years, 4 Months, 12 Days | 10,361 Days Total
         </div>
       </div>
       <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-300">
-        <div class="p-2 bg-slate-800 rounded">● Framework: Next.js 14 App Router</div>
+        <div class="p-2 bg-slate-800 rounded">● Framework: Next.js App Router</div>
         <div class="p-2 bg-slate-800 rounded">● Styling: Tailwind CSS</div>
         <div class="p-2 bg-slate-800 rounded">● Edge Deployment: Vercel CDN</div>
-        <div class="p-2 bg-slate-800 rounded">● Lighthouse Score: 100/100</div>
+        <div class="p-2 bg-slate-800 rounded">● Score: 100/100 Lighthouse</div>
       </div>
     </div>
 
     <div class="mt-6 flex items-center justify-between">
-      <span class="text-xs text-on-surface-variant">Built for friction-free calculations</span>
-      <a class="btn-tactile inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-xs font-medium hover:bg-secondary transition-colors" href="https://myagenow.com" target="_blank" rel="noopener">
+      <span class="text-xs text-muted">Designed for friction-free usage</span>
+      <a class="btn-magnetic inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-accent text-white text-xs font-medium hover:bg-accent-hover transition-colors" href="https://myagenow.com" target="_blank" rel="noopener">
         <span>Launch MyAgeNow.com</span>
         <span class="material-symbols-outlined text-sm">arrow_outward</span>
       </a>
@@ -1094,32 +574,32 @@
 
 <!-- Modal 02: Tangail Saree -->
 <div id="modal-tangail" class="modal-overlay fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-  <div class="modal-container bg-surface max-w-2xl w-full rounded-2xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
-    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full glass-pill flex items-center justify-center text-primary hover:bg-surface-variant transition-colors" aria-label="Close Modal">
+  <div class="modal-container bg-bg max-w-2xl w-full rounded-3xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
+    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full bg-black/5 flex items-center justify-center text-dark hover:bg-black/10 transition-colors" aria-label="Close Modal">
       <span class="material-symbols-outlined text-lg">close</span>
     </button>
     <div class="flex items-center gap-2 mb-2">
       <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-medium">BUILDING</span>
-      <span class="text-xs text-outline font-mono">DTC ECOMMERCE</span>
+      <span class="text-xs text-muted font-mono">DTC ECOMMERCE</span>
     </div>
-    <h3 class="font-headline-venture text-2xl font-bold text-primary mb-2">Tangail Saree — Brand Story & Photography</h3>
-    <p class="font-body-sm text-on-surface-variant mb-6">Direct-to-consumer brand platform celebrating Bangladeshi handloom weavers with authentic storytelling, transparent artisan margins, and global delivery.</p>
+    <h3 class="font-display font-bold text-2xl text-dark mb-2">Tangail Saree — Heritage Brand Platform</h3>
+    <p class="text-sm text-muted mb-6">Connecting master handloom weavers directly with global consumers using modern storytelling and DTC logistics.</p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-      <div class="p-4 rounded-xl bg-purple-50 border border-purple-200 flex flex-col gap-2">
-        <span class="text-xs font-bold text-purple-900 uppercase">Artisan Supply Chain</span>
-        <p class="text-xs text-purple-800">Direct sourcing from master weavers in Tangail district, ensuring fair wages and preserving century-old weaving heritage.</p>
+      <div class="p-4 rounded-2xl bg-blue-50/80 border border-blue-200/60 flex flex-col gap-2">
+        <span class="text-xs font-bold text-blue-900 uppercase">Artisan Supply Chain</span>
+        <p class="text-xs text-blue-800">Direct partnership with artisan weavers in Tangail, ensuring fair trade compensation and authentic quality.</p>
       </div>
-      <div class="p-4 rounded-xl bg-pink-50 border border-pink-200 flex flex-col gap-2">
-        <span class="text-xs font-bold text-pink-900 uppercase">Brand Visual Identity</span>
-        <p class="text-xs text-pink-800">High-resolution photography, macro fabric texture previews, and modern minimalistic e-commerce web storefront.</p>
+      <div class="p-4 rounded-2xl bg-indigo-50/80 border border-indigo-200/60 flex flex-col gap-2">
+        <span class="text-xs font-bold text-indigo-900 uppercase">Digital Storefront</span>
+        <p class="text-xs text-indigo-800">Minimalist webstore built with headless commerce principles, optimized for global multi-currency checkout.</p>
       </div>
     </div>
 
-    <div class="mt-6 flex items-center justify-between border-t border-surface-container-highest pt-4">
-      <span class="text-xs text-on-surface-variant">Supply Chain & E-commerce Platform</span>
-      <a class="btn-tactile inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-xs font-medium hover:bg-secondary transition-colors" href="#contact">
-        <span>Inquire About Partnership</span>
+    <div class="mt-6 flex items-center justify-between border-t border-border pt-4">
+      <span class="text-xs text-muted">Direct-to-Consumer Brand</span>
+      <a class="btn-magnetic inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-accent text-white text-xs font-medium hover:bg-accent-hover transition-colors" href="#contact">
+        <span>Inquire Partnerships</span>
         <span class="material-symbols-outlined text-sm">arrow_outward</span>
       </a>
     </div>
@@ -1128,34 +608,33 @@
 
 <!-- Modal 03: MemoryFix -->
 <div id="modal-memoryfix" class="modal-overlay fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-  <div class="modal-container bg-surface max-w-2xl w-full rounded-2xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
-    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full glass-pill flex items-center justify-center text-primary hover:bg-surface-variant transition-colors" aria-label="Close Modal">
+  <div class="modal-container bg-bg max-w-2xl w-full rounded-3xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
+    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full bg-black/5 flex items-center justify-center text-dark hover:bg-black/10 transition-colors" aria-label="Close Modal">
       <span class="material-symbols-outlined text-lg">close</span>
     </button>
     <div class="flex items-center gap-2 mb-2">
       <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-medium">EXPLORING</span>
-      <span class="text-xs text-outline font-mono">APPLIED AI</span>
+      <span class="text-xs text-muted font-mono">APPLIED AI</span>
     </div>
-    <h3 class="font-headline-venture text-2xl font-bold text-primary mb-2">MemoryFix — Neural Restoration Wireframe</h3>
-    <p class="font-body-sm text-on-surface-variant mb-6">AI-assisted photo enhancement prototype capable of scratch removal, face detail restoration, and historical colorization in seconds.</p>
+    <h3 class="font-display font-bold text-2xl text-dark mb-2">MemoryFix — Neural Restoration Pipeline</h3>
+    <p class="text-sm text-muted mb-6">AI-driven photo enhancement prototype for automated scratch repair, facial detail enhancement, and resolution scaling.</p>
 
-    <div class="p-4 rounded-xl bg-amber-950 text-amber-100 font-mono text-xs flex flex-col gap-3 shadow-inner">
+    <div class="p-4 rounded-2xl bg-amber-950 text-amber-100 font-mono text-xs flex flex-col gap-3 shadow-inner">
       <div class="flex items-center justify-between border-b border-amber-800 pb-2">
-        <span>pipeline_architecture.py — Neural Pipeline</span>
-        <span class="text-amber-400">PyTorch / CodeFormer</span>
+        <span>Neural Restoration Pipeline</span>
+        <span class="text-amber-400">PyTorch</span>
       </div>
       <div class="grid grid-cols-3 gap-2 text-center text-[10px]">
-        <div class="p-2 bg-amber-900/60 rounded">1. Scratch & Noise Detection</div>
-        <div class="p-2 bg-amber-900/60 rounded">2. GFPGAN Face Refinement</div>
-        <div class="p-2 bg-amber-900/60 rounded">3. Neural Colorization</div>
+        <div class="p-2 bg-amber-900/60 rounded-lg">1. Scratch Removal</div>
+        <div class="p-2 bg-amber-900/60 rounded-lg">2. Face Refinement</div>
+        <div class="p-2 bg-amber-900/60 rounded-lg">3. 4x Super-Res</div>
       </div>
-      <p class="text-[11px] text-amber-200">Designed as a fast web utility for converting degraded family prints into high-resolution digital keepsakes.</p>
     </div>
 
-    <div class="mt-6 flex items-center justify-between border-t border-surface-container-highest pt-4">
-      <span class="text-xs text-on-surface-variant">Applied AI Prototype</span>
-      <a class="btn-tactile inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-xs font-medium hover:bg-secondary transition-colors" href="#idea-lab">
-        <span>Explore Research Notes</span>
+    <div class="mt-6 flex items-center justify-between border-t border-border pt-4">
+      <span class="text-xs text-muted">Applied AI Experiment</span>
+      <a class="btn-magnetic inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-accent text-white text-xs font-medium hover:bg-accent-hover transition-colors" href="#contact">
+        <span>Contact Developer</span>
         <span class="material-symbols-outlined text-sm">arrow_outward</span>
       </a>
     </div>
@@ -1164,49 +643,46 @@
 
 <!-- Modal 04: QuoteFlow -->
 <div id="modal-quoteflow" class="modal-overlay fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-  <div class="modal-container bg-surface max-w-2xl w-full rounded-2xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
-    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full glass-pill flex items-center justify-center text-primary hover:bg-surface-variant transition-colors" aria-label="Close Modal">
+  <div class="modal-container bg-bg max-w-2xl w-full rounded-3xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
+    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full bg-black/5 flex items-center justify-center text-dark hover:bg-black/10 transition-colors" aria-label="Close Modal">
       <span class="material-symbols-outlined text-lg">close</span>
     </button>
     <div class="flex items-center gap-2 mb-2">
       <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-medium">BUILDING</span>
-      <span class="text-xs text-outline font-mono">MICRO-SAAS</span>
+      <span class="text-xs text-muted font-mono">MICRO-SAAS</span>
     </div>
-    <h3 class="font-headline-venture text-2xl font-bold text-primary mb-2">QuoteFlow — Commercial Quotation Wireframe</h3>
-    <p class="font-body-sm text-on-surface-variant mb-6">Single-purpose document utility helping freelancers and agencies calculate profitability margins and generate client proposals effortlessly.</p>
+    <h3 class="font-display font-bold text-2xl text-dark mb-2">QuoteFlow — Proposal &amp; Margin Tool</h3>
+    <p class="text-sm text-muted mb-6">Single-purpose document utility designed for rapid proposal generation and margin calculations.</p>
 
-    <div class="p-4 rounded-xl bg-slate-100 border border-slate-300 font-mono text-xs text-slate-800 flex flex-col gap-3">
+    <div class="p-4 rounded-2xl bg-slate-100 border border-slate-300 font-mono text-xs text-slate-800 flex flex-col gap-3">
       <div class="flex items-center justify-between border-b border-slate-300 pb-2 font-bold">
-        <span>QUOTATION #QF-2026-089</span>
-        <span class="text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">STATUS: DRAFT</span>
+        <span>PROPOSAL #QF-2026-001</span>
+        <span class="text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">APPROVED</span>
       </div>
       <div class="grid grid-cols-2 gap-2 text-[11px]">
         <div>
-          <span class="text-slate-500 block">CLIENT:</span>
-          <span class="font-semibold">Acme Corporation Inc.</span>
+          <span class="text-slate-500 block">CLIENT</span>
+          <span class="font-semibold">Acme Tech</span>
         </div>
         <div>
-          <span class="text-slate-500 block">PROPOSED TOTAL:</span>
-          <span class="font-semibold text-emerald-700">$3,400.00 (Target Margin: 68%)</span>
+          <span class="text-slate-500 block">PROPOSED VALUE</span>
+          <span class="font-semibold text-emerald-700">$3,400.00</span>
         </div>
-      </div>
-      <div class="p-2 bg-white rounded border border-slate-200 text-[11px]">
-        ● Instant Client Acceptance Link & Client E-Signature Capture Enabled
       </div>
     </div>
 
-    <div class="mt-6 flex items-center justify-between border-t border-surface-container-highest pt-4">
-      <span class="text-xs text-on-surface-variant">Workflow & Micro-SaaS</span>
-      <a class="btn-tactile inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-white text-xs font-medium hover:bg-secondary transition-colors" href="#contact">
-        <span>Request Early Beta Access</span>
+    <div class="mt-6 flex items-center justify-between border-t border-border pt-4">
+      <span class="text-xs text-muted">Micro-SaaS Prototype</span>
+      <a class="btn-magnetic inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-accent text-white text-xs font-medium hover:bg-accent-hover transition-colors" href="#contact">
+        <span>Inquire Beta Access</span>
         <span class="material-symbols-outlined text-sm">arrow_outward</span>
       </a>
     </div>
   </div>
 </div>
 
-<!-- Floating Back to Top Button -->
-<button id="back-to-top-btn" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-primary text-on-primary shadow-lg flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-secondary focus:outline-none" aria-label="Back to Top">
+<!-- Back to top floating button -->
+<button id="back-to-top-btn" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-dark text-white shadow-xl flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-accent focus:outline-none" aria-label="Back to Top">
   <span class="material-symbols-outlined text-xl">arrow_upward</span>
 </button>
 
