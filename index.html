@@ -1,709 +1,485 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="web_standard" name="shell-type"/>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYDIN RAHMAN — Entrepreneur & Builder</title>
+    <meta name="description" content="Sydin Rahman — Entrepreneur, Builder, and Product Creator based in Dhaka. Building businesses, one idea at a time.">
 
-  <title>Sydin Rahman — Entrepreneur</title>
-  <meta name="description" content="Portfolio of Sydin Rahman — Entrepreneur. Good ideas should be built." />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Open Graph / Twitter Cards -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sydinrahman.com/" />
-  <meta property="og:title" content="Sydin Rahman — Entrepreneur" />
-  <meta property="og:description" content="Good ideas should be built." />
-  <meta property="og:image" content="og-image.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
-
-  <link href="style.css" rel="stylesheet"/>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg: '#F7F7F5',
-            dark: '#111111',
-            accent: '#2563EB',
-            'accent-hover': '#1D4ED8',
-            muted: '#666666',
-            card: 'rgba(255, 255, 255, 0.75)',
-            border: 'rgba(0, 0, 0, 0.08)'
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            display: ['Space Grotesk', 'sans-serif']
-          }
+    <!-- Tailwind CSS (via CDN with configuration) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgMain: '#F5F5F2',
+                        textMain: '#111111',
+                        accentBlue: '#2563EB',
+                        cardBg: '#FFFFFF',
+                        borderMuted: '#E2E2DF',
+                        subtleText: '#666663'
+                    },
+                    fontFamily: {
+                        space: ['"Space Grotesk"', 'sans-serif'],
+                        sans: ['"Inter"', 'sans-serif']
+                    }
+                }
+            }
         }
-      }
-    };
-  </script>
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-bg text-dark font-sans antialiased selection:bg-accent selection:text-white relative overflow-x-hidden">
+<body class="bg-bgMain text-textMain font-sans antialiased selection:bg-accentBlue selection:text-white relative overflow-x-hidden min-h-screen">
 
-<!-- Interactive Cursor Spotlight -->
-<div id="cursor-spotlight" class="pointer-events-none fixed inset-0 z-0 opacity-0 transition-opacity duration-500"></div>
+    <!-- Subtle Interactive Cursor Spotlight Glow -->
+    <div id="cursor-glow" class="pointer-events-none fixed top-0 left-0 w-96 h-96 rounded-full bg-accentBlue/10 blur-3xl transition-transform duration-100 ease-out z-0 -translate-x-1/2 -translate-y-1/2"></div>
 
-<!-- Ambient Floating Background Shapes -->
-<div class="pointer-events-none fixed inset-0 overflow-hidden z-0">
-  <div class="floating-shape absolute -top-20 -right-20 w-96 h-96 rounded-full bg-blue-200/30 blur-3xl"></div>
-  <div class="floating-shape absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-indigo-200/25 blur-3xl" style="animation-delay: -4s;"></div>
-  <div class="floating-shape absolute -bottom-20 right-1/3 w-96 h-96 rounded-full bg-sky-200/30 blur-3xl" style="animation-delay: -8s;"></div>
-</div>
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-bgMain/80 backdrop-blur-md border-b border-borderMuted/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#hero" class="font-space font-bold text-lg tracking-tight hover:text-accentBlue transition-colors duration-200 flex items-center gap-2">
+                <span class="inline-block w-2.5 h-2.5 rounded-full bg-accentBlue animate-pulse"></span>
+                SYDIN RAHMAN
+            </a>
 
-<!-- Skip to main content link for keyboard accessibility -->
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-dark focus:text-white focus:rounded-lg focus:shadow-xl focus:outline-none">
-  Skip to main content
-</a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#currently" class="hover:text-accentBlue transition-colors py-1">Currently</a>
+                <a href="#about" class="hover:text-accentBlue transition-colors py-1">About</a>
+                <a href="#ventures" class="hover:text-accentBlue transition-colors py-1">Ventures</a>
+                <a href="#contact" class="hover:text-accentBlue transition-colors py-1">Contact</a>
+            </div>
 
-<!-- Header Navigation -->
-<header class="fixed top-0 left-0 right-0 w-full z-50 glass-nav transition-all duration-300">
-  <div class="max-w-[1240px] mx-auto px-6 h-20 flex items-center justify-between">
-    <a class="group flex flex-col" href="#overview">
-      <span class="font-display font-bold text-lg tracking-tight text-dark group-hover:text-accent transition-colors">SYDIN RAHMAN</span>
-      <span class="text-[11px] font-medium tracking-widest text-muted uppercase">Entrepreneur</span>
-    </a>
-
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:flex items-center gap-8">
-      <a class="nav-link text-sm font-medium text-muted hover:text-dark transition-colors relative py-1" href="#about">
-        <span>About</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 transition-transform duration-200 origin-left"></span>
-      </a>
-      <a class="nav-link text-sm font-medium text-muted hover:text-dark transition-colors relative py-1" href="#ventures">
-        <span>Ventures</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 transition-transform duration-200 origin-left"></span>
-      </a>
-      <a class="nav-link text-sm font-medium text-muted hover:text-dark transition-colors relative py-1" href="#currently">
-        <span>Currently</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 transition-transform duration-200 origin-left"></span>
-      </a>
-      <a class="nav-link text-sm font-medium text-muted hover:text-dark transition-colors relative py-1" href="#contact">
-        <span>Contact</span>
-        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 transition-transform duration-200 origin-left"></span>
-      </a>
+            <a href="#contact" class="btn-magnetic px-5 py-2.5 rounded-full bg-textMain text-white text-xs font-space tracking-wider uppercase font-semibold hover:bg-accentBlue transition-all duration-300 shadow-sm hover:shadow-md">
+                Let's Talk ↗
+            </a>
+        </div>
     </nav>
 
-    <div class="flex items-center gap-4">
-      <a class="btn-magnetic inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-dark text-white text-sm font-medium hover:bg-accent transition-all shadow-sm" href="#contact">
-        <span>Let's Talk</span>
-        <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
-      </a>
+    <!-- Main Container -->
+    <main class="relative z-10 pt-24">
 
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center p-2 rounded-xl text-dark hover:bg-black/5 transition-colors focus:outline-none" aria-label="Toggle Navigation Menu">
-        <span id="menu-icon" class="material-symbols-outlined text-2xl">menu</span>
-      </button>
-    </div>
-  </div>
+        <!-- ================= HERO: THE ENTREPRENEUR'S DESK ================= -->
+        <section id="hero" class="min-h-[88vh] flex items-center relative px-6 max-w-7xl mx-auto py-12">
 
-  <!-- Mobile Dropdown Navigation -->
-  <div id="mobile-menu" class="hidden md:hidden glass-menu px-6 py-4">
-    <nav class="flex flex-col gap-3">
-      <a class="mobile-nav-link text-base font-medium text-muted hover:text-dark py-2 border-b border-border flex items-center justify-between" href="#about">
-        <span>About</span>
-        <span class="material-symbols-outlined text-sm text-muted">chevron_right</span>
-      </a>
-      <a class="mobile-nav-link text-base font-medium text-muted hover:text-dark py-2 border-b border-border flex items-center justify-between" href="#ventures">
-        <span>Ventures</span>
-        <span class="material-symbols-outlined text-sm text-muted">chevron_right</span>
-      </a>
-      <a class="mobile-nav-link text-base font-medium text-muted hover:text-dark py-2 border-b border-border flex items-center justify-between" href="#currently">
-        <span>Currently</span>
-        <span class="material-symbols-outlined text-sm text-muted">chevron_right</span>
-      </a>
-      <a class="mobile-nav-link text-base font-medium text-muted hover:text-dark py-2 flex items-center justify-between" href="#contact">
-        <span>Contact</span>
-        <span class="material-symbols-outlined text-sm text-muted">chevron_right</span>
-      </a>
-    </nav>
-  </div>
-</header>
+            <!-- Dynamic Background Canvas Lines & Dots -->
+            <canvas id="bg-dots-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
 
-<main id="main-content" class="relative z-10 pt-28 pb-20">
-  <div class="max-w-[1240px] mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full z-10">
 
-    <!-- HERO SECTION WITH INTERACTIVE MOUSE PARALLAX & TILT -->
-    <section class="min-h-[85vh] flex flex-col justify-center py-12 md:py-20 relative" id="hero-container">
+                <!-- Left Hero Column -->
+                <div class="lg:col-span-5 flex flex-col items-start space-y-6">
 
-      <!-- Parallax Floating Idea Cards scattered around hero -->
-      <div class="hero-parallax-card hidden lg:flex glass-card px-4 py-2 rounded-2xl items-center gap-2 absolute top-8 left-12 z-20 shadow-lg text-xs font-mono font-bold text-dark border border-white/80" data-speed="0.04">
-        <span class="w-2 h-2 rounded-full bg-accent"></span>
-        <span>AI</span>
-      </div>
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-borderMuted shadow-sm text-xs font-space font-medium text-subtleText">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                        SYDIN RAHMAN
+                    </div>
 
-      <div class="hero-parallax-card hidden lg:flex glass-card px-4 py-2 rounded-2xl items-center gap-2 absolute top-24 right-16 z-20 shadow-lg text-xs font-mono font-bold text-dark border border-white/80" data-speed="-0.03">
-        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-        <span>BUILD</span>
-      </div>
+                    <h1 class="font-space font-bold text-5xl sm:text-6xl md:text-7xl tracking-tight text-textMain leading-tight">
+                        Entrepreneur
+                    </h1>
 
-      <div class="hero-parallax-card hidden lg:flex glass-card px-4 py-2 rounded-2xl items-center gap-2 absolute bottom-24 left-8 z-20 shadow-lg text-xs font-mono font-bold text-dark border border-white/80" data-speed="-0.05">
-        <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
-        <span>BUSINESS</span>
-      </div>
+                    <p class="text-xl text-subtleText font-normal max-w-md leading-relaxed">
+                        Building businesses, one idea at a time.
+                    </p>
 
-      <div class="hero-parallax-card hidden lg:flex glass-card px-4 py-2 rounded-2xl items-center gap-2 absolute bottom-12 right-24 z-20 shadow-lg text-xs font-mono font-bold text-dark border border-white/80" data-speed="0.03">
-        <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-        <span>ECOMMERCE</span>
-      </div>
+                    <div class="pt-2 flex flex-wrap items-center gap-4">
+                        <a href="#currently" class="btn-magnetic inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-accentBlue text-white font-space font-medium text-sm shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 group">
+                            <span>See What I'm Building</span>
+                            <i class="fa-solid font-bold fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#about" class="px-6 py-3.5 rounded-full bg-white border border-borderMuted text-textMain font-space font-medium text-sm hover:border-textMain transition-all">
+                            More About Me
+                        </a>
+                    </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
+                    <!-- Category Pills -->
+                    <div class="pt-6 flex flex-wrap gap-2 text-xs font-space tracking-wider uppercase text-subtleText font-medium">
+                        <span class="px-3 py-1 rounded-md bg-white border border-borderMuted">AI</span>
+                        <span class="px-3 py-1 rounded-md bg-white border border-borderMuted">Ecommerce</span>
+                        <span class="px-3 py-1 rounded-md bg-white border border-borderMuted">Digital Products</span>
+                        <span class="px-3 py-1 rounded-md bg-white border border-borderMuted">Ventures</span>
+                    </div>
 
-        <!-- Left Text Column with Subtle Headline Shift -->
-        <div class="lg:col-span-7 flex flex-col gap-6 hero-text-reveal">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-border text-xs font-semibold tracking-wider text-dark uppercase shadow-2xs w-fit">
-            <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-            SYDIN RAHMAN · ENTREPRENEUR
-          </div>
-
-          <h1 id="hero-headline" class="font-display font-extrabold text-5xl sm:text-6xl lg:text-7xl text-dark tracking-tight leading-[1.02] uppercase transition-transform duration-100 ease-out">
-            GOOD IDEAS<br/>
-            SHOULD BE<br/>
-            <span class="text-accent">BUILT.</span>
-          </h1>
-
-          <p class="text-base sm:text-lg text-muted font-medium max-w-lg leading-relaxed">
-            I explore ideas, build businesses, and learn along the way.
-          </p>
-
-          <div class="pt-2 flex items-center gap-4">
-            <a class="btn-magnetic inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-accent text-white font-medium text-base hover:bg-accent-hover transition-all shadow-lg shadow-accent/25 group" href="#ventures">
-              <span>Explore Ventures</span>
-              <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1.5">arrow_forward</span>
-            </a>
-            <a class="btn-magnetic inline-flex items-center gap-2 px-6 py-4 rounded-full bg-white border border-border text-dark font-medium text-base hover:bg-black/5 transition-all" href="#about">
-              <span>About</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right 3D Interactive Hero Image Card -->
-        <div class="lg:col-span-5 relative flex items-center justify-center">
-          <div id="hero-3d-card" class="relative w-full max-w-md lg:max-w-none aspect-square rounded-3xl overflow-hidden shadow-2xl border border-white/80 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-7 flex flex-col justify-between group transition-transform duration-200 ease-out">
-
-            <!-- Hero Image Layer -->
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Entrepreneur Workspace" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay group-hover:scale-105 transition-transform duration-700 ease-out" />
-
-            <!-- Top Floating Badge -->
-            <div class="relative z-10 flex items-center justify-between">
-              <div class="glass-card px-4 py-2 rounded-2xl flex items-center gap-2.5">
-                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-                <span class="text-xs font-semibold text-dark tracking-wide uppercase">Builder Studio</span>
-              </div>
-              <div class="glass-card px-3 py-1.5 rounded-xl text-[11px] font-mono text-dark font-semibold">
-                EST. 2026
-              </div>
-            </div>
-
-            <!-- Central Glass Accent Blocks -->
-            <div class="relative z-10 my-auto flex flex-col gap-3.5 py-4">
-              <div class="glass-card p-4 rounded-2xl flex items-center gap-3 transform -rotate-1 group-hover:rotate-0 transition-transform duration-300">
-                <div class="w-10 h-10 rounded-xl bg-accent text-white flex items-center justify-center shadow-md">
-                  <span class="material-symbols-outlined text-xl">auto_awesome</span>
                 </div>
-                <div class="flex flex-col">
-                  <span class="text-xs font-mono text-muted uppercase">Vision</span>
-                  <span class="text-sm font-bold text-dark font-display">Ideas → Reality</span>
+
+                <!-- Right Hero Column: Interactive Entrepreneur's Desk -->
+                <div class="lg:col-span-7 relative h-[480px] sm:h-[540px] w-full flex items-center justify-center">
+
+                    <div id="desk-canvas" class="relative w-full h-full max-w-xl rounded-2xl bg-white/60 backdrop-blur-md border border-borderMuted/80 p-6 shadow-xl overflow-hidden group/desk transition-transform duration-300 ease-out">
+
+                        <!-- Desk Workspace Header -->
+                        <div class="flex items-center justify-between border-b border-borderMuted/60 pb-3 mb-4">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                                <span class="text-xs font-space text-subtleText font-medium ml-2">the-entrepreneurs-desk.workspace</span>
+                            </div>
+                            <span class="text-[10px] font-space uppercase tracking-widest px-2 py-0.5 rounded bg-accentBlue/10 text-accentBlue font-bold">Active Workspace</span>
+                        </div>
+
+                        <!-- Central Desk Canvas Grid / Floating Cards Area -->
+                        <div class="relative w-full h-[380px]">
+
+                            <!-- 💡 Card 1: Idea Card -->
+                            <div class="desk-card absolute top-2 left-2 sm:top-4 sm:left-4 w-44 sm:w-48 bg-white border border-borderMuted rounded-xl p-4 shadow-md hover:shadow-2xl transition-all duration-300 z-20 cursor-pointer"
+                                 data-speed="0.04" data-card="idea">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xl">💡</span>
+                                    <span class="text-[10px] font-space font-semibold uppercase px-2 py-0.5 rounded bg-amber-50 text-amber-700">Idea Lab</span>
+                                </div>
+                                <h3 class="font-space font-bold text-sm text-textMain">Problem-First</h3>
+                                <p class="desk-card-desc text-xs text-subtleText mt-1 line-clamp-2 transition-all">Validated concepts targeting real market inefficiencies.</p>
+                            </div>
+
+                            <!-- 📈 Card 2: Growth Chart Card -->
+                            <div class="desk-card absolute top-6 right-2 sm:top-8 sm:right-6 w-48 sm:w-52 bg-white border border-borderMuted rounded-xl p-4 shadow-md hover:shadow-2xl transition-all duration-300 z-20 cursor-pointer"
+                                 data-speed="-0.03" data-card="growth">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xl">📈</span>
+                                    <span class="text-[10px] font-space font-semibold uppercase px-2 py-0.5 rounded bg-emerald-50 text-emerald-700">+142% Traction</span>
+                                </div>
+                                <h3 class="font-space font-bold text-sm text-textMain">Scale & Metric</h3>
+                                <div class="w-full bg-slate-100 rounded-full h-1.5 mt-2 overflow-hidden">
+                                    <div class="bg-accentBlue h-1.5 rounded-full w-3/4"></div>
+                                </div>
+                                <p class="desk-card-desc text-xs text-subtleText mt-2 transition-all">Driven by unit economics, revenue, and product clarity.</p>
+                            </div>
+
+                            <!-- 🤖 Card 3: AI Card -->
+                            <div class="desk-card absolute top-36 left-1/4 sm:left-1/3 -translate-x-1/2 w-48 sm:w-52 bg-slate-900 text-white border border-slate-800 rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 z-30 cursor-pointer"
+                                 data-speed="0.06" data-card="ai">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xl">🤖</span>
+                                    <span class="text-[10px] font-space font-semibold uppercase px-2 py-0.5 rounded bg-blue-900/60 text-blue-300">AI Integration</span>
+                                </div>
+                                <h3 class="font-space font-bold text-sm text-white">Smart Workflows</h3>
+                                <p class="desk-card-desc text-xs text-slate-300 mt-1 transition-all">Automating operations and amplifying user capabilities with AI.</p>
+                            </div>
+
+                            <!-- 🛍️ Card 4: Ecommerce Card -->
+                            <div class="desk-card absolute bottom-4 left-2 sm:bottom-6 sm:left-6 w-44 sm:w-48 bg-white border border-borderMuted rounded-xl p-4 shadow-md hover:shadow-2xl transition-all duration-300 z-20 cursor-pointer"
+                                 data-speed="-0.05" data-card="ecommerce">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xl">🛍️</span>
+                                    <span class="text-[10px] font-space font-semibold uppercase px-2 py-0.5 rounded bg-purple-50 text-purple-700">D2C Brand</span>
+                                </div>
+                                <h3 class="font-space font-bold text-sm text-textMain">Modern Retail</h3>
+                                <p class="desk-card-desc text-xs text-subtleText mt-1 line-clamp-2 transition-all">Bringing heritage products online with seamless UX.</p>
+                            </div>
+
+                            <!-- 🚀 Card 5: Launch Card -->
+                            <div class="desk-card absolute bottom-4 right-2 sm:bottom-6 sm:right-6 w-48 sm:w-52 bg-white border border-borderMuted rounded-xl p-4 shadow-md hover:shadow-2xl transition-all duration-300 z-20 cursor-pointer"
+                                 data-speed="0.05" data-card="launch">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xl">🚀</span>
+                                    <span class="text-[10px] font-space font-semibold uppercase px-2 py-0.5 rounded bg-blue-50 text-accentBlue">Velocity</span>
+                                </div>
+                                <h3 class="font-space font-bold text-sm text-textMain">Fast Execution</h3>
+                                <p class="desk-card-desc text-xs text-subtleText mt-1 line-clamp-2 transition-all">From zero to functional MVP in record time.</p>
+                            </div>
+
+                            <!-- Small Profile Visual Badge -->
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20 group-hover/desk:opacity-40 transition-opacity duration-300">
+                                <div class="w-32 h-32 rounded-full border border-dashed border-accentBlue/60 flex items-center justify-center animate-spin-slow">
+                                    <i class="fa-solid fa-compass text-3xl text-accentBlue"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
-              </div>
 
-              <div class="glass-card p-4 rounded-2xl flex items-center justify-between transform rotate-2 group-hover:rotate-0 transition-transform duration-300 ml-6">
-                <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-xl bg-dark text-white flex items-center justify-center shadow-md">
-                    <span class="material-symbols-outlined text-xl">rocket_launch</span>
-                  </div>
-                  <div class="flex flex-col">
-                    <span class="text-xs font-mono text-muted uppercase">Status</span>
-                    <span class="text-sm font-bold text-dark font-display">Building Active</span>
-                  </div>
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 01: CURRENTLY BUILDING ================= -->
+        <section id="currently" class="py-20 px-6 max-w-7xl mx-auto border-t border-borderMuted/80">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">01 // Dashboard Index</span>
+                    <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain mt-2">Currently Building</h2>
                 </div>
-                <span class="px-2.5 py-1 rounded-full bg-accent/10 text-accent font-mono text-xs font-bold">4 Projects</span>
-              </div>
+                <p class="text-subtleText font-space text-sm mt-2 md:mt-0">Real-time status of active ventures and experiments.</p>
             </div>
 
-            <!-- Bottom Footer Tag -->
-            <div class="relative z-10 flex items-center justify-between pt-2">
-              <span class="text-xs font-medium text-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded-xl bg-black/40 border border-white/10">Dhaka / Global</span>
-              <span class="text-xs font-mono text-white/90 backdrop-blur-sm px-3.5 py-1.5 rounded-xl bg-black/40 border border-white/10">01 // HERO</span>
+            <!-- Dashboard Index List -->
+            <div class="space-y-4">
+
+                <!-- Venture 01 -->
+                <div class="group bg-white border border-borderMuted hover:border-accentBlue/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 cursor-pointer" onclick="openVentureModal('myagenow')">
+                    <div class="flex items-center space-x-6">
+                        <span class="font-space text-xl font-bold text-subtleText group-hover:text-accentBlue transition-colors">01</span>
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <h3 class="font-space font-bold text-xl text-textMain group-hover:text-accentBlue transition-colors">MyAgeNow</h3>
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-semibold bg-emerald-100 text-emerald-800">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
+                                    LIVE
+                                </span>
+                            </div>
+                            <p class="text-sm text-subtleText mt-1">Smart age calculator & milestone discovery tool powered by sleek micro-apps.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 text-xs font-space text-subtleText">
+                        <span class="hidden md:inline-block">AI / Micro Tool</span>
+                        <span class="px-4 py-2 rounded-full border border-borderMuted group-hover:bg-accentBlue group-hover:text-white group-hover:border-accentBlue transition-all">Details ↗</span>
+                    </div>
+                </div>
+
+                <!-- Venture 02 -->
+                <div class="group bg-white border border-borderMuted hover:border-accentBlue/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 cursor-pointer" onclick="openVentureModal('tangail')">
+                    <div class="flex items-center space-x-6">
+                        <span class="font-space text-xl font-bold text-subtleText group-hover:text-accentBlue transition-colors">02</span>
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <h3 class="font-space font-bold text-xl text-textMain group-hover:text-accentBlue transition-colors">Tangail Saree Market</h3>
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-semibold bg-blue-100 text-accentBlue">
+                                    BUILDING
+                                </span>
+                            </div>
+                            <p class="text-sm text-subtleText mt-1">D2C ecommerce portal connecting artisan weavers directly with global consumers.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 text-xs font-space text-subtleText">
+                        <span class="hidden md:inline-block">Ecommerce / D2C</span>
+                        <span class="px-4 py-2 rounded-full border border-borderMuted group-hover:bg-accentBlue group-hover:text-white group-hover:border-accentBlue transition-all">Details ↗</span>
+                    </div>
+                </div>
+
+                <!-- Venture 03 -->
+                <div class="group bg-white border border-borderMuted hover:border-accentBlue/50 rounded-2xl p-6 transition-all duration-300 hover:shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 cursor-pointer" onclick="openVentureModal('memoryfix')">
+                    <div class="flex items-center space-x-6">
+                        <span class="font-space text-xl font-bold text-subtleText group-hover:text-accentBlue transition-colors">03</span>
+                        <div>
+                            <div class="flex items-center gap-3">
+                                <h3 class="font-space font-bold text-xl text-textMain group-hover:text-accentBlue transition-colors">MemoryFix</h3>
+                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-semibold bg-purple-100 text-purple-800">
+                                    EXPLORING
+                                </span>
+                            </div>
+                            <p class="text-sm text-subtleText mt-1">Digital memory organization & photo restoration assistant leveraging lightweight AI.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 text-xs font-space text-subtleText">
+                        <span class="hidden md:inline-block">Productivity / AI</span>
+                        <span class="px-4 py-2 rounded-full border border-borderMuted group-hover:bg-accentBlue group-hover:text-white group-hover:border-accentBlue transition-all">Details ↗</span>
+                    </div>
+                </div>
+
             </div>
-          </div>
+
+            <!-- Action Link Below Index -->
+            <div class="mt-8 text-center sm:text-left">
+                <a href="#about" class="inline-flex items-center font-space font-semibold text-textMain hover:text-accentBlue transition-colors group">
+                    <span>More about me</span>
+                    <i class="fa-solid fa-arrow-right ml-2 text-xs group-hover:translate-x-1.5 transition-transform"></i>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 02: ABOUT ================= -->
+        <section id="about" class="py-20 px-6 max-w-7xl mx-auto border-t border-borderMuted/80">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">02 // Background</span>
+                    <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain leading-tight">
+                        I turn napkin ideas into functioning digital businesses.
+                    </h2>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6 text-subtleText text-base sm:text-lg leading-relaxed">
+                    <p>
+                        Based in Dhaka and operating globally, I focus on combining rapid product execution, thoughtful user experience, and modern tech stacks to launch web apps and ecommerce platforms.
+                    </p>
+                    <p>
+                        Whether it’s automated tools, D2C retail platforms, or productivity suites, my philosophy centers on execution speed, clean architecture, and direct utility.
+                    </p>
+
+                    <div class="pt-4 flex flex-wrap items-center gap-8 text-sm font-space text-textMain font-medium">
+                        <div>
+                            <span class="block text-2xl font-bold text-accentBlue">04+</span>
+                            <span class="text-xs text-subtleText uppercase tracking-wider">Active Ventures</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-accentBlue">100%</span>
+                            <span class="text-xs text-subtleText uppercase tracking-wider">Builder Mindset</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold text-accentBlue">Global</span>
+                            <span class="text-xs text-subtleText uppercase tracking-wider">Reach</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 03: ALL VENTURES ================= -->
+        <section id="ventures" class="py-20 px-6 max-w-7xl mx-auto border-t border-borderMuted/80">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">03 // Featured Ventures</span>
+                    <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain mt-2">Selected Works</h2>
+                </div>
+            </div>
+
+            <!-- Venture Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Venture 1 Card -->
+                <div class="venture-card group bg-white border border-borderMuted rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openVentureModal('myagenow')">
+                    <div class="relative h-64 overflow-hidden bg-slate-900 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/30 group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="relative text-center p-6 text-white">
+                            <span class="text-xs font-space tracking-widest uppercase bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">Micro-App</span>
+                            <h3 class="font-space font-bold text-3xl mt-3">MyAgeNow</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-space font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md">LIVE</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-subtleText group-hover:text-accentBlue transition-colors"></i>
+                        </div>
+                        <p class="text-sm text-subtleText">Sleek, high-precision age calculation engine and lifespan milestone discovery platform.</p>
+                    </div>
+                </div>
+
+                <!-- Venture 2 Card -->
+                <div class="venture-card group bg-white border border-borderMuted rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openVentureModal('tangail')">
+                    <div class="relative h-64 overflow-hidden bg-amber-950 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-amber-600/30 to-rose-700/30 group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="relative text-center p-6 text-white">
+                            <span class="text-xs font-space tracking-widest uppercase bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">Ecommerce</span>
+                            <h3 class="font-space font-bold text-3xl mt-3">Tangail Saree Market</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-space font-semibold text-accentBlue bg-blue-50 px-2.5 py-1 rounded-md">BUILDING</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-subtleText group-hover:text-accentBlue transition-colors"></i>
+                        </div>
+                        <p class="text-sm text-subtleText">Direct-to-consumer digital portal empowering traditional weavers in Tangail.</p>
+                    </div>
+                </div>
+
+                <!-- Venture 3 Card -->
+                <div class="venture-card group bg-white border border-borderMuted rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openVentureModal('memoryfix')">
+                    <div class="relative h-64 overflow-hidden bg-slate-800 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-600/30 to-purple-800/30 group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="relative text-center p-6 text-white">
+                            <span class="text-xs font-space tracking-widest uppercase bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">AI Utility</span>
+                            <h3 class="font-space font-bold text-3xl mt-3">MemoryFix</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-space font-semibold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md">EXPLORING</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-subtleText group-hover:text-accentBlue transition-colors"></i>
+                        </div>
+                        <p class="text-sm text-subtleText">AI-powered media restoration and memory cataloging tool for families and archives.</p>
+                    </div>
+                </div>
+
+                <!-- Venture 4 Card -->
+                <div class="venture-card group bg-white border border-borderMuted rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 cursor-pointer" onclick="openVentureModal('quoteflow')">
+                    <div class="relative h-64 overflow-hidden bg-blue-950 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-700/30 to-teal-600/30 group-hover:scale-105 transition-transform duration-500"></div>
+                        <div class="relative text-center p-6 text-white">
+                            <span class="text-xs font-space tracking-widest uppercase bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">SaaS</span>
+                            <h3 class="font-space font-bold text-3xl mt-3">QuoteFlow</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-space font-semibold text-accentBlue bg-blue-50 px-2.5 py-1 rounded-md">CONCEPT</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-subtleText group-hover:text-accentBlue transition-colors"></i>
+                        </div>
+                        <p class="text-sm text-subtleText">Automated client proposal and price estimation builder for creative agencies.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 04: CONTACT ================= -->
+        <section id="contact" class="py-24 px-6 max-w-7xl mx-auto border-t border-borderMuted/80 text-center">
+            <div class="max-w-2xl mx-auto space-y-6">
+                <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">04 // Get In Touch</span>
+
+                <h2 class="font-space font-bold text-4xl sm:text-6xl text-textMain tracking-tight">
+                    Let's build something.
+                </h2>
+
+                <p class="text-subtleText text-base sm:text-lg">
+                    Have an idea, partnership opportunity, or project in mind? Reach out directly.
+                </p>
+
+                <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="mailto:contact@sydinrahman.com" class="btn-magnetic px-8 py-4 rounded-full bg-accentBlue text-white font-space font-medium text-base shadow-lg hover:bg-blue-700 transition-all">
+                        contact@sydinrahman.com ↗
+                    </a>
+                    <button onclick="copyEmail()" id="copy-email-btn" class="px-6 py-4 rounded-full bg-white border border-borderMuted text-textMain font-space font-medium text-sm hover:border-textMain transition-all">
+                        <i class="fa-regular fa-copy mr-2"></i>Copy Email
+                    </button>
+                </div>
+
+                <!-- Social Handles -->
+                <div class="pt-10 flex items-center justify-center space-x-6 text-xl text-subtleText">
+                    <a href="https://github.com/sydinrahman" target="_blank" class="hover:text-accentBlue transition-colors" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/sydinrahman" target="_blank" class="hover:text-accentBlue transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://facebook.com/sydinrahman" target="_blank" class="hover:text-accentBlue transition-colors" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://behance.net/sydinrahman" target="_blank" class="hover:text-accentBlue transition-colors" title="Behance"><i class="fa-brands fa-behance"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-borderMuted/80 bg-white/50 py-8 px-6 text-center text-xs font-space text-subtleText">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>© <span id="current-year">2026</span> SYDIN RAHMAN. All rights reserved.</div>
+            <div class="flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>Designed with Space Grotesk & Inter</span>
+            </div>
         </div>
+    </footer>
 
-      </div>
-    </section>
 
-    <!-- 01 — ABOUT -->
-    <section class="py-20 border-t border-border/60 scroll-mt-24" id="about">
-      <div class="max-w-3xl flex flex-col gap-6">
-        <div class="flex items-center gap-3">
-          <span class="text-xs font-mono font-bold tracking-widest text-accent uppercase">01 // ABOUT</span>
-          <span class="w-8 h-px bg-accent/40"></span>
-        </div>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-dark leading-tight">
-          Entrepreneur from Bangladesh building digital products, exploring new business ideas, and turning concepts into real-world projects.
-        </h2>
-        <p class="text-lg text-muted leading-relaxed font-normal">
-          I enjoy taking simple concepts and refining them into useful software, ecommerce brands, and automated tools. My goal is simple: build things that solve real problems and bring value to people.
-        </p>
-      </div>
-    </section>
-
-    <!-- 02 — VENTURES WITH ENHANCED CARD HOVER INTERACTION -->
-    <section class="py-20 border-t border-border/60 scroll-mt-24" id="ventures">
-      <div class="flex flex-col gap-12">
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-          <div class="flex flex-col gap-2">
-            <span class="text-xs font-mono font-bold tracking-widest text-accent uppercase">02 // VENTURES</span>
-            <h2 class="font-display font-bold text-3xl sm:text-4xl text-dark">Selected Ventures</h2>
-          </div>
-          <p class="text-sm text-muted">Featured products and brands built with purpose.</p>
-        </div>
-
-        <!-- 4 Large Venture Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          <!-- Venture 1: MyAgeNow -->
-          <div class="venture-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-            <div class="relative z-10 flex flex-col gap-6">
-              <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
-                  LIVE
-                </span>
-                <span class="text-xs font-mono text-muted">WEB APP</span>
-              </div>
-
-              <!-- Image Container with smooth scale expand -->
-              <div class="w-full h-52 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/40 transition-colors">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="MyAgeNow Tool" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-4 text-white font-mono text-xs font-medium">myagenow.com</div>
-              </div>
-
-              <div>
-                <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">MyAgeNow</h3>
-                <p class="text-muted text-sm mt-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">Precision age calculator, life milestone tracking, and chronological planning tool.</p>
-              </div>
-            </div>
-
-            <div class="relative z-10 pt-6 mt-6 border-t border-border flex items-center justify-between">
-              <button class="modal-open-btn text-xs font-medium text-accent hover:underline flex items-center gap-1" data-modal="modal-myagenow">
-                <span class="material-symbols-outlined text-base">visibility</span>
-                <span>Inspect Specs</span>
-              </button>
-              <a class="btn-magnetic inline-flex items-center gap-1.5 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="https://myagenow.com" target="_blank" rel="noopener">
-                <span>Visit Site</span>
-                <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Venture 2: Tangail Saree -->
-          <div class="venture-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-            <div class="relative z-10 flex flex-col gap-6">
-              <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-                  BUILDING
-                </span>
-                <span class="text-xs font-mono text-muted">ECOMMERCE</span>
-              </div>
-
-              <div class="w-full h-52 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/40 transition-colors">
-                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80" alt="Tangail Saree DTC Brand" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-4 text-white font-mono text-xs font-medium">Heritage Handloom DTC</div>
-              </div>
-
-              <div>
-                <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">Tangail Saree</h3>
-                <p class="text-muted text-sm mt-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">Modern direct-to-consumer ecommerce brand connecting authentic Bangladeshi weavers with global customers.</p>
-              </div>
-            </div>
-
-            <div class="relative z-10 pt-6 mt-6 border-t border-border flex items-center justify-between">
-              <button class="modal-open-btn text-xs font-medium text-accent hover:underline flex items-center gap-1" data-modal="modal-tangail">
-                <span class="material-symbols-outlined text-base">visibility</span>
-                <span>Inspect Brand Story</span>
-              </button>
-              <a class="btn-magnetic inline-flex items-center gap-1.5 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
-                <span>Explore Brand</span>
-                <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Venture 3: MemoryFix -->
-          <div class="venture-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-            <div class="relative z-10 flex flex-col gap-6">
-              <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
-                  EXPLORING
-                </span>
-                <span class="text-xs font-mono text-muted">AI PRODUCT</span>
-              </div>
-
-              <div class="w-full h-52 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/40 transition-colors">
-                <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="MemoryFix AI" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-4 text-white font-mono text-xs font-medium">Neural Restoration Engine</div>
-              </div>
-
-              <div>
-                <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">MemoryFix</h3>
-                <p class="text-muted text-sm mt-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">AI-powered web utility for restoring, colorizing, and enhancing legacy family photographs.</p>
-              </div>
-            </div>
-
-            <div class="relative z-10 pt-6 mt-6 border-t border-border flex items-center justify-between">
-              <button class="modal-open-btn text-xs font-medium text-accent hover:underline flex items-center gap-1" data-modal="modal-memoryfix">
-                <span class="material-symbols-outlined text-base">visibility</span>
-                <span>Inspect AI Prototype</span>
-              </button>
-              <a class="btn-magnetic inline-flex items-center gap-1.5 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
-                <span>View Concept</span>
-                <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Venture 4: QuoteFlow -->
-          <div class="venture-card group glass-card rounded-3xl p-8 flex flex-col justify-between min-h-[460px] relative overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-            <div class="relative z-10 flex flex-col gap-6">
-              <div class="flex items-center justify-between">
-                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-semibold uppercase tracking-wider flex items-center gap-1.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-blue-600"></span>
-                  BUILDING
-                </span>
-                <span class="text-xs font-mono text-muted">MICRO-SAAS</span>
-              </div>
-
-              <div class="w-full h-52 rounded-2xl overflow-hidden relative bg-slate-100 border border-border group-hover:border-accent/40 transition-colors">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="QuoteFlow Micro-SaaS" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-4 text-white font-mono text-xs font-medium">Quotation &amp; Invoice Tool</div>
-              </div>
-
-              <div>
-                <h3 class="font-display font-bold text-2xl text-dark group-hover:text-accent transition-colors">QuoteFlow</h3>
-                <p class="text-muted text-sm mt-2 leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity">Lightweight quotation builder and margin calculator designed for freelancers and micro-agencies.</p>
-              </div>
-            </div>
-
-            <div class="relative z-10 pt-6 mt-6 border-t border-border flex items-center justify-between">
-              <button class="modal-open-btn text-xs font-medium text-accent hover:underline flex items-center gap-1" data-modal="modal-quoteflow">
-                <span class="material-symbols-outlined text-base">visibility</span>
-                <span>Inspect Wireframe</span>
-              </button>
-              <a class="btn-magnetic inline-flex items-center gap-1.5 text-sm font-semibold text-dark group-hover:text-accent transition-colors" href="#contact">
-                <span>View Concept</span>
-                <span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 03 — CURRENTLY -->
-    <section class="py-20 border-t border-border/60 scroll-mt-24" id="currently">
-      <div class="flex flex-col gap-10">
-        <div class="flex flex-col gap-2">
-          <span class="text-xs font-mono font-bold tracking-widest text-accent uppercase">03 // CURRENTLY</span>
-          <h2 class="font-display font-bold text-3xl sm:text-4xl text-dark">Building. Exploring. Learning.</h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 hover:-translate-y-1 transition-all">
-            <div class="flex flex-col gap-4">
-              <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center">
-                <span class="material-symbols-outlined text-2xl">construction</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-dark">Building</h3>
-              <p class="text-muted text-sm leading-relaxed">Designing simple digital tools, micro-SaaS utilities, and DTC web platforms with modern web tech.</p>
-            </div>
-            <span class="text-xs font-mono text-accent font-semibold mt-6">ACTIVE DEVELOPMENT</span>
-          </div>
-
-          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 hover:-translate-y-1 transition-all">
-            <div class="flex flex-col gap-4">
-              <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center">
-                <span class="material-symbols-outlined text-2xl">science</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-dark">Exploring</h3>
-              <p class="text-muted text-sm leading-relaxed">Applied AI workflows, generative image tools, automated operations, and emerging business models.</p>
-            </div>
-            <span class="text-xs font-mono text-accent font-semibold mt-6">EXPERIMENTATION</span>
-          </div>
-
-          <div class="glass-card rounded-3xl p-8 flex flex-col justify-between hover:border-accent/40 hover:-translate-y-1 transition-all">
-            <div class="flex flex-col gap-4">
-              <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center">
-                <span class="material-symbols-outlined text-2xl">school</span>
-              </div>
-              <h3 class="font-display font-bold text-xl text-dark">Learning</h3>
-              <p class="text-muted text-sm leading-relaxed">Lean startup execution, marketing automation, customer acquisition channels, and product design systems.</p>
-            </div>
-            <span class="text-xs font-mono text-accent font-semibold mt-6">CONTINUOUS GROWTH</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 04 — CONTACT -->
-    <section class="py-20 border-t border-border/60 scroll-mt-24" id="contact">
-      <div class="glass-card rounded-3xl p-8 sm:p-12 md:p-16 flex flex-col gap-10 shadow-xl relative overflow-hidden">
-
-        <div class="flex flex-col gap-4 max-w-2xl">
-          <span class="text-xs font-mono font-bold tracking-widest text-accent uppercase">04 // CONTACT</span>
-          <h2 class="font-display font-bold text-4xl sm:text-5xl text-dark tracking-tight">
-            Let's build something.
-          </h2>
-          <p class="text-muted text-base sm:text-lg">
-            Have an idea, partnership proposal, or opportunity? I'm always open to discussing new projects and collaborations.
-          </p>
-        </div>
-
-        <div class="flex flex-col gap-6">
-          <div class="flex flex-wrap items-center gap-4">
-            <a class="btn-magnetic inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent text-white font-medium hover:bg-accent-hover transition-all shadow-lg shadow-accent/25" href="mailto:contact@sydinrahman.com">
-              <span class="material-symbols-outlined text-lg">mail</span>
-              <span>contact@sydinrahman.com</span>
-            </a>
-
-            <button id="copy-email-btn" class="btn-magnetic inline-flex items-center gap-2 px-6 py-4 rounded-full bg-white border border-border text-dark font-medium hover:bg-black/5 transition-all">
-              <span class="material-symbols-outlined text-lg">content_copy</span>
-              <span>Copy Address</span>
+    <!-- Venture Detail Modal Container -->
+    <div id="venture-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+        <div class="bg-white border border-borderMuted rounded-2xl max-w-xl w-full p-6 sm:p-8 relative shadow-2xl scale-95 transition-transform duration-300" id="modal-content-box">
+            <button onclick="closeVentureModal()" class="absolute top-4 right-4 text-subtleText hover:text-textMain p-2 text-xl">
+                <i class="fa-solid fa-xmark"></i>
             </button>
-
-            <!-- Feedback Toast -->
-            <span id="copy-feedback" role="status" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-dark text-white text-xs font-medium opacity-0 transition-opacity duration-300 pointer-events-none">
-              <span class="material-symbols-outlined text-sm">check_circle</span>
-              <span>Copied contact@sydinrahman.com</span>
-            </span>
-          </div>
-
-          <!-- Social Profiles Grid -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
-            <a class="group glass-card p-4 rounded-2xl flex items-center justify-between hover:border-accent transition-colors" href="https://facebook.com/sydinrahman" target="_blank" rel="noopener">
-              <div class="flex flex-col">
-                <span class="text-xs text-muted font-mono uppercase">Facebook</span>
-                <span class="text-sm font-semibold text-dark group-hover:text-accent transition-colors">@sydinrahman</span>
-              </div>
-              <span class="material-symbols-outlined text-sm text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
-            </a>
-
-            <a class="group glass-card p-4 rounded-2xl flex items-center justify-between hover:border-accent transition-colors" href="https://linkedin.com/in/sydinrahman" target="_blank" rel="noopener">
-              <div class="flex flex-col">
-                <span class="text-xs text-muted font-mono uppercase">LinkedIn</span>
-                <span class="text-sm font-semibold text-dark group-hover:text-accent transition-colors">in/sydinrahman</span>
-              </div>
-              <span class="material-symbols-outlined text-sm text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
-            </a>
-
-            <a class="group glass-card p-4 rounded-2xl flex items-center justify-between hover:border-accent transition-colors" href="https://github.com/sydinrahman" target="_blank" rel="noopener">
-              <div class="flex flex-col">
-                <span class="text-xs text-muted font-mono uppercase">GitHub</span>
-                <span class="text-sm font-semibold text-dark group-hover:text-accent transition-colors">@sydinrahman</span>
-              </div>
-              <span class="material-symbols-outlined text-sm text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
-            </a>
-
-            <a class="group glass-card p-4 rounded-2xl flex items-center justify-between hover:border-accent transition-colors" href="https://behance.net/sydinrahman" target="_blank" rel="noopener">
-              <div class="flex flex-col">
-                <span class="text-xs text-muted font-mono uppercase">Behance</span>
-                <span class="text-sm font-semibold text-dark group-hover:text-accent transition-colors">be.net/sydinrahman</span>
-              </div>
-              <span class="material-symbols-outlined text-sm text-muted group-hover:text-accent group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">arrow_outward</span>
-            </a>
-          </div>
-
+            <div id="modal-body">
+                <!-- Dynamically populated -->
+            </div>
         </div>
-      </div>
-    </section>
-
-  </div>
-</main>
-
-<footer class="w-full border-t border-border/60 py-10">
-  <div class="max-w-[1240px] mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-muted">
-    <div class="flex items-center gap-2">
-      <span class="font-bold text-dark">SYDIN RAHMAN</span>
-      <span>© 2026</span>
-    </div>
-    <p>Entrepreneur &amp; Builder · Built with simplicity and motion.</p>
-  </div>
-</footer>
-
-<!-- Modals -->
-<!-- Modal 01: MyAgeNow -->
-<div id="modal-myagenow" class="modal-overlay fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-  <div class="modal-container bg-bg max-w-2xl w-full rounded-3xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
-    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full bg-black/5 flex items-center justify-center text-dark hover:bg-black/10 transition-colors" aria-label="Close Modal">
-      <span class="material-symbols-outlined text-lg">close</span>
-    </button>
-    <div class="flex items-center gap-2 mb-2">
-      <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-mono font-medium">LIVE WEB APP</span>
-      <span class="text-xs text-muted font-mono">UTILITY TOOL</span>
-    </div>
-    <h3 class="font-display font-bold text-2xl text-dark mb-2">MyAgeNow — Interactive Tool Specs</h3>
-    <p class="text-sm text-muted mb-6">High-speed chronological age calculator with milestone tracking, time elapsed indicators, and shareable URLs.</p>
-
-    <div class="p-4 rounded-2xl bg-slate-900 text-white font-mono text-xs flex flex-col gap-3 shadow-inner">
-      <div class="flex items-center justify-between border-b border-slate-700 pb-2">
-        <span class="text-slate-400">myagenow.com</span>
-        <span class="text-emerald-400">● 100% Operational</span>
-      </div>
-      <div class="p-3 bg-slate-800 rounded-xl flex flex-col gap-2">
-        <span class="text-slate-400 text-[11px]">CALCULATION PREVIEW</span>
-        <div class="p-2 bg-slate-900 rounded border border-slate-700 text-emerald-300 font-bold text-sm">
-          28 Years, 4 Months, 12 Days | 10,361 Days Total
-        </div>
-      </div>
-      <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-300">
-        <div class="p-2 bg-slate-800 rounded">● Framework: Next.js App Router</div>
-        <div class="p-2 bg-slate-800 rounded">● Styling: Tailwind CSS</div>
-        <div class="p-2 bg-slate-800 rounded">● Edge Deployment: Vercel CDN</div>
-        <div class="p-2 bg-slate-800 rounded">● Score: 100/100 Lighthouse</div>
-      </div>
     </div>
 
-    <div class="mt-6 flex items-center justify-between">
-      <span class="text-xs text-muted">Designed for friction-free usage</span>
-      <a class="btn-magnetic inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-accent text-white text-xs font-medium hover:bg-accent-hover transition-colors" href="https://myagenow.com" target="_blank" rel="noopener">
-        <span>Launch MyAgeNow.com</span>
-        <span class="material-symbols-outlined text-sm">arrow_outward</span>
-      </a>
-    </div>
-  </div>
-</div>
 
-<!-- Modal 02: Tangail Saree -->
-<div id="modal-tangail" class="modal-overlay fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-  <div class="modal-container bg-bg max-w-2xl w-full rounded-3xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
-    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full bg-black/5 flex items-center justify-center text-dark hover:bg-black/10 transition-colors" aria-label="Close Modal">
-      <span class="material-symbols-outlined text-lg">close</span>
-    </button>
-    <div class="flex items-center gap-2 mb-2">
-      <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-medium">BUILDING</span>
-      <span class="text-xs text-muted font-mono">DTC ECOMMERCE</span>
-    </div>
-    <h3 class="font-display font-bold text-2xl text-dark mb-2">Tangail Saree — Heritage Brand Platform</h3>
-    <p class="text-sm text-muted mb-6">Connecting master handloom weavers directly with global consumers using modern storytelling and DTC logistics.</p>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-      <div class="p-4 rounded-2xl bg-blue-50/80 border border-blue-200/60 flex flex-col gap-2">
-        <span class="text-xs font-bold text-blue-900 uppercase">Artisan Supply Chain</span>
-        <p class="text-xs text-blue-800">Direct partnership with artisan weavers in Tangail, ensuring fair trade compensation and authentic quality.</p>
-      </div>
-      <div class="p-4 rounded-2xl bg-indigo-50/80 border border-indigo-200/60 flex flex-col gap-2">
-        <span class="text-xs font-bold text-indigo-900 uppercase">Digital Storefront</span>
-        <p class="text-xs text-indigo-800">Minimalist webstore built with headless commerce principles, optimized for global multi-currency checkout.</p>
-      </div>
-    </div>
-
-    <div class="mt-6 flex items-center justify-between border-t border-border pt-4">
-      <span class="text-xs text-muted">Direct-to-Consumer Brand</span>
-      <a class="btn-magnetic inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-accent text-white text-xs font-medium hover:bg-accent-hover transition-colors" href="#contact">
-        <span>Inquire Partnerships</span>
-        <span class="material-symbols-outlined text-sm">arrow_outward</span>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Modal 03: MemoryFix -->
-<div id="modal-memoryfix" class="modal-overlay fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-  <div class="modal-container bg-bg max-w-2xl w-full rounded-3xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
-    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full bg-black/5 flex items-center justify-center text-dark hover:bg-black/10 transition-colors" aria-label="Close Modal">
-      <span class="material-symbols-outlined text-lg">close</span>
-    </button>
-    <div class="flex items-center gap-2 mb-2">
-      <span class="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-mono font-medium">EXPLORING</span>
-      <span class="text-xs text-muted font-mono">APPLIED AI</span>
-    </div>
-    <h3 class="font-display font-bold text-2xl text-dark mb-2">MemoryFix — Neural Restoration Pipeline</h3>
-    <p class="text-sm text-muted mb-6">AI-driven photo enhancement prototype for automated scratch repair, facial detail enhancement, and resolution scaling.</p>
-
-    <div class="p-4 rounded-2xl bg-amber-950 text-amber-100 font-mono text-xs flex flex-col gap-3 shadow-inner">
-      <div class="flex items-center justify-between border-b border-amber-800 pb-2">
-        <span>Neural Restoration Pipeline</span>
-        <span class="text-amber-400">PyTorch</span>
-      </div>
-      <div class="grid grid-cols-3 gap-2 text-center text-[10px]">
-        <div class="p-2 bg-amber-900/60 rounded-lg">1. Scratch Removal</div>
-        <div class="p-2 bg-amber-900/60 rounded-lg">2. Face Refinement</div>
-        <div class="p-2 bg-amber-900/60 rounded-lg">3. 4x Super-Res</div>
-      </div>
-    </div>
-
-    <div class="mt-6 flex items-center justify-between border-t border-border pt-4">
-      <span class="text-xs text-muted">Applied AI Experiment</span>
-      <a class="btn-magnetic inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-accent text-white text-xs font-medium hover:bg-accent-hover transition-colors" href="#contact">
-        <span>Contact Developer</span>
-        <span class="material-symbols-outlined text-sm">arrow_outward</span>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Modal 04: QuoteFlow -->
-<div id="modal-quoteflow" class="modal-overlay fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
-  <div class="modal-container bg-bg max-w-2xl w-full rounded-3xl glass-card p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl border border-white/80">
-    <button class="modal-close-btn absolute top-4 right-4 w-9 h-9 rounded-full bg-black/5 flex items-center justify-center text-dark hover:bg-black/10 transition-colors" aria-label="Close Modal">
-      <span class="material-symbols-outlined text-lg">close</span>
-    </button>
-    <div class="flex items-center gap-2 mb-2">
-      <span class="px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-xs font-mono font-medium">BUILDING</span>
-      <span class="text-xs text-muted font-mono">MICRO-SAAS</span>
-    </div>
-    <h3 class="font-display font-bold text-2xl text-dark mb-2">QuoteFlow — Proposal &amp; Margin Tool</h3>
-    <p class="text-sm text-muted mb-6">Single-purpose document utility designed for rapid proposal generation and margin calculations.</p>
-
-    <div class="p-4 rounded-2xl bg-slate-100 border border-slate-300 font-mono text-xs text-slate-800 flex flex-col gap-3">
-      <div class="flex items-center justify-between border-b border-slate-300 pb-2 font-bold">
-        <span>PROPOSAL #QF-2026-001</span>
-        <span class="text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded">APPROVED</span>
-      </div>
-      <div class="grid grid-cols-2 gap-2 text-[11px]">
-        <div>
-          <span class="text-slate-500 block">CLIENT</span>
-          <span class="font-semibold">Acme Tech</span>
-        </div>
-        <div>
-          <span class="text-slate-500 block">PROPOSED VALUE</span>
-          <span class="font-semibold text-emerald-700">$3,400.00</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="mt-6 flex items-center justify-between border-t border-border pt-4">
-      <span class="text-xs text-muted">Micro-SaaS Prototype</span>
-      <a class="btn-magnetic inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-accent text-white text-xs font-medium hover:bg-accent-hover transition-colors" href="#contact">
-        <span>Inquire Beta Access</span>
-        <span class="material-symbols-outlined text-sm">arrow_outward</span>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Back to top floating button -->
-<button id="back-to-top-btn" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-dark text-white shadow-xl flex items-center justify-center opacity-0 translate-y-4 pointer-events-none transition-all duration-300 hover:bg-accent focus:outline-none" aria-label="Back to Top">
-  <span class="material-symbols-outlined text-xl">arrow_upward</span>
-</button>
-
-<script src="script.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

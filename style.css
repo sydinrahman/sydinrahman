@@ -1,156 +1,93 @@
-:root {
-  --bg: #F7F7F5;
-  --dark: #111111;
-  --accent: #2563EB;
-  --accent-hover: #1D4ED8;
-  --muted: #666666;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  background-color: var(--bg);
-  color: var(--dark);
-}
-
+/* Space Grotesk & Inter Typography Base */
 body {
-  margin: 0;
-  background-color: var(--bg);
-  color: var(--dark);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F5F2;
+    color: #111111;
+    overflow-x: hidden;
 }
 
-.font-display {
-  font-family: 'Space Grotesk', sans-serif;
-}
-
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1;
-}
-
-/* Glassmorphism Styles */
-.glass-nav {
-  background: rgba(247, 247, 245, 0.82) !important;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.glass-menu {
-  background: rgba(247, 247, 245, 0.95) !important;
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.75) !important;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(0, 0, 0, 0.07) !important;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
-}
-
-/* Interactive Cursor Spotlight Radial Background */
-#cursor-spotlight {
-  background: radial-gradient(600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(37, 99, 235, 0.08), transparent 80%);
-}
-
-/* Floating ambient background shapes animation */
-@keyframes floatShape {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -20px) scale(1.08);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.95);
-  }
-}
-
-.floating-shape {
-  animation: floatShape 16s ease-in-out infinite;
-  will-change: transform;
-}
-
-/* Hero Parallax Idea Cards Smooth Transition */
-.hero-parallax-card {
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform;
-}
-
-/* Hero 3D Card Smooth Transition */
-#hero-3d-card {
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-
-/* Venture Card Hover Animations */
-.venture-card {
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
-}
-
-/* Magnetic Button Slide Effect */
-.btn-magnetic {
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease;
-  will-change: transform;
-}
-
-.btn-magnetic:active {
-  transform: scale(0.96);
-}
-
-/* Scroll reveal animations */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.scroll-reveal.revealed {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Hero text initial reveal animation */
-.hero-text-reveal {
-  animation: heroReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes heroReveal {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+h1, h2, h3, h4, h5, h6, .font-space {
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg);
+    background: #F5F5F2;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
-  border-radius: 9999px;
+    background: #D1D1CD;
+    border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.3);
+    background: #2563EB;
+}
+
+/* Desk Canvas Interactive Styling */
+#desk-canvas {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.desk-card {
+    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    will-change: transform, box-shadow;
+}
+
+.desk-card:hover {
+    z-index: 40 !important;
+    transform: translateY(-8px) scale(1.04) rotate(1.5deg) !important;
+    border-color: #2563EB !important;
+    box-shadow: 0 20px 30px -10px rgba(37, 99, 235, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.08) !important;
+}
+
+.desk-card-desc {
+    transition: all 0.3s ease;
+}
+
+.desk-card.bg-white:hover .desk-card-desc {
+    color: #111111;
+}
+
+/* Slow spin animation for radar element */
+@keyframes spinSlow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spinSlow 20s linear infinite;
+}
+
+/* Magnetic Button Hover Feel */
+.btn-magnetic {
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Card hover animation */
+.venture-card {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.venture-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(37, 99, 235, 0.4);
+}
+
+/* Reveal on Scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
