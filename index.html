@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sydin Rahman — Entrepreneur & Builder</title>
-    <meta name="description" content="Hi, I'm Sydin. I'm an entrepreneur who likes building things and trying new ideas.">
+    <title>Sydin Rahman — Entrepreneur</title>
+    <meta name="description" content="I build and explore businesses at the intersection of technology and opportunity.">
 
-    <!-- Google Fonts: Space Grotesk & Inter -->
+    <!-- Google Fonts: Inter & Space Grotesk for crisp typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,23 +14,23 @@
     <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind CSS (via CDN with configuration) -->
+    <!-- Tailwind CSS (via CDN with custom configuration) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        bgMain: '#F5F5F2',
-                        textMain: '#111111',
-                        accentBlue: '#2563EB',
-                        cardBg: '#FFFFFF',
-                        borderMuted: '#E2E2DF',
-                        subtleText: '#666663'
+                        appleBg: '#F5F5F7',
+                        appleText: '#1D1D1F',
+                        appleSecondary: '#6E6E73',
+                        appleAccent: '#0071E3',
+                        appleCard: '#FFFFFF',
+                        appleBorder: '#E5E5E7'
                     },
                     fontFamily: {
-                        space: ['"Space Grotesk"', 'sans-serif'],
-                        sans: ['"Inter"', 'sans-serif']
+                        sans: ['"Inter"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        display: ['"Space Grotesk"', '"Inter"', 'sans-serif']
                     }
                 }
             }
@@ -40,236 +40,96 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-bgMain text-textMain font-sans antialiased selection:bg-accentBlue selection:text-white relative overflow-x-hidden min-h-screen">
+<body class="bg-appleBg text-appleText font-sans antialiased selection:bg-appleAccent selection:text-white relative min-h-screen">
 
-    <!-- Subtle Interactive Cursor Spotlight Glow -->
-    <div id="cursor-glow" class="pointer-events-none fixed top-0 left-0 w-80 h-80 rounded-full bg-accentBlue/10 blur-3xl transition-transform duration-100 ease-out z-0 -translate-x-1/2 -translate-y-1/2"></div>
-
-    <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 w-full z-50 bg-bgMain/80 backdrop-blur-md border-b border-borderMuted/60 transition-all duration-300">
+    <!-- Apple-style Blurred Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-appleBg/70 backdrop-blur-xl border-b border-appleBorder/60 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#hero" class="font-space font-bold text-lg tracking-tight hover:text-accentBlue transition-colors duration-200 flex items-center gap-2">
-                <span class="text-xl">👋</span>
-                <span>SYDIN RAHMAN</span>
+            <a href="#hero" class="font-display font-semibold text-sm tracking-widest text-appleText uppercase hover:opacity-70 transition-opacity">
+                SYDIN RAHMAN
             </a>
 
-            <div class="hidden md:flex items-center space-x-8 text-sm font-medium font-space">
-                <a href="#upto" class="hover:text-accentBlue transition-colors py-1">What I'm Up To</a>
-                <a href="#ventures" class="hover:text-accentBlue transition-colors py-1">Ventures</a>
-                <a href="#about" class="hover:text-accentBlue transition-colors py-1">About</a>
-                <a href="#contact" class="hover:text-accentBlue transition-colors py-1">Contact</a>
+            <div class="hidden md:flex items-center space-x-10 text-sm font-medium text-appleSecondary">
+                <a href="#about" class="hover:text-appleText transition-colors py-1">About</a>
+                <a href="#ventures" class="hover:text-appleText transition-colors py-1">Ventures</a>
+                <a href="#currently" class="hover:text-appleText transition-colors py-1">Currently</a>
+                <a href="#contact" class="hover:text-appleText transition-colors py-1">Contact</a>
             </div>
 
-            <a href="#contact" class="btn-magnetic px-5 py-2.5 rounded-full bg-textMain text-white text-xs font-space tracking-wider uppercase font-semibold hover:bg-accentBlue transition-all duration-300 shadow-sm hover:shadow-md">
-                Let's Talk →
+            <a href="mailto:contact@sydinrahman.com" class="inline-flex items-center justify-center px-4 py-2 rounded-full bg-appleText text-white text-xs font-semibold hover:bg-appleAccent transition-colors duration-200 group">
+                <span>Let's Talk</span>
+                <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
             </a>
         </div>
     </nav>
 
-    <!-- Main Container -->
-    <main class="relative z-10 pt-20">
+    <!-- Main Content Container -->
+    <main class="relative pt-24 sm:pt-32">
 
-        <!-- ================= HERO: HI, I'M SYDIN ================= -->
-        <section id="hero" class="min-h-[85vh] flex items-center relative px-6 max-w-6xl mx-auto py-12">
+        <!-- ================= HERO ================= -->
+        <section id="hero" class="max-w-6xl mx-auto px-6 py-12 sm:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
-            <!-- Floating background decorative elements -->
-            <div class="floating-sparkle absolute top-12 left-10 text-xl opacity-60 text-amber-500 pointer-events-none">✦</div>
-            <div class="floating-sparkle absolute top-28 right-1/2 text-2xl opacity-40 text-accentBlue pointer-events-none">💡</div>
-            <div class="floating-sparkle absolute bottom-12 left-1/4 text-lg opacity-50 text-indigo-500 pointer-events-none">🚀</div>
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 flex flex-col items-start space-y-8 fade-up">
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full z-10">
-
-                <!-- Left Hero Column -->
-                <div class="lg:col-span-6 flex flex-col items-start space-y-6">
-
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-borderMuted shadow-sm text-xs font-space font-semibold text-textMain">
-                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span class="text-xs font-semibold font-display tracking-widest uppercase text-appleSecondary">
                         SYDIN RAHMAN
-                    </div>
+                    </span>
 
-                    <h1 class="font-space font-bold text-5xl sm:text-6xl md:text-7xl tracking-tight text-textMain leading-[1.1]">
-                        👋 Hi, I'm Sydin.
+                    <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-[90px] font-display font-bold tracking-tight text-appleText leading-[1.02]">
+                        Entrepreneur.
                     </h1>
 
-                    <p class="text-xl sm:text-2xl font-space font-medium text-subtleText max-w-lg leading-relaxed">
-                        I'm an entrepreneur who likes <span class="text-textMain border-b-2 border-accentBlue">building things</span> and <span class="text-textMain border-b-2 border-amber-400">trying new ideas</span>.
+                    <p class="text-xl sm:text-2xl text-appleSecondary font-normal max-w-xl leading-relaxed">
+                        I build and explore businesses at the intersection of technology and opportunity.
                     </p>
 
                     <div class="pt-2 flex flex-wrap items-center gap-4">
-                        <a href="#upto" class="btn-magnetic inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-accentBlue text-white font-space font-semibold text-sm shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 group">
-                            <span>See What I'm Building</span>
-                            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1.5 transition-transform"></i>
+                        <a href="#ventures" class="inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-appleAccent text-white font-medium text-sm hover:bg-blue-600 transition-colors duration-200 group shadow-sm">
+                            <span>View Ventures</span>
+                            <span class="ml-1.5 group-hover:translate-x-1 transition-transform">→</span>
                         </a>
-                        <a href="#about" class="px-6 py-3.5 rounded-full bg-white border border-borderMuted text-textMain font-space font-medium text-sm hover:border-textMain transition-all">
-                            A Little About Me 👋
+                        <a href="#about" class="px-6 py-3.5 rounded-full bg-appleCard border border-appleBorder text-appleText font-medium text-sm hover:border-appleText transition-colors duration-200">
+                            About Me
                         </a>
                     </div>
 
+                    <!-- Subtle Animated Status Line -->
+                    <div class="pt-6 flex items-center gap-3 text-xs font-mono text-appleSecondary tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span>Building · Learning · Growing</span>
+                    </div>
+
                 </div>
 
-                <!-- Right Hero Column: Interactive Character Canvas -->
-                <div class="lg:col-span-6 relative h-[420px] sm:h-[480px] w-full flex items-center justify-center">
+                <!-- Right Hero Visual (Portrait Container with Subtle Parallax) -->
+                <div class="lg:col-span-5 flex justify-center lg:justify-end fade-up" style="animation-delay: 150ms;">
+                    <div id="portrait-wrapper" class="relative w-full max-w-md h-[460px] sm:h-[500px] rounded-[24px] bg-appleCard border border-appleBorder/80 p-8 shadow-sm flex flex-col justify-between overflow-hidden group transition-all duration-300">
 
-                    <div id="playful-canvas" class="relative w-full h-full max-w-lg rounded-3xl bg-white/70 backdrop-blur-md border border-borderMuted/80 p-6 shadow-xl flex items-center justify-center overflow-visible group/canvas">
+                        <!-- Ambient Minimal Background Structure -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-slate-100 via-stone-50 to-blue-50/40 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                        <div class="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-appleAccent/5 blur-2xl"></div>
 
-                        <!-- 🧑‍💻 Center Avatar / Character with Eye Tracking -->
-                        <div id="character-avatar" class="relative z-20 flex flex-col items-center">
-                            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-tr from-blue-100 via-amber-50 to-blue-200 border-2 border-borderMuted flex items-center justify-center shadow-lg relative cursor-pointer hover:scale-105 transition-transform">
-                                <div class="text-5xl sm:text-6xl select-none">🧑‍💻</div>
-                                <!-- Interactive Eye Balls -->
-                                <div id="eye-left" class="absolute top-10 left-9 sm:top-12 sm:left-10 w-2.5 h-2.5 bg-textMain rounded-full transition-transform duration-75"></div>
-                                <div id="eye-right" class="absolute top-10 right-9 sm:top-12 sm:right-10 w-2.5 h-2.5 bg-textMain rounded-full transition-transform duration-75"></div>
+                        <div class="relative z-10 flex items-center justify-between">
+                            <span class="text-xs font-mono uppercase tracking-wider text-appleSecondary">Personal Profile</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/80 border border-appleBorder text-appleText">BD</span>
+                        </div>
+
+                        <!-- Central Portrait Placeholder / Graphic -->
+                        <div class="relative z-10 my-auto flex flex-col items-center text-center py-6">
+                            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-tr from-slate-200 to-slate-100 border border-appleBorder flex items-center justify-center text-4xl shadow-inner mb-4">
+                                👨‍💼
                             </div>
-                            <div class="mt-3 px-3 py-1 rounded-full bg-white border border-borderMuted text-xs font-space font-semibold text-subtleText shadow-sm">
-                                Sydin's Corner ☕
-                            </div>
+                            <h3 class="font-display font-bold text-2xl text-appleText">Sydin Rahman</h3>
+                            <p class="text-sm text-appleSecondary mt-1">Founder & Builder</p>
                         </div>
 
-                        <!-- 💡 Item 1: Lightbulb (Turns on + "New idea!") -->
-                        <div id="item-lightbulb" class="playful-item absolute top-6 left-6 bg-white border border-borderMuted rounded-2xl p-3 shadow-md hover:shadow-xl transition-all duration-300 z-30 cursor-pointer group/bulb flex items-center gap-2" data-speed="0.05">
-                            <span class="text-3xl bulb-icon group-hover/bulb:scale-125 transition-transform">💡</span>
-                            <span class="font-space font-bold text-xs bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full whitespace-nowrap">
-                                New idea! ✨
-                            </span>
+                        <div class="relative z-10 pt-4 border-t border-appleBorder/60 flex items-center justify-between text-xs text-appleSecondary">
+                            <span>contact@sydinrahman.com</span>
+                            <span class="font-mono">2026</span>
                         </div>
 
-                        <!-- 🚀 Item 2: Rocket (Moves upward on hover) -->
-                        <div id="item-rocket" class="playful-item absolute top-6 right-6 bg-white border border-borderMuted rounded-2xl p-3 shadow-md hover:shadow-xl transition-all duration-300 z-30 cursor-pointer group/rocket flex items-center gap-2" data-speed="-0.04">
-                            <span class="text-3xl rocket-icon inline-block group-hover/rocket:-translate-y-2 group-hover/rocket:scale-110 transition-transform duration-300">🚀</span>
-                            <span class="font-space text-xs font-bold text-textMain">Launch Mode</span>
-                        </div>
-
-                        <!-- 🤖 Item 3: AI Robot (Wiggles on hover) -->
-                        <div id="item-robot" class="playful-item absolute bottom-6 left-6 bg-slate-900 text-white border border-slate-800 rounded-2xl p-3 shadow-md hover:shadow-xl transition-all duration-300 z-30 cursor-pointer group/robot flex items-center gap-2" data-speed="0.06">
-                            <span class="text-3xl robot-icon inline-block group-hover/robot:animate-bounce">🤖</span>
-                            <span class="font-space text-xs font-bold text-slate-200">AI Assistant</span>
-                        </div>
-
-                        <!-- 🛍️ Item 4: Shopping Bag ("Business idea") -->
-                        <div id="item-bag" class="playful-item absolute bottom-6 right-6 bg-white border border-borderMuted rounded-2xl p-3 shadow-md hover:shadow-xl transition-all duration-300 z-30 cursor-pointer group/bag flex items-center gap-2" data-speed="-0.05">
-                            <span class="text-3xl bag-icon group-hover/bag:rotate-12 transition-transform">🛍️</span>
-                            <span class="font-space font-bold text-xs bg-purple-100 text-purple-800 px-2.5 py-1 rounded-full whitespace-nowrap">
-                                Business idea 🛒
-                            </span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ================= SECTION 01: WHAT I'M UP TO ================= -->
-        <section id="upto" class="py-20 px-6 max-w-6xl mx-auto border-t border-borderMuted/80">
-            <div class="mb-12">
-                <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">01 // Current Focus</span>
-                <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain mt-2">What I'm up to</h2>
-            </div>
-
-            <!-- 3 Simple Playful Cards -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                <!-- Card 1: Building -->
-                <div class="bg-white border border-borderMuted hover:border-accentBlue/60 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group">
-                    <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        🚀
-                    </div>
-                    <h3 class="font-space font-bold text-2xl text-textMain mb-2">Building</h3>
-                    <p class="text-subtleText text-base">Small online businesses and micro-applications that solve real problems.</p>
-                </div>
-
-                <!-- Card 2: Exploring -->
-                <div class="bg-white border border-borderMuted hover:border-amber-400/80 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group">
-                    <div class="w-14 h-14 rounded-2xl bg-amber-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        💡
-                    </div>
-                    <h3 class="font-space font-bold text-2xl text-textMain mb-2">Exploring</h3>
-                    <p class="text-subtleText text-base">AI technology, automated workflows, and brand-new product concepts.</p>
-                </div>
-
-                <!-- Card 3: Learning -->
-                <div class="bg-white border border-borderMuted hover:border-purple-400/80 rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 group">
-                    <div class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                        📚
-                    </div>
-                    <h3 class="font-space font-bold text-2xl text-textMain mb-2">Learning</h3>
-                    <p class="text-subtleText text-base">Modern business strategies, marketing channels, and software architecture.</p>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ================= SECTION 02: PLAYFUL VENTURES ================= -->
-        <section id="ventures" class="py-20 px-6 max-w-6xl mx-auto border-t border-borderMuted/80">
-            <div class="mb-12">
-                <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">02 // Projects & Ventures</span>
-                <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain mt-2">Ventures</h2>
-            </div>
-
-            <!-- Playful Compact Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- Venture 1: MyAgeNow -->
-                <div class="group bg-white border border-borderMuted hover:border-accentBlue rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-56" onclick="openVentureModal('myagenow')">
-                    <div>
-                        <span class="text-4xl mb-4 block group-hover:scale-110 transition-transform">🧮</span>
-                        <h3 class="font-space font-bold text-2xl text-textMain group-hover:text-accentBlue transition-colors">MyAgeNow</h3>
-                        <p class="text-xs text-subtleText mt-1">Smart age calculator & milestone tool.</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-4 border-t border-borderMuted/60">
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-bold bg-emerald-100 text-emerald-800">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
-                            LIVE
-                        </span>
-                        <span class="text-lg font-bold group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
-                </div>
-
-                <!-- Venture 2: Tangail Saree -->
-                <div class="group bg-white border border-borderMuted hover:border-accentBlue rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-56" onclick="openVentureModal('tangail')">
-                    <div>
-                        <span class="text-4xl mb-4 block group-hover:scale-110 transition-transform">🥻</span>
-                        <h3 class="font-space font-bold text-xl text-textMain group-hover:text-accentBlue transition-colors">Tangail Saree</h3>
-                        <p class="text-xs text-subtleText mt-1">D2C traditional weaver marketplace.</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-4 border-t border-borderMuted/60">
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-bold bg-blue-100 text-accentBlue">
-                            BUILDING
-                        </span>
-                        <span class="text-lg font-bold group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
-                </div>
-
-                <!-- Venture 3: MemoryFix -->
-                <div class="group bg-white border border-borderMuted hover:border-accentBlue rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-56" onclick="openVentureModal('memoryfix')">
-                    <div>
-                        <span class="text-4xl mb-4 block group-hover:scale-110 transition-transform">🤖</span>
-                        <h3 class="font-space font-bold text-2xl text-textMain group-hover:text-accentBlue transition-colors">MemoryFix</h3>
-                        <p class="text-xs text-subtleText mt-1">AI photo restoration & organization.</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-4 border-t border-borderMuted/60">
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-bold bg-purple-100 text-purple-800">
-                            EXPLORING
-                        </span>
-                        <span class="text-lg font-bold group-hover:translate-x-1 transition-transform">→</span>
-                    </div>
-                </div>
-
-                <!-- Venture 4: QuoteFlow -->
-                <div class="group bg-white border border-borderMuted hover:border-accentBlue rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between h-56" onclick="openVentureModal('quoteflow')">
-                    <div>
-                        <span class="text-4xl mb-4 block group-hover:scale-110 transition-transform">📋</span>
-                        <h3 class="font-space font-bold text-2xl text-textMain group-hover:text-accentBlue transition-colors">QuoteFlow</h3>
-                        <p class="text-xs text-subtleText mt-1">SaaS agency proposal builder.</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-4 border-t border-borderMuted/60">
-                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-space font-bold bg-amber-100 text-amber-800">
-                            CONCEPT
-                        </span>
-                        <span class="text-lg font-bold group-hover:translate-x-1 transition-transform">→</span>
                     </div>
                 </div>
 
@@ -277,88 +137,198 @@
         </section>
 
 
-        <!-- ================= SECTION 03: HUMAN ABOUT ================= -->
-        <section id="about" class="py-20 px-6 max-w-6xl mx-auto border-t border-borderMuted/80">
-            <div class="max-w-2xl">
-                <span class="text-xs font-space font-bold uppercase tracking-widest text-accentBlue">03 // Background</span>
-                <h2 class="font-space font-bold text-3xl sm:text-4xl text-textMain mt-2 mb-8">
-                    A little about me 👋
+        <!-- ================= 01 — ABOUT ================= -->
+        <section id="about" class="max-w-6xl mx-auto px-6 py-24 border-t border-appleBorder/70">
+            <div class="max-w-3xl fade-up">
+                <span class="text-xs font-mono uppercase tracking-widest text-appleSecondary">01 — About</span>
+
+                <h2 class="text-4xl sm:text-5xl font-display font-bold text-appleText tracking-tight mt-3 mb-8">
+                    A little about me.
                 </h2>
 
-                <div class="space-y-4 text-xl sm:text-2xl font-space text-textMain leading-relaxed font-medium">
-                    <p class="flex items-center gap-3">
-                        <span class="text-accentBlue">✦</span> I like ideas.
-                    </p>
-                    <p class="flex items-center gap-3">
-                        <span class="text-amber-500">✦</span> I like building things.
-                    </p>
-                    <p class="flex items-center gap-3">
-                        <span class="text-emerald-500">✦</span> And I like seeing what happens when an idea becomes real.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ================= SECTION 04: FINAL CONTACT ================= -->
-        <section id="contact" class="py-24 px-6 max-w-6xl mx-auto border-t border-borderMuted/80 text-center">
-            <div class="max-w-xl mx-auto space-y-6">
-
-                <div class="text-5xl mb-2">💬</div>
-
-                <h2 class="font-space font-bold text-4xl sm:text-5xl text-textMain tracking-tight">
-                    Got an idea?
-                </h2>
-
-                <p class="text-subtleText font-space text-lg sm:text-xl">
-                    Maybe we should build it.
+                <p class="text-xl sm:text-2xl text-appleText leading-relaxed font-normal mb-8">
+                    I'm Sydin Rahman, an entrepreneur from Bangladesh. I enjoy finding opportunities, building simple businesses, and exploring new ideas.
                 </p>
 
-                <div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="mailto:contact@sydinrahman.com" class="btn-magnetic px-8 py-4 rounded-full bg-accentBlue text-white font-space font-bold text-base shadow-lg hover:bg-blue-700 transition-all">
-                        Let's Talk →
+                <a href="#contact" class="inline-flex items-center text-appleAccent font-medium text-base hover:underline group">
+                    <span>More about me</span>
+                    <span class="ml-1 group-hover:translate-x-1 transition-transform">→</span>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ================= 02 — VENTURES ================= -->
+        <section id="ventures" class="max-w-6xl mx-auto px-6 py-24 border-t border-appleBorder/70">
+            <div class="mb-12 fade-up">
+                <span class="text-xs font-mono uppercase tracking-widest text-appleSecondary">02 — Ventures</span>
+                <h2 class="text-4xl sm:text-5xl font-display font-bold text-appleText tracking-tight mt-3">
+                    Things I'm building.
+                </h2>
+            </div>
+
+            <!-- Spacious Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Card 1: MyAgeNow -->
+                <div class="apple-card group bg-appleCard border border-appleBorder rounded-[24px] p-8 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between h-72 cursor-pointer fade-up" onclick="openVentureModal('myagenow')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase tracking-wider text-appleSecondary">Web Utility</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">LIVE</span>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl text-appleText group-hover:text-appleAccent transition-colors">MyAgeNow</h3>
+                        <p class="text-appleSecondary text-sm mt-2">Simple web utility and precise milestone tracking tool.</p>
+                    </div>
+                    <div class="pt-4 border-t border-appleBorder/50 flex items-center justify-between text-xs font-semibold text-appleAccent">
+                        <span>LIVE</span>
+                        <span class="text-sm group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Tangail Saree -->
+                <div class="apple-card group bg-appleCard border border-appleBorder rounded-[24px] p-8 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between h-72 cursor-pointer fade-up" style="animation-delay: 100ms;" onclick="openVentureModal('tangail')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase tracking-wider text-appleSecondary">Ecommerce</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-appleAccent border border-blue-200">BUILDING</span>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl text-appleText group-hover:text-appleAccent transition-colors">Tangail Saree</h3>
+                        <p class="text-appleSecondary text-sm mt-2">Direct-to-consumer traditional weaver marketplace.</p>
+                    </div>
+                    <div class="pt-4 border-t border-appleBorder/50 flex items-center justify-between text-xs font-semibold text-appleAccent">
+                        <span>BUILDING</span>
+                        <span class="text-sm group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: MemoryFix -->
+                <div class="apple-card group bg-appleCard border border-appleBorder rounded-[24px] p-8 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between h-72 cursor-pointer fade-up" style="animation-delay: 200ms;" onclick="openVentureModal('memoryfix')">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-mono uppercase tracking-wider text-appleSecondary">AI Product</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-50 text-purple-700 border border-purple-200">EXPLORING</span>
+                        </div>
+                        <h3 class="font-display font-bold text-2xl text-appleText group-hover:text-appleAccent transition-colors">MemoryFix</h3>
+                        <p class="text-appleSecondary text-sm mt-2">Smart photo restoration and memory curation assistant.</p>
+                    </div>
+                    <div class="pt-4 border-t border-appleBorder/50 flex items-center justify-between text-xs font-semibold text-appleAccent">
+                        <span>EXPLORING</span>
+                        <span class="text-sm group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= 03 — CURRENTLY ================= -->
+        <section id="currently" class="max-w-6xl mx-auto px-6 py-24 border-t border-appleBorder/70">
+            <div class="mb-12 fade-up">
+                <span class="text-xs font-mono uppercase tracking-widest text-appleSecondary">03 — Currently</span>
+                <h2 class="text-4xl sm:text-5xl font-display font-bold text-appleText tracking-tight mt-3">
+                    Currently
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="bg-appleCard border border-appleBorder rounded-[24px] p-8 fade-up">
+                    <h3 class="font-display font-bold text-2xl text-appleText mb-2">Building</h3>
+                    <p class="text-appleSecondary text-base">Small online businesses.</p>
+                </div>
+
+                <div class="bg-appleCard border border-appleBorder rounded-[24px] p-8 fade-up" style="animation-delay: 100ms;">
+                    <h3 class="font-display font-bold text-2xl text-appleText mb-2">Exploring</h3>
+                    <p class="text-appleSecondary text-base">AI, technology & ecommerce.</p>
+                </div>
+
+                <div class="bg-appleCard border border-appleBorder rounded-[24px] p-8 fade-up" style="animation-delay: 200ms;">
+                    <h3 class="font-display font-bold text-2xl text-appleText mb-2">Learning</h3>
+                    <p class="text-appleSecondary text-base">Business, products & growth.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= 04 — PHILOSOPHY ================= -->
+        <section id="philosophy" class="max-w-6xl mx-auto px-6 py-24 border-t border-appleBorder/70">
+            <div class="max-w-3xl fade-up">
+                <span class="text-xs font-mono uppercase tracking-widest text-appleSecondary">04 — Philosophy</span>
+
+                <h2 class="text-4xl sm:text-5xl font-display font-bold text-appleText tracking-tight mt-3 mb-8">
+                    Keep it simple.
+                </h2>
+
+                <div class="space-y-3 text-xl sm:text-2xl text-appleText font-normal">
+                    <p>Build something useful.</p>
+                    <p>Launch it.</p>
+                    <p>Learn from it.</p>
+                    <p>Make it better.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 05 — CONTACT ================= -->
+        <section id="contact" class="max-w-6xl mx-auto px-6 py-28 border-t border-appleBorder/70">
+            <div class="max-w-2xl fade-up">
+                <span class="text-xs font-mono uppercase tracking-widest text-appleSecondary">05 — Contact</span>
+
+                <h2 class="text-5xl sm:text-6xl font-display font-bold text-appleText tracking-tight mt-3 mb-4">
+                    Let's talk.
+                </h2>
+
+                <p class="text-xl sm:text-2xl text-appleSecondary mb-8 font-normal">
+                    Have an idea or opportunity?
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <a href="mailto:contact@sydinrahman.com" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-appleAccent text-white font-medium text-base hover:bg-blue-600 transition-colors duration-200 group shadow-sm">
+                        <span>Get in touch</span>
+                        <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                     </a>
-                    <button onclick="copyEmail()" id="copy-email-btn" class="px-6 py-4 rounded-full bg-white border border-borderMuted text-textMain font-space font-medium text-sm hover:border-textMain transition-all">
+                    <button onclick="copyEmail()" id="copy-email-btn" class="px-6 py-4 rounded-full bg-appleCard border border-appleBorder text-appleText font-medium text-sm hover:border-appleText transition-colors">
                         <i class="fa-regular fa-copy mr-2"></i>Copy Email
                     </button>
                 </div>
 
                 <!-- Social Handles -->
-                <div class="pt-10 flex items-center justify-center space-x-6 text-xl text-subtleText">
-                    <a href="https://github.com/sydinrahman" target="_blank" class="hover:text-accentBlue transition-colors" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://linkedin.com/in/sydinrahman" target="_blank" class="hover:text-accentBlue transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://facebook.com/sydinrahman" target="_blank" class="hover:text-accentBlue transition-colors" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://behance.net/sydinrahman" target="_blank" class="hover:text-accentBlue transition-colors" title="Behance"><i class="fa-brands fa-behance"></i></a>
+                <div class="pt-12 flex items-center space-x-6 text-xl text-appleSecondary">
+                    <a href="https://github.com/sydinrahman" target="_blank" class="hover:text-appleText transition-colors" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/sydinrahman" target="_blank" class="hover:text-appleText transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://facebook.com/sydinrahman" target="_blank" class="hover:text-appleText transition-colors" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://behance.net/sydinrahman" target="_blank" class="hover:text-appleText transition-colors" title="Behance"><i class="fa-brands fa-behance"></i></a>
                 </div>
+
             </div>
         </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-borderMuted/80 bg-white/50 py-8 px-6 text-center text-xs font-space text-subtleText">
+    <footer class="border-t border-appleBorder/60 py-10 px-6 text-xs text-appleSecondary font-sans">
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>© <span id="current-year">2026</span> SYDIN RAHMAN. Sydin's personal corner of the internet.</div>
+            <div>© <span id="current-year">2026</span> SYDIN RAHMAN. All rights reserved.</div>
             <div class="flex items-center space-x-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                <span>Space Grotesk & Inter</span>
+                <span>Minimal & Apple-Inspired</span>
             </div>
         </div>
     </footer>
 
-
-    <!-- Venture Detail Modal Container -->
-    <div id="venture-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
-        <div class="bg-white border border-borderMuted rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl scale-95 transition-transform duration-300" id="modal-content-box">
-            <button onclick="closeVentureModal()" class="absolute top-4 right-4 text-subtleText hover:text-textMain p-2 text-xl">
+    <!-- Minimal Apple-Styled Modal -->
+    <div id="venture-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-appleCard border border-appleBorder rounded-[24px] max-w-lg w-full p-8 relative shadow-2xl scale-95 transition-transform duration-300" id="modal-content-box">
+            <button onclick="closeVentureModal()" class="absolute top-5 right-5 text-appleSecondary hover:text-appleText p-2 text-xl">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div id="modal-body">
-                <!-- Dynamically populated -->
+                <!-- Populated dynamically -->
             </div>
         </div>
     </div>
-
 
     <!-- Custom JavaScript -->
     <script src="script.js"></script>

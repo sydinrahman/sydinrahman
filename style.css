@@ -1,13 +1,15 @@
-/* Space Grotesk & Inter Typography Base */
+/* Apple Minimalist Design Base */
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #F5F5F2;
-    color: #111111;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+    background-color: #F5F5F7;
+    color: #1D1D1F;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6, .font-space {
-    font-family: 'Space Grotesk', sans-serif;
+h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
 }
 
 /* Custom Scrollbar */
@@ -15,61 +17,47 @@ h1, h2, h3, h4, h5, h6, .font-space {
     width: 8px;
 }
 ::-webkit-scrollbar-track {
-    background: #F5F5F2;
+    background: #F5F5F7;
 }
 ::-webkit-scrollbar-thumb {
-    background: #D1D1CD;
+    background: #D2D2D7;
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background: #2563EB;
+    background: #0071E3;
 }
 
-/* Playful Canvas Interactive Styling */
-#playful-canvas {
-    perspective: 1000px;
-    transform-style: preserve-3d;
-}
-
-.playful-item {
-    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+/* Apple Card Hover Interaction */
+.apple-card {
     will-change: transform, box-shadow;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
-.playful-item:hover {
-    z-index: 40 !important;
-    transform: translateY(-6px) scale(1.05) !important;
-    border-color: #2563EB !important;
-    box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important;
+.apple-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.06), 0 10px 15px -5px rgba(0, 0, 0, 0.03);
+    border-color: #0071E3;
 }
 
-/* Floating sparkles subtle float animation */
-@keyframes sparkleFloat {
-    0%, 100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-8px) rotate(6deg);
-    }
+/* Portrait Card Parallax Effect */
+#portrait-wrapper {
+    will-change: transform;
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.floating-sparkle {
-    animation: sparkleFloat 4s ease-in-out infinite;
-}
-
-/* Magnetic Button Hover Feel */
-.btn-magnetic {
-    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Reveal on Scroll */
-.reveal {
+/* Soft Fade-Up Entry Animations */
+.fade-up {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(24px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal.active {
+.fade-up.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Arrow Subtle Slide */
+.group:hover .group-hover\:translate-x-1 {
+    transform: translateX(4px);
 }
