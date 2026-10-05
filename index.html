@@ -165,6 +165,10 @@
         <span>Ventures</span>
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
       </a>
+      <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="design-work" href="#design-work">
+        <span>Design Work</span>
+        <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
+      </a>
       <a class="nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 relative py-1" data-path="currently" href="#currently">
         <span>Currently</span>
         <span class="nav-indicator absolute bottom-0 left-0 w-full h-0.5 bg-secondary scale-x-0 transition-transform duration-200 origin-left"></span>
@@ -201,6 +205,10 @@
       </a>
       <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="ventures" href="#ventures">
         <span>Ventures</span>
+        <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+      </a>
+      <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="design-work" href="#design-work">
+        <span>Design Work</span>
         <span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
       </a>
       <a class="mobile-nav-link font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors duration-150 py-2.5 px-2 rounded-lg border-b border-surface-container-high/50 flex items-center justify-between" data-path="currently" href="#currently">
@@ -240,22 +248,22 @@
             from good ideas.
           </h1>
           <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-space-xs leading-relaxed">
-            Entrepreneur from Bangladesh, building digital products, exploring new business ideas, and turning concepts into real-world projects.
+            Designer &amp; Web Developer turning digital concepts into production-ready software. Available for select web design, UI/UX, and SaaS build projects.
           </p>
 
           <!-- Core Focus Tags -->
           <div class="flex items-center gap-2 flex-wrap pt-2">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm font-medium">
-              Digital Products
+              UI/UX Design
             </span>
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm font-medium">
-              AI
+              Web Development
             </span>
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm font-medium">
-              Ecommerce
+              Digital Products &amp; SaaS
             </span>
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg glass-pill text-on-surface font-body-sm text-body-sm font-medium">
-              Web
+              DTC Ecommerce
             </span>
           </div>
         </div>
@@ -277,6 +285,206 @@
               <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
             </span>
             <span class="font-body-sm text-body-sm text-on-surface font-medium">Currently building and experimenting with digital products.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TONAL SPACER -->
+      <div class="w-full h-12"></div>
+
+      <!-- LIVE INTERACTIVE DEMO WIDGET SECTION -->
+      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="demo-widget">
+        <div class="rounded-2xl glass-card p-space-xl md:p-space-2xl flex flex-col gap-space-lg">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm pb-space-xs">
+            <div class="flex flex-col gap-space-xs">
+              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
+                LIVE DEMO // PROOF OF CRAFT
+              </span>
+              <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
+                Interactive Quote &amp; Invoice Calculator
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                Test a live mini-engine snippet from <strong class="text-primary font-semibold">QuoteFlow</strong>. Modify line items, tax rates, and currency to see instant calculations and live draft invoice rendering.
+              </p>
+            </div>
+            <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 font-mono text-xs font-bold">
+              <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+              <span>LIVE INTERACTIVE WIDGET</span>
+            </div>
+          </div>
+
+          <!-- Interactive Calculator Widget Container -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start pt-2">
+            <!-- Left Controls Column -->
+            <div class="lg:col-span-6 flex flex-col gap-4 p-5 rounded-2xl bg-white/90 border border-outline-variant/50 shadow-sm">
+              <div class="flex items-center justify-between pb-2 border-b border-surface-container-highest">
+                <span class="font-label-mono-tag text-xs uppercase tracking-wider text-primary font-bold">Line Items &amp; Parameters</span>
+                <span class="text-xs text-outline font-mono">QuoteFlow v1.0</span>
+              </div>
+
+              <!-- Item 1 -->
+              <div class="flex flex-col gap-1.5">
+                <label for="demo-item1-name" class="text-xs font-medium text-on-surface">Service Item 1</label>
+                <div class="grid grid-cols-12 gap-2">
+                  <input id="demo-item1-name" type="text" value="UI/UX Design & Wireframing" class="col-span-7 px-3 py-2 text-xs rounded-xl border border-outline-variant/60 bg-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 font-medium" />
+                  <div class="col-span-5 relative">
+                    <span class="absolute left-2.5 top-2.5 text-xs text-outline">$</span>
+                    <input id="demo-item1-price" type="number" value="1800" min="0" class="w-full pl-6 pr-2 py-2 text-xs rounded-xl border border-outline-variant/60 bg-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 font-mono font-bold" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="flex flex-col gap-1.5">
+                <label for="demo-item2-name" class="text-xs font-medium text-on-surface">Service Item 2</label>
+                <div class="grid grid-cols-12 gap-2">
+                  <input id="demo-item2-name" type="text" value="Next.js & Tailwind SaaS Development" class="col-span-7 px-3 py-2 text-xs rounded-xl border border-outline-variant/60 bg-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 font-medium" />
+                  <div class="col-span-5 relative">
+                    <span class="absolute left-2.5 top-2.5 text-xs text-outline">$</span>
+                    <input id="demo-item2-price" type="number" value="2400" min="0" class="w-full pl-6 pr-2 py-2 text-xs rounded-xl border border-outline-variant/60 bg-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 font-mono font-bold" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tax & Discount Controls -->
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div class="flex flex-col gap-1">
+                  <label for="demo-tax-rate" class="text-xs font-medium text-on-surface-variant">Tax Rate (%)</label>
+                  <input id="demo-tax-rate" type="number" value="8" min="0" max="100" class="px-3 py-2 text-xs rounded-xl border border-outline-variant/60 bg-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 font-mono font-bold" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <label for="demo-discount" class="text-xs font-medium text-on-surface-variant">Discount ($)</label>
+                  <input id="demo-discount" type="number" value="200" min="0" class="px-3 py-2 text-xs rounded-xl border border-outline-variant/60 bg-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 font-mono font-bold" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Live Preview Column -->
+            <div class="lg:col-span-6 flex flex-col gap-4 p-5 rounded-2xl bg-slate-900 text-white shadow-xl">
+              <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                  <span class="font-mono text-xs font-bold uppercase tracking-wider text-slate-300">LIVE ESTIMATE PREVIEW</span>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 font-mono text-[10px]">#QF-2026-LIVE</span>
+              </div>
+
+              <div class="flex flex-col gap-2 pt-1 font-mono">
+                <div class="flex justify-between text-xs text-slate-300 border-b border-slate-800 pb-2">
+                  <span id="demo-prev-item1-title">UI/UX Design</span>
+                  <span id="demo-prev-item1-cost" class="font-bold text-white">$1,800.00</span>
+                </div>
+                <div class="flex justify-between text-xs text-slate-300 border-b border-slate-800 pb-2">
+                  <span id="demo-prev-item2-title">Next.js Development</span>
+                  <span id="demo-prev-item2-cost" class="font-bold text-white">$2,400.00</span>
+                </div>
+                <div class="flex justify-between text-xs text-slate-400 pt-1">
+                  <span>Subtotal:</span>
+                  <span id="demo-prev-subtotal" class="text-slate-200">$4,200.00</span>
+                </div>
+                <div class="flex justify-between text-xs text-slate-400">
+                  <span>Discount:</span>
+                  <span id="demo-prev-discount-val" class="text-amber-400">-$200.00</span>
+                </div>
+                <div class="flex justify-between text-xs text-slate-400">
+                  <span>Tax (8%):</span>
+                  <span id="demo-prev-tax-val" class="text-slate-200">+$320.00</span>
+                </div>
+
+                <div class="mt-3 p-3 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-between">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] uppercase text-slate-400 tracking-wider">ESTIMATED TOTAL</span>
+                    <span id="demo-prev-total" class="text-xl font-bold text-emerald-400">$4,320.00</span>
+                  </div>
+                  <a href="#contact" class="btn-tactile px-4 py-2 rounded-lg bg-emerald-500 text-slate-950 text-xs font-bold hover:bg-emerald-400 transition-colors">
+                    Request Quote →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TONAL SPACER -->
+      <div class="w-full h-12"></div>
+
+      <!-- DEDICATED DESIGN WORK & CLIENT SERVICES SECTION -->
+      <section class="py-space-2xl md:py-space-3xl scroll-mt-24" id="design-work">
+        <div class="flex flex-col gap-space-xl">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pb-space-sm">
+            <div class="flex flex-col gap-space-xs">
+              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-[0.2em] font-semibold text-secondary">
+                03.5 // CLIENT SERVICES &amp; DESIGN
+              </span>
+              <h2 class="font-headline-section text-[28px] sm:text-headline-section text-primary leading-tight">
+                Design Work &amp; Client Projects
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                High-impact UI/UX design, full-stack web engineering, and product design services for select clients.
+              </p>
+            </div>
+            <a class="btn-tactile inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-colors" href="#contact">
+              <span>Hire For Project</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+            </a>
+          </div>
+
+          <!-- Services Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <!-- Service 1 -->
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[280px]">
+              <div class="flex flex-col gap-space-xs">
+                <div class="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-2">
+                  <span class="material-symbols-outlined text-[24px]">palette</span>
+                </div>
+                <span class="font-label-mono-tag text-xs uppercase tracking-wider text-secondary font-bold">SERVICE 01</span>
+                <h3 class="font-title-md text-xl font-bold text-primary">UI/UX &amp; Product Design</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                  Crafting clean, accessible, and high-converting web and mobile user interfaces with Apple-inspired minimalism.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-surface-container-highest/60 flex items-center justify-between text-xs font-mono text-outline">
+                <span>Figma / Design Systems</span>
+                <span class="text-secondary font-bold">Production Ready</span>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[280px]">
+              <div class="flex flex-col gap-space-xs">
+                <div class="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-2">
+                  <span class="material-symbols-outlined text-[24px]">terminal</span>
+                </div>
+                <span class="font-label-mono-tag text-xs uppercase tracking-wider text-secondary font-bold">SERVICE 02</span>
+                <h3 class="font-title-md text-xl font-bold text-primary">Full-Stack SaaS Development</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                  Building scalable web tools, custom interactive dashboards, and micro-SaaS applications with modern Next.js/Tailwind stack.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-surface-container-highest/60 flex items-center justify-between text-xs font-mono text-outline">
+                <span>Next.js / Node / Tailwind</span>
+                <span class="text-secondary font-bold">High Performance</span>
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="p-space-lg rounded-2xl glass-card card-hover-effect flex flex-col justify-between min-h-[280px]">
+              <div class="flex flex-col gap-space-xs">
+                <div class="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-2">
+                  <span class="material-symbols-outlined text-[24px]">storefront</span>
+                </div>
+                <span class="font-label-mono-tag text-xs uppercase tracking-wider text-secondary font-bold">SERVICE 03</span>
+                <h3 class="font-title-md text-xl font-bold text-primary">DTC &amp; Ecommerce Layouts</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                  End-to-end brand identity systems and custom Shopify/Headless commerce architectures built for fast load times.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-surface-container-highest/60 flex items-center justify-between text-xs font-mono text-outline">
+                <span>Shopify / Headless API</span>
+                <span class="text-secondary font-bold">Brand Growth</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -410,30 +618,33 @@
                   MyAgeNow
                 </h3>
                 <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
-                  Age calculator and planning tool.
+                  Precision chronological age calculator and milestone planner web application.
                 </p>
 
-                <!-- Visual Browser Preview Frame -->
-                <div class="mt-space-md p-3 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2">
+                <!-- Visual Live App Mockup Frame -->
+                <div class="mt-space-md p-3.5 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2.5 shadow-2xs">
                   <div class="flex items-center justify-between border-b border-surface-container-highest/60 pb-2 px-1">
                     <div class="flex items-center gap-1.5">
                       <span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]"></span>
                       <span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]"></span>
                       <span class="w-2.5 h-2.5 rounded-full bg-[#10B981]"></span>
                     </div>
-                    <span class="font-mono text-[11px] text-on-surface-variant bg-white/80 px-2 py-0.5 rounded">myagenow.com</span>
-                    <span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+                    <span class="font-mono text-[11px] text-on-surface-variant bg-white/90 px-2 py-0.5 rounded border border-outline-variant/30">https://myagenow.com</span>
+                    <span class="material-symbols-outlined text-[14px] text-emerald-600">lock</span>
                   </div>
-                  <div class="p-2.5 bg-white rounded-lg flex items-center justify-between shadow-2xs">
-                    <div class="flex flex-col">
-                      <span class="text-[10px] font-mono text-outline uppercase">CHRONO CALCULATOR</span>
-                      <span class="text-xs font-semibold text-primary">28 Years, 4 Months, 12 Days</span>
+                  <div class="p-3 bg-white rounded-lg flex flex-col gap-2 border border-outline-variant/40 shadow-xs">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[10px] font-mono text-outline uppercase tracking-wider">LIVE COMPUTATION</span>
+                      <span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 text-[10px] font-mono font-medium">100/100 Lighthouse</span>
                     </div>
-                    <span class="px-2 py-1 rounded bg-secondary/10 text-secondary text-[10px] font-mono font-medium">Next.js / Tailwind</span>
+                    <div class="flex items-baseline justify-between pt-1">
+                      <span class="text-sm font-bold text-primary font-mono">28Y 4M 12D</span>
+                      <span class="text-[11px] font-mono text-secondary font-semibold">10,361 Days Total</span>
+                    </div>
                   </div>
-                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant">
-                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span> 99.9% Uptime</span>
-                    <span>&lt; 50ms Latency</span>
+                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant font-medium">
+                    <span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-[#16A34A]"></span> Edge CDN Deployed</span>
+                    <span>Next.js 14 / Tailwind</span>
                   </div>
                 </div>
               </div>
@@ -443,8 +654,8 @@
                   <span class="material-symbols-outlined text-[16px]">visibility</span>
                   <span>Inspect Visual Specs</span>
                 </button>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="https://myagenow.com" rel="noopener noreferrer" target="_blank">
-                  <span>Visit →</span>
+                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-semibold transition-colors" href="https://myagenow.com" rel="noopener noreferrer" target="_blank">
+                  <span>Launch Live App →</span>
                   <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
                 </a>
               </div>
@@ -456,7 +667,7 @@
                 <div class="flex items-center justify-between mb-space-md">
                   <div class="flex items-center gap-2">
                     <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Ecommerce</span>
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Brand</span>
+                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Brand System</span>
                   </div>
                   <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DBEAFE] text-secondary font-label-status text-label-status font-medium">
                     <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
@@ -467,29 +678,32 @@
                   Tangail Saree
                 </h3>
                 <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
-                  Traditional Tangail sarees with a modern ecommerce approach.
+                  Heritage handloom saree brand identity, mood boards, and webstore layout architecture.
                 </p>
 
-                <!-- Brand Story Snippet -->
-                <div class="mt-space-md p-3 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2">
+                <!-- Brand Story & Visual Palette Preview -->
+                <div class="mt-space-md p-3.5 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2.5 shadow-2xs">
                   <div class="flex items-center justify-between">
-                    <span class="text-[11px] font-label-mono-tag uppercase text-on-surface font-semibold tracking-wider">HERITAGE BRAND STORY</span>
-                    <span class="text-[10px] font-mono text-secondary px-2 py-0.5 rounded bg-secondary/10">DTC ECOMMERCE</span>
+                    <span class="text-[11px] font-label-mono-tag uppercase text-on-surface font-semibold tracking-wider">BRAND MOODBOARD &amp; UI</span>
+                    <span class="text-[10px] font-mono text-secondary px-2 py-0.5 rounded bg-secondary/10">DTC STOREFRONT</span>
                   </div>
-                  <div class="grid grid-cols-3 gap-1.5">
-                    <div class="h-16 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#6366F1] flex items-center justify-center p-1 text-center">
-                      <span class="text-[9px] text-white font-medium">Handloom Weaves</span>
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="h-16 rounded-lg bg-gradient-to-br from-[#7C3AED] via-[#6366F1] to-[#4F46E5] flex flex-col justify-end p-2 text-white shadow-xs">
+                      <span class="text-[10px] font-bold leading-none">Royal Indigo</span>
+                      <span class="text-[8px] font-mono opacity-80">#7C3AED</span>
                     </div>
-                    <div class="h-16 rounded-lg bg-gradient-to-br from-[#EC4899] to-[#F43F5E] flex items-center justify-center p-1 text-center">
-                      <span class="text-[9px] text-white font-medium">Artisan Stories</span>
+                    <div class="h-16 rounded-lg bg-gradient-to-br from-[#BE123C] via-[#E11D48] to-[#FB7185] flex flex-col justify-end p-2 text-white shadow-xs">
+                      <span class="text-[10px] font-bold leading-none">Crimson Silk</span>
+                      <span class="text-[8px] font-mono opacity-80">#BE123C</span>
                     </div>
-                    <div class="h-16 rounded-lg bg-gradient-to-br from-[#10B981] to-[#059669] flex items-center justify-center p-1 text-center">
-                      <span class="text-[9px] text-white font-medium">Global DTC</span>
+                    <div class="h-16 rounded-lg bg-gradient-to-br from-[#047857] via-[#10B981] to-[#34D399] flex flex-col justify-end p-2 text-white shadow-xs">
+                      <span class="text-[10px] font-bold leading-none">Emerald Thread</span>
+                      <span class="text-[8px] font-mono opacity-80">#047857</span>
                     </div>
                   </div>
-                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant">
-                    <span>Authentic Sourcing</span>
-                    <span>Shopify / Custom Webstore</span>
+                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant font-medium">
+                    <span>Artisan Supply Story</span>
+                    <span>Shopify + Next.js Storefront</span>
                   </div>
                 </div>
               </div>
@@ -497,10 +711,10 @@
               <div class="pt-space-md mt-space-md flex items-center justify-between border-t border-surface-container-highest/40">
                 <button class="modal-open-btn inline-flex items-center gap-1.5 text-xs font-medium text-secondary hover:underline" data-modal="modal-tangail">
                   <span class="material-symbols-outlined text-[16px]">visibility</span>
-                  <span>Inspect Brand Moodboard</span>
+                  <span>Inspect Brand Identity</span>
                 </button>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#contact">
-                  <span>Explore →</span>
+                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-semibold transition-colors" href="#contact">
+                  <span>Request Pitch Deck →</span>
                   <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
                 </a>
               </div>
@@ -512,7 +726,7 @@
                 <div class="flex items-center justify-between mb-space-md">
                   <div class="flex items-center gap-2">
                     <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">AI</span>
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Product</span>
+                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">UI Prototype</span>
                   </div>
                   <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#FEF3C7] text-[#B45309] font-label-status text-label-status font-medium">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#D97706]"></span>
@@ -523,29 +737,29 @@
                   MemoryFix
                 </h3>
                 <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
-                  AI-powered restoration for old family photographs.
+                  Interactive AI photo restoration interface with scratch removal and face enhancement wireframes.
                 </p>
 
-                <!-- AI Restoration Box -->
-                <div class="mt-space-md p-3 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2">
+                <!-- AI Restoration Interactive Mockup -->
+                <div class="mt-space-md p-3.5 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2.5 shadow-2xs">
                   <div class="flex items-center justify-between">
-                    <span class="text-[11px] font-label-mono-tag uppercase text-on-surface font-semibold tracking-wider">NEURAL RESTORATION WIREFRAME</span>
-                    <span class="text-[10px] font-mono text-[#B45309] px-2 py-0.5 rounded bg-[#FEF3C7]">AI PIPELINE</span>
+                    <span class="text-[11px] font-label-mono-tag uppercase text-on-surface font-semibold tracking-wider">NEURAL RESTORATION CANVAS</span>
+                    <span class="text-[10px] font-mono text-[#B45309] px-2 py-0.5 rounded bg-[#FEF3C7]">AI PROTOTYPE</span>
                   </div>
-                  <div class="p-2.5 bg-white rounded-lg flex items-center justify-between border border-dashed border-outline-variant">
-                    <div class="flex items-center gap-2">
-                      <div class="w-10 h-10 rounded bg-gray-200 flex items-center justify-center text-xs font-mono text-gray-500">OLD</div>
-                      <span class="material-symbols-outlined text-secondary text-base">auto_fix_high</span>
-                      <div class="w-10 h-10 rounded bg-blue-100 flex items-center justify-center text-xs font-mono text-secondary font-bold">HD</div>
+                  <div class="p-3 bg-white rounded-lg flex items-center justify-between border border-outline-variant/50 shadow-xs">
+                    <div class="flex items-center gap-2.5">
+                      <div class="w-10 h-10 rounded-lg bg-amber-100/80 border border-amber-300 flex items-center justify-center text-[10px] font-mono text-amber-800 font-bold">RAW</div>
+                      <span class="material-symbols-outlined text-secondary text-base animate-pulse">auto_fix_high</span>
+                      <div class="w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center text-[10px] font-mono font-bold shadow-xs">4K HD</div>
                     </div>
                     <div class="text-right">
-                      <span class="text-[10px] font-mono block text-outline">NEURAL SCALE</span>
-                      <span class="text-xs font-semibold text-primary">4x Super-Res</span>
+                      <span class="text-[10px] font-mono block text-outline uppercase">CODEFORMER MODEL</span>
+                      <span class="text-xs font-bold text-primary">Face Fidelity 98.4%</span>
                     </div>
                   </div>
-                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant">
-                    <span>Face Restoration AI</span>
-                    <span>Python / PyTorch / WebGL</span>
+                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant font-medium">
+                    <span>Scratch Repair Pipeline</span>
+                    <span>WebGL Canvas / PyTorch</span>
                   </div>
                 </div>
               </div>
@@ -555,8 +769,8 @@
                   <span class="material-symbols-outlined text-[16px]">visibility</span>
                   <span>Inspect AI Prototype UI</span>
                 </button>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#idea-lab">
-                  <span>View Concept →</span>
+                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-semibold transition-colors" href="#idea-lab">
+                  <span>View AI Prototype →</span>
                   <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
                 </a>
               </div>
@@ -568,7 +782,7 @@
                 <div class="flex items-center justify-between mb-space-md">
                   <div class="flex items-center gap-2">
                     <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Micro-SaaS</span>
-                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">Product</span>
+                    <span class="px-2.5 py-1 rounded-lg glass-pill font-mono text-[11px] font-semibold text-on-surface">UI Engine</span>
                   </div>
                   <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#DBEAFE] text-secondary font-label-status text-label-status font-medium">
                     <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
@@ -579,24 +793,24 @@
                   QuoteFlow
                 </h3>
                 <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
-                  A simple quote and invoice tool for small businesses.
+                  Micro-SaaS quotation engine with live PDF generation, tax calculations, and client approval flows.
                 </p>
 
                 <!-- Commercial Quotation Wireframe Preview -->
-                <div class="mt-space-md p-3 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2">
+                <div class="mt-space-md p-3.5 rounded-xl bg-surface-container-high/60 border border-surface-container-highest flex flex-col gap-2.5 shadow-2xs">
                   <div class="flex items-center justify-between">
-                    <span class="text-[11px] font-label-mono-tag uppercase text-on-surface font-semibold tracking-wider">QUOTATION BUILDER MOCKUP</span>
+                    <span class="text-[11px] font-label-mono-tag uppercase text-on-surface font-semibold tracking-wider">LIVE PDF GENERATOR UI</span>
                     <span class="text-[10px] font-mono text-secondary px-2 py-0.5 rounded bg-secondary/10">SAAS UTILITY</span>
                   </div>
-                  <div class="p-2.5 bg-white rounded-lg flex items-center justify-between border border-outline-variant">
+                  <div class="p-3 bg-white rounded-lg flex items-center justify-between border border-outline-variant/50 shadow-xs">
                     <div class="flex flex-col">
-                      <span class="text-[10px] font-mono text-outline">ESTIMATE #QF-2026</span>
-                      <span class="text-xs font-semibold text-primary">$3,400.00 — Approved</span>
+                      <span class="text-[10px] font-mono text-outline">ESTIMATE #QF-2026-089</span>
+                      <span class="text-xs font-bold text-primary">$3,400.00 — Client Approved</span>
                     </div>
-                    <span class="px-2 py-1 rounded bg-emerald-50 text-emerald-700 text-[10px] font-mono font-medium">PDF Auto-Gen</span>
+                    <span class="px-2.5 py-1 rounded-md bg-emerald-50 text-emerald-700 text-[10px] font-mono font-bold border border-emerald-200">PDF Auto-Gen</span>
                   </div>
-                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant">
-                    <span>Margin Calculator</span>
+                  <div class="flex items-center justify-between px-1 text-[11px] text-on-surface-variant font-medium">
+                    <span>Margin &amp; Tax Engine</span>
                     <span>React / TypeScript / Tailwind</span>
                   </div>
                 </div>
@@ -607,8 +821,8 @@
                   <span class="material-symbols-outlined text-[16px]">visibility</span>
                   <span>Inspect Workflow Mockups</span>
                 </button>
-                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-medium transition-colors" href="#contact">
-                  <span>View Concept →</span>
+                <a class="inline-flex items-center gap-1 text-primary group-hover:text-secondary font-body-sm text-body-sm font-semibold transition-colors" href="#demo-widget">
+                  <span>View UI Wireframes →</span>
                   <span class="material-symbols-outlined text-[16px] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
                 </a>
               </div>
@@ -645,10 +859,10 @@
                   <span class="material-symbols-outlined text-secondary text-[20px]">construction</span>
                 </div>
                 <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">01</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Building</h3>
+                <h3 class="font-title-md text-title-md text-primary font-semibold">Building</h3>
               </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Small digital products and web tools.
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed font-medium">
+                <strong class="text-primary font-semibold">QuoteFlow</strong> — micro-SaaS invoicing engine with live PDF generation.
               </p>
             </div>
 
@@ -658,10 +872,10 @@
                   <span class="material-symbols-outlined text-secondary text-[20px]">science</span>
                 </div>
                 <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">02</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Experimenting</h3>
+                <h3 class="font-title-md text-title-md text-primary font-semibold">Experimenting</h3>
               </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                AI products, automation and new ideas.
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed font-medium">
+                <strong class="text-primary font-semibold">Neural Restoration</strong> — models &amp; AI workflow automation tools.
               </p>
             </div>
 
@@ -671,10 +885,10 @@
                   <span class="material-symbols-outlined text-secondary text-[20px]">explore</span>
                 </div>
                 <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">03</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Exploring</h3>
+                <h3 class="font-title-md text-title-md text-primary font-semibold">Exploring</h3>
               </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Ecommerce, branding and online businesses.
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed font-medium">
+                <strong class="text-primary font-semibold">DTC Architecture</strong> — webstore layout for Tangail handloom sarees.
               </p>
             </div>
 
@@ -684,10 +898,10 @@
                   <span class="material-symbols-outlined text-secondary text-[20px]">menu_book</span>
                 </div>
                 <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">04</span>
-                <h3 class="font-title-md text-title-md text-primary font-medium">Learning</h3>
+                <h3 class="font-title-md text-title-md text-primary font-semibold">Learning</h3>
               </div>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Business, technology and product development.
+              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed font-medium">
+                <strong class="text-primary font-semibold">Headless Ecommerce</strong> — Shopify Storefront API + Next.js 14.
               </p>
             </div>
           </div>
@@ -891,110 +1105,112 @@
               Have an idea worth building?
             </h2>
             <p class="font-body-md text-body-md text-on-surface-variant">
-              I'm always interested in interesting products, businesses, collaborations, and opportunities.
+              Available for select web design, UI/UX, SaaS builds, and venture collaborations.
             </p>
           </div>
 
-          <!-- Action Cluster -->
-          <div class="flex flex-col gap-space-lg">
-            <!-- Email Buttons Bar with Visible Raw Address Fallback -->
-            <div class="flex flex-col sm:flex-row sm:items-center gap-space-md relative">
-              <div class="flex flex-wrap items-center gap-space-md">
-                <a class="btn-tactile inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary transition-colors duration-150 shadow-sm min-h-[44px]" href="mailto:contact@sydinrahman.com">
-                  <span class="material-symbols-outlined text-[18px]">mail</span>
-                  <span>Email Me →</span>
-                </a>
+          <!-- Integrated Contact Form & Social Columns -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            <!-- Left: Direct Inquiry Form -->
+            <form id="contact-form" class="lg:col-span-7 p-6 rounded-2xl bg-white/90 border border-outline-variant/60 flex flex-col gap-4 shadow-sm">
+              <div class="flex items-center justify-between pb-2 border-b border-surface-container-highest">
+                <span class="font-label-mono-tag text-xs uppercase tracking-wider text-primary font-bold">Direct Inquiry Form</span>
+                <span class="text-xs text-secondary font-medium">● Instant Direct Reach</span>
+              </div>
 
-                <button id="copy-email-btn" class="btn-tactile inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-full glass-pill text-on-surface font-body-sm text-body-sm font-medium hover:bg-surface-variant transition-colors duration-150 min-h-[44px]" aria-label="Copy contact@sydinrahman.com to clipboard">
-                  <span class="material-symbols-outlined text-[18px]">content_copy</span>
-                  <span>Copy Address</span>
+              <!-- Inquiry Type Radio Pointers -->
+              <div class="flex flex-col gap-1.5">
+                <label class="text-xs font-semibold text-on-surface">Inquiry Purpose</label>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <label class="btn-tactile cursor-pointer flex items-center justify-center gap-1.5 p-2.5 rounded-xl border border-outline-variant/60 bg-surface hover:bg-surface-container-high font-body-sm text-xs text-on-surface font-medium has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:border-primary transition-colors">
+                    <input type="radio" name="inquiry_type" value="Hire for Design/Web Dev" checked class="sr-only" />
+                    <span>Design &amp; Dev</span>
+                  </label>
+                  <label class="btn-tactile cursor-pointer flex items-center justify-center gap-1.5 p-2.5 rounded-xl border border-outline-variant/60 bg-surface hover:bg-surface-container-high font-body-sm text-xs text-on-surface font-medium has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:border-primary transition-colors">
+                    <input type="radio" name="inquiry_type" value="Venture Collaboration" class="sr-only" />
+                    <span>Venture Co-Op</span>
+                  </label>
+                  <label class="btn-tactile cursor-pointer flex items-center justify-center gap-1.5 p-2.5 rounded-xl border border-outline-variant/60 bg-surface hover:bg-surface-container-high font-body-sm text-xs text-on-surface font-medium has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:border-primary transition-colors">
+                    <input type="radio" name="inquiry_type" value="General Inquiry" class="sr-only" />
+                    <span>General</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Name & Email Inputs -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="flex flex-col gap-1">
+                  <label for="contact-name" class="text-xs font-semibold text-on-surface">Your Name</label>
+                  <input id="contact-name" required type="text" placeholder="Jane Doe" class="px-3.5 py-2.5 text-xs rounded-xl border border-outline-variant/60 bg-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 font-medium" />
+                </div>
+                <div class="flex flex-col gap-1">
+                  <label for="contact-email" class="text-xs font-semibold text-on-surface">Your Email</label>
+                  <input id="contact-email" required type="email" placeholder="jane@example.com" class="px-3.5 py-2.5 text-xs rounded-xl border border-outline-variant/60 bg-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 font-medium" />
+                </div>
+              </div>
+
+              <!-- Message TextArea -->
+              <div class="flex flex-col gap-1">
+                <label for="contact-message" class="text-xs font-semibold text-on-surface">Project Details / Message</label>
+                <textarea id="contact-message" required rows="4" placeholder="Tell me about your project scope, timeline, or idea..." class="px-3.5 py-2.5 text-xs rounded-xl border border-outline-variant/60 bg-surface focus:outline-none focus:ring-2 focus:ring-secondary/40 font-medium resize-none"></textarea>
+              </div>
+
+              <!-- Submit Button & Feedback -->
+              <div class="flex items-center justify-between pt-1">
+                <button type="submit" class="btn-tactile inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-on-primary font-body-sm text-xs font-semibold hover:bg-secondary transition-colors shadow-sm">
+                  <span>Send Message</span>
+                  <span class="material-symbols-outlined text-[16px]">send</span>
                 </button>
+
+                <!-- Feedback Banner -->
+                <span id="form-feedback" class="hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-100 text-emerald-800 text-xs font-semibold">
+                  <span class="material-symbols-outlined text-sm">check_circle</span>
+                  <span>Message sent successfully!</span>
+                </span>
+              </div>
+            </form>
+
+            <!-- Right: Quick Email & Social Grid -->
+            <div class="lg:col-span-5 flex flex-col gap-space-md">
+              <!-- Quick Email Card -->
+              <div class="p-5 rounded-2xl glass-pill flex flex-col gap-3">
+                <span class="font-label-mono-tag text-xs uppercase tracking-wider text-outline font-semibold">Direct Email</span>
+                <div class="flex items-center justify-between gap-2">
+                  <div class="inline-flex items-center gap-2 font-mono text-xs text-primary select-all font-bold">
+                    <span class="material-symbols-outlined text-[16px] text-secondary">alternate_email</span>
+                    <span>contact@sydinrahman.com</span>
+                  </div>
+                  <button id="copy-email-btn" type="button" class="btn-tactile p-2 rounded-xl bg-primary text-white hover:bg-secondary transition-colors" aria-label="Copy Email">
+                    <span class="material-symbols-outlined text-sm">content_copy</span>
+                  </button>
+                </div>
+                <span id="copy-feedback" role="status" aria-live="polite" class="text-[11px] text-emerald-700 font-semibold opacity-0 transition-opacity duration-300">
+                  ✓ Copied contact@sydinrahman.com!
+                </span>
               </div>
 
-              <!-- Desktop Raw Email Badge Fallback -->
-              <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass-pill font-mono text-xs text-on-surface select-all">
-                <span class="material-symbols-outlined text-[14px] text-secondary">alternate_email</span>
-                <span class="font-semibold">contact@sydinrahman.com</span>
-              </div>
-
-              <!-- Toast / Feedback message -->
-              <span id="copy-feedback" role="status" aria-live="polite" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary text-on-primary text-xs font-medium opacity-0 transition-opacity duration-300 pointer-events-none shadow-md">
-                <span class="material-symbols-outlined text-[14px]">check_circle</span>
-                <span>Copied contact@sydinrahman.com!</span>
-              </span>
-            </div>
-
-            <!-- Social Media Identity Grid -->
-            <div class="flex flex-col gap-space-sm pt-space-md">
-              <span class="font-label-mono-tag text-label-mono-tag uppercase tracking-widest text-outline">Primary Social Profiles</span>
-              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+              <!-- Social Identity Links Grid -->
+              <div class="grid grid-cols-2 gap-2">
                 <!-- Facebook -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://facebook.com/sydinrahman" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm">
-                      f
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Facebook →</span>
-                      <span class="text-[11px] text-secondary font-medium">@sydinrahman</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+                <a class="btn-tactile p-3 rounded-xl glass-card hover:bg-white transition-colors flex items-center justify-between" href="https://facebook.com/sydinrahman" target="_blank" rel="noopener">
+                  <span class="font-body-sm text-xs font-semibold text-primary">Facebook</span>
+                  <span class="material-symbols-outlined text-xs text-outline">arrow_outward</span>
                 </a>
-
                 <!-- LinkedIn -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://linkedin.com/in/sydinrahman" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center font-bold text-xs">
-                      in
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">LinkedIn →</span>
-                      <span class="text-[11px] text-on-surface-variant">in/sydinrahman</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+                <a class="btn-tactile p-3 rounded-xl glass-card hover:bg-white transition-colors flex items-center justify-between" href="https://linkedin.com/in/sydinrahman" target="_blank" rel="noopener">
+                  <span class="font-body-sm text-xs font-semibold text-primary">LinkedIn</span>
+                  <span class="material-symbols-outlined text-xs text-outline">arrow_outward</span>
                 </a>
-
                 <!-- GitHub -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://github.com/sydinrahman" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center">
-                      <span class="material-symbols-outlined text-[18px]">terminal</span>
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">GitHub →</span>
-                      <span class="text-[11px] text-on-surface-variant">@sydinrahman</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+                <a class="btn-tactile p-3 rounded-xl glass-card hover:bg-white transition-colors flex items-center justify-between" href="https://github.com/sydinrahman" target="_blank" rel="noopener">
+                  <span class="font-body-sm text-xs font-semibold text-primary">GitHub</span>
+                  <span class="material-symbols-outlined text-xs text-outline">arrow_outward</span>
                 </a>
-
                 <!-- Behance -->
-                <a class="btn-tactile group p-space-md rounded-2xl glass-card hover:bg-white/80 transition-all duration-150 flex items-center justify-between min-h-[60px]" href="https://behance.net/sydinrahman" rel="noopener noreferrer" target="_blank">
-                  <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 rounded-xl glass-pill text-on-surface flex items-center justify-center font-bold text-xs">
-                      Bē
-                    </div>
-                    <div class="flex flex-col">
-                      <span class="font-body-sm text-body-sm text-primary font-medium group-hover:text-secondary transition-colors">Behance →</span>
-                      <span class="text-[11px] text-on-surface-variant">be.net/sydinrahman</span>
-                    </div>
-                  </div>
-                  <span class="material-symbols-outlined text-[16px] text-outline group-hover:text-secondary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">arrow_outward</span>
+                <a class="btn-tactile p-3 rounded-xl glass-card hover:bg-white transition-colors flex items-center justify-between" href="https://behance.net/sydinrahman" target="_blank" rel="noopener">
+                  <span class="font-body-sm text-xs font-semibold text-primary">Behance</span>
+                  <span class="material-symbols-outlined text-xs text-outline">arrow_outward</span>
                 </a>
-              </div>
-            </div>
-
-            <!-- Open To Tags -->
-            <div class="pt-space-md flex flex-col gap-2 border-t border-surface-container-highest/40">
-              <span class="font-label-mono-tag text-xs uppercase tracking-wider text-outline">Open to:</span>
-              <div class="flex flex-wrap gap-2">
-                <span class="px-3 py-1 rounded-full glass-pill text-xs font-medium text-on-surface">Business Ideas</span>
-                <span class="px-3 py-1 rounded-full glass-pill text-xs font-medium text-on-surface">Collaborations</span>
-                <span class="px-3 py-1 rounded-full glass-pill text-xs font-medium text-on-surface">Digital Products</span>
-                <span class="px-3 py-1 rounded-full glass-pill text-xs font-medium text-on-surface">Ecommerce</span>
-                <span class="px-3 py-1 rounded-full glass-pill text-xs font-medium text-on-surface">Interesting Opportunities</span>
               </div>
             </div>
           </div>
